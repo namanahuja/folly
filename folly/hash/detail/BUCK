@@ -11,11 +11,11 @@ cpp_library(
     ],
     headers = ["ChecksumDetail.h"],
     deps = [
-        "//folly:bits",
-        "//folly:cpp_attributes",
+        "folly//folly:bits",
+        "folly//folly:cpp_attributes",
     ],
     exported_deps = [
-        "//folly:portability",
+        "folly//folly:portability",
     ],
     external_deps = [
         ("boost", None, "boost_preprocessor"),

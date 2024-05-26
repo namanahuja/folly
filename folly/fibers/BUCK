@@ -11,8 +11,8 @@ cpp_library(
     ],
     exported_deps = [
         ":core",
-        "//folly:optional",
-        "//folly:try",
+        "folly//folly:optional",
+        "folly//folly:try",
     ],
 )
 
@@ -23,11 +23,11 @@ cpp_library(
         "AtomicBatchDispatcher-inl.h",
     ],
     exported_deps = [
-        "//folly:c_portability",
-        "//folly:function",
-        "//folly:optional",
-        "//folly/fibers/detail:atomic_batch_dispatcher",
-        "//folly/futures:core",
+        "folly//folly:c_portability",
+        "folly//folly:function",
+        "folly//folly:optional",
+        "folly//folly/fibers/detail:atomic_batch_dispatcher",
+        "folly//folly/futures:core",
     ],
 )
 
@@ -35,8 +35,8 @@ cpp_library(
     name = "batch_dispatcher",
     headers = ["BatchDispatcher.h"],
     exported_deps = [
-        "//folly:function",
-        "//folly/futures:core",
+        "folly//folly:function",
+        "folly//folly/futures:core",
     ],
 )
 
@@ -44,7 +44,7 @@ cpp_library(
     name = "boost_context_compatibility",
     headers = ["BoostContextCompatibility.h"],
     exported_deps = [
-        "//folly:function",
+        "folly//folly:function",
     ],
     exported_external_deps = [
         "glog",
@@ -71,42 +71,42 @@ cpp_library(
         "Promise-inl.h",
     ],
     deps = [
-        "//folly:constexpr_math",
-        "//folly:singleton_thread_local",
-        "//folly/detail:memory_idler",
-        "//folly/memory:sanitize_address",
-        "//folly/portability:asm",
-        "//folly/portability:config",
-        "//folly/portability:sys_syscall",
-        "//folly/portability:unistd",
-        "//folly/synchronization:sanitize_thread",
+        "folly//folly:constexpr_math",
+        "folly//folly:singleton_thread_local",
+        "folly//folly/detail:memory_idler",
+        "folly//folly/memory:sanitize_address",
+        "folly//folly/portability:asm",
+        "folly//folly/portability:config",
+        "folly//folly/portability:sys_syscall",
+        "folly//folly/portability:unistd",
+        "folly//folly/synchronization:sanitize_thread",
     ],
     exported_deps = [
         ":boost_context_compatibility",
         ":guard_page_allocator",
         ":loop_controller",
         ":traits",
-        "//folly:atomic_linked_list",
-        "//folly:c_portability",
-        "//folly:executor",
-        "//folly:function",
-        "//folly:intrusive_list",
-        "//folly:likely",
-        "//folly:memory",
-        "//folly:optional",
-        "//folly:portability",
-        "//folly:scope_guard",
-        "//folly:try",
-        "//folly/detail:async_trace",
-        "//folly/detail:futex",
-        "//folly/experimental:execution_observer",
-        "//folly/experimental/coro:coroutine",
-        "//folly/functional:invoke",
-        "//folly/io/async:async_base",
-        "//folly/io/async:request_context",
-        "//folly/lang:thunk",
-        "//folly/portability:pthread",
-        "//folly/tracing:async_stack",
+        "folly//folly:atomic_linked_list",
+        "folly//folly:c_portability",
+        "folly//folly:executor",
+        "folly//folly:function",
+        "folly//folly:intrusive_list",
+        "folly//folly:likely",
+        "folly//folly:memory",
+        "folly//folly:optional",
+        "folly//folly:portability",
+        "folly//folly:scope_guard",
+        "folly//folly:try",
+        "folly//folly/detail:async_trace",
+        "folly//folly/detail:futex",
+        "folly//folly/experimental:execution_observer",
+        "folly//folly/experimental/coro:coroutine",
+        "folly//folly/functional:invoke",
+        "folly//folly/io/async:async_base",
+        "folly//folly/io/async:request_context",
+        "folly//folly/lang:thunk",
+        "folly//folly/portability:pthread",
+        "folly//folly/tracing:async_stack",
     ],
     external_deps = [
         "glog",
@@ -121,8 +121,8 @@ cpp_library(
     ],
     exported_deps = [
         ":core",
-        "//folly/functional:invoke",
-        "//folly/futures:core",
+        "folly//folly/functional:invoke",
+        "folly//folly/futures:core",
     ],
 )
 
@@ -135,9 +135,9 @@ cpp_library(
     exported_deps = [
         ":core",
         ":executor_based_loop_controller",
-        "//folly:cancellation_token",
-        "//folly:memory",
-        "//folly/io/async:async_base",
+        "folly//folly:cancellation_token",
+        "folly//folly:memory",
+        "folly//folly/io/async:async_base",
     ],
 )
 
@@ -150,9 +150,9 @@ cpp_library(
     exported_deps = [
         ":core",
         ":executor_based_loop_controller",
-        "//folly:executor",
-        "//folly:scope_guard",
-        "//folly/futures:core",
+        "folly//folly:executor",
+        "folly//folly:scope_guard",
+        "folly//folly/futures:core",
     ],
 )
 
@@ -165,13 +165,13 @@ cpp_library(
     exported_deps = [
         ":core",
         ":event_base_loop_controller",
-        "//folly:function",
-        "//folly:scope_guard",
-        "//folly:singleton_thread_local",
-        "//folly:synchronized",
-        "//folly/container:f14_hash",
-        "//folly/io/async:async_base",
-        "//folly/synchronization:relaxed_atomic",
+        "folly//folly:function",
+        "folly//folly:scope_guard",
+        "folly//folly:singleton_thread_local",
+        "folly//folly:synchronized",
+        "folly//folly/container:f14_hash",
+        "folly//folly/io/async:async_base",
+        "folly//folly/synchronization:relaxed_atomic",
     ],
 )
 
@@ -208,7 +208,7 @@ cpp_library(
     ],
     exported_deps = [
         ":core",
-        "//folly/functional:invoke",
+        "folly//folly/functional:invoke",
     ],
 )
 
@@ -217,7 +217,7 @@ cpp_library(
     headers = ["GenericBaton.h"],
     exported_deps = [
         ":core",
-        "//folly/synchronization:baton",
+        "folly//folly/synchronization:baton",
     ],
 )
 
@@ -226,11 +226,11 @@ cpp_library(
     srcs = ["GuardPageAllocator.cpp"],
     headers = ["GuardPageAllocator.h"],
     deps = [
-        "//folly:singleton",
-        "//folly:spin_lock",
-        "//folly:synchronized",
-        "//folly/portability:sys_mman",
-        "//folly/portability:unistd",
+        "folly//folly:singleton",
+        "folly//folly:spin_lock",
+        "folly//folly:synchronized",
+        "folly//folly/portability:sys_mman",
+        "folly//folly/portability:unistd",
     ],
     external_deps = [
         "glog",
@@ -242,7 +242,7 @@ cpp_library(
     name = "loop_controller",
     headers = ["LoopController.h"],
     exported_deps = [
-        "//folly/io/async:async_base_fwd",
+        "folly//folly/io/async:async_base_fwd",
     ],
 )
 
@@ -251,7 +251,7 @@ cpp_library(
     headers = ["ExecutorBasedLoopController.h"],
     exported_deps = [
         ":loop_controller",
-        "//folly:executor",
+        "folly//folly:executor",
     ],
 )
 
@@ -261,10 +261,10 @@ cpp_library(
     headers = ["Semaphore.h"],
     exported_deps = [
         ":core",
-        "//folly:intrusive_list",
-        "//folly:synchronized",
-        "//folly/experimental/coro:task",
-        "//folly/futures:core",
+        "folly//folly:intrusive_list",
+        "folly//folly:synchronized",
+        "folly//folly/experimental/coro:task",
+        "folly//folly/futures:core",
     ],
 )
 
@@ -283,10 +283,10 @@ cpp_library(
     headers = ["SemaphoreBase.h"],
     exported_deps = [
         ":core",
-        "//folly:intrusive_list",
-        "//folly:synchronized",
-        "//folly/experimental/coro:task",
-        "//folly/futures:core",
+        "folly//folly:intrusive_list",
+        "folly//folly:synchronized",
+        "folly//folly/experimental/coro:task",
+        "folly//folly/futures:core",
     ],
 )
 
@@ -295,13 +295,13 @@ cpp_library(
     srcs = ["SimpleLoopController.cpp"],
     headers = ["SimpleLoopController.h"],
     deps = [
-        "//folly/io/async:async_base",
+        "folly//folly/io/async:async_base",
     ],
     exported_deps = [
         ":core_manager",
         ":loop_controller",
-        "//folly:function",
-        "//folly:likely",
+        "folly//folly:function",
+        "folly//folly:likely",
     ],
 )
 
@@ -314,10 +314,10 @@ cpp_library(
     ],
     exported_deps = [
         ":generic_baton",
-        "//folly:intrusive_list",
-        "//folly:portability",
-        "//folly:spin_lock",
-        "//folly/synchronization:call_once",
+        "folly//folly:intrusive_list",
+        "folly//folly:portability",
+        "folly//folly:spin_lock",
+        "folly//folly/synchronization:call_once",
     ],
 )
 
@@ -335,7 +335,7 @@ cpp_library(
     exported_deps = [
         ":core",
         ":for_each",
-        "//folly:optional",
-        "//folly/functional:invoke",
+        "folly//folly:optional",
+        "folly//folly/functional:invoke",
     ],
 )

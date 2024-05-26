@@ -6,7 +6,7 @@ cpp_library(
     name = "atomic_utils",
     headers = ["AtomicUtils.h"],
     exported_deps = [
-        "//folly/lang:assume",
+        "folly//folly/lang:assume",
     ],
 )
 
@@ -17,7 +17,7 @@ cpp_library(
     ],
     exported_deps = [
         ":sleeper",
-        "//folly:portability",
+        "folly//folly:portability",
     ],
     exported_external_deps = [
         "glog",
@@ -32,11 +32,11 @@ cpp_library(
         "ThreadCachedTag.h",
     ],
     exported_deps = [
-        "//folly:function",
-        "//folly:synchronized",
-        "//folly:thread_local",
-        "//folly/synchronization:asymmetric_thread_fence",
-        "//folly/synchronization:relaxed_atomic",
+        "folly//folly:function",
+        "folly//folly:synchronized",
+        "folly//folly:thread_local",
+        "folly//folly/synchronization:asymmetric_thread_fence",
+        "folly//folly/synchronization:relaxed_atomic",
     ],
     exported_external_deps = [
         "glog",
@@ -48,10 +48,10 @@ cpp_library(
     srcs = ["Sleeper.cpp"],
     headers = ["Sleeper.h"],
     deps = [
-        "//folly:portability",
+        "folly//folly:portability",
     ],
     exported_deps = [
-        "//folly/portability:asm",
+        "folly//folly/portability:asm",
     ],
 )
 
@@ -59,8 +59,8 @@ cpp_library(
     name = "spin",
     headers = ["Spin.h"],
     exported_deps = [
-        "//folly/portability:asm",
-        "//folly/synchronization:wait_options",
+        "folly//folly/portability:asm",
+        "folly//folly/synchronization:wait_options",
     ],
 )
 
@@ -70,10 +70,10 @@ cpp_library(
         "InlineFunctionRef.h",
     ],
     exported_deps = [
-        "//folly:function",
-        "//folly:traits",
-        "//folly:utility",
-        "//folly/functional:invoke",
+        "folly//folly:function",
+        "folly//folly:traits",
+        "folly//folly:utility",
+        "folly//folly/functional:invoke",
     ],
 )
 
@@ -91,12 +91,12 @@ cpp_library(
     ],
     headers = ["Hardware.h"],
     deps = [
-        "//folly:cpp_attributes",
-        "//folly/lang:assume",
-        "//folly/lang:exception",
+        "folly//folly:cpp_attributes",
+        "folly//folly/lang:assume",
+        "folly//folly/lang:exception",
     ],
     exported_deps = [
-        "//folly:portability",
+        "folly//folly:portability",
     ],
     external_deps = [
         ("boost", None, "boost_preprocessor"),

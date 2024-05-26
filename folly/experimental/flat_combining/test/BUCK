@@ -8,7 +8,7 @@ cpp_library(
         "FlatCombiningExamples.h",
     ],
     exported_deps = [
-        "//folly/synchronization/test:flat_combining_examples",
+        "folly//folly/synchronization/test:flat_combining_examples",
     ],
 )
 
@@ -18,6 +18,6 @@ cpp_library(
         "FlatCombiningTestHelpers.h",
     ],
     exported_deps = [
-        "//folly/synchronization/test:flat_combining_test_helpers",
+        "folly//folly/synchronization/test:flat_combining_test_helpers",
     ],
 )

@@ -8,12 +8,12 @@ cpp_unittest(
     srcs = ["ArenaTest.cpp"],
     headers = [],
     deps = [
-        "//folly:memory",
-        "//folly/memory:arena",
-        "//folly/memory:mallctl_helper",
-        "//folly/memory:malloc",
-        "//folly/portability:gflags",
-        "//folly/portability:gtest",
+        "folly//folly:memory",
+        "folly//folly/memory:arena",
+        "folly//folly/memory:mallctl_helper",
+        "folly//folly/memory:malloc",
+        "folly//folly/portability:gflags",
+        "folly//folly/portability:gtest",
     ],
     external_deps = [
         "glog",
@@ -28,11 +28,11 @@ cpp_unittest(
     supports_static_listing = False,
     deps = [
         "fbsource//third-party/jemalloc:headers",
-        "//folly:c_portability",
-        "//folly/init:init",
-        "//folly/memory:mallctl_helper",
-        "//folly/memory:malloc",
-        "//folly/portability:gtest",
+        "folly//folly:c_portability",
+        "folly//folly/init:init",
+        "folly//folly/memory:mallctl_helper",
+        "folly//folly/memory:malloc",
+        "folly//folly/portability:gtest",
     ],
 )
 
@@ -41,10 +41,10 @@ cpp_unittest(
     srcs = ["MallocTest.cpp"],
     headers = [],
     deps = [
-        "//folly/memory:malloc",
-        "//folly/portability:gtest",
-        "//folly/portability:malloc",
-        "//folly/test:test_utils",
+        "folly//folly/memory:malloc",
+        "folly//folly/portability:gtest",
+        "folly//folly/portability:malloc",
+        "folly//folly/test:test_utils",
     ],
 )
 
@@ -53,9 +53,9 @@ cpp_benchmark(
     srcs = ["MallocBenchmark.cpp"],
     headers = [],
     deps = [
-        "//folly:benchmark",
-        "//folly:random",
-        "//folly/memory:malloc",
+        "folly//folly:benchmark",
+        "folly//folly:random",
+        "folly//folly/memory:malloc",
     ],
 )
 
@@ -64,8 +64,8 @@ cpp_unittest(
     srcs = ["MemoryResourceTest.cpp"],
     headers = [],
     deps = [
-        "//folly/memory:memory_resource",
-        "//folly/portability:gtest",
+        "folly//folly/memory:memory_resource",
+        "folly//folly/portability:gtest",
     ],
 )
 
@@ -76,8 +76,8 @@ cpp_unittest(
     ],
     supports_static_listing = False,
     deps = [
-        "//folly/memory:not_null",
-        "//folly/portability:gtest",
+        "folly//folly/memory:not_null",
+        "folly//folly/portability:gtest",
     ],
 )
 
@@ -85,10 +85,10 @@ cpp_unittest(
     name = "reentrant_allocator_test",
     srcs = ["ReentrantAllocatorTest.cpp"],
     deps = [
-        "//folly:utility",
-        "//folly/functional:invoke",
-        "//folly/memory:reentrant_allocator",
-        "//folly/portability:gtest",
+        "folly//folly:utility",
+        "folly//folly/functional:invoke",
+        "folly//folly/memory:reentrant_allocator",
+        "folly//folly/portability:gtest",
     ],
 )
 
@@ -96,8 +96,8 @@ cpp_unittest(
     name = "sanitize_address_test",
     srcs = ["SanitizeAddressTest.cpp"],
     deps = [
-        "//folly/memory:sanitize_address",
-        "//folly/portability:gtest",
+        "folly//folly/memory:sanitize_address",
+        "folly//folly/portability:gtest",
     ],
 )
 
@@ -105,8 +105,8 @@ cpp_unittest(
     name = "sanitize_leak_test",
     srcs = ["SanitizeLeakTest.cpp"],
     deps = [
-        "//folly/memory:sanitize_leak",
-        "//folly/portability:gtest",
+        "folly//folly/memory:sanitize_leak",
+        "folly//folly/portability:gtest",
     ],
 )
 
@@ -115,12 +115,12 @@ cpp_unittest(
     srcs = ["ThreadCachedArenaTest.cpp"],
     headers = [],
     deps = [
-        "//folly:benchmark",
-        "//folly:memory",
-        "//folly:range",
-        "//folly/lang:align",
-        "//folly/memory:thread_cached_arena",
-        "//folly/portability:gtest",
+        "folly//folly:benchmark",
+        "folly//folly:memory",
+        "folly//folly:range",
+        "folly//folly/lang:align",
+        "folly//folly/memory:thread_cached_arena",
+        "folly//folly/portability:gtest",
     ],
     external_deps = [
         "glog",
@@ -134,9 +134,9 @@ cpp_unittest(
         "UninitializedMemoryHacksTest.cpp",
     ],
     deps = [
-        "//folly:random",
-        "//folly/memory:uninitialized_memory_hacks",
-        "//folly/portability:gtest",
+        "folly//folly:random",
+        "folly//folly/memory:uninitialized_memory_hacks",
+        "folly//folly/portability:gtest",
     ],
     external_deps = [
         "glog",

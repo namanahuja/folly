@@ -8,9 +8,9 @@ cpp_unittest(
     name = "barrier_test",
     srcs = ["BarrierTest.cpp"],
     deps = [
-        "//folly:random",
-        "//folly/futures:barrier",
-        "//folly/portability:gtest",
+        "folly//folly:random",
+        "folly//folly/futures:barrier",
+        "folly//folly/portability:gtest",
     ],
     external_deps = [
         "glog",
@@ -22,8 +22,8 @@ cpp_unittest(
     srcs = ["CallbackLifetimeTest.cpp"],
     deps = [
         ":test_executor",
-        "//folly/futures:core",
-        "//folly/portability:gtest",
+        "folly//folly/futures:core",
+        "folly//folly/portability:gtest",
     ],
 )
 
@@ -31,14 +31,14 @@ cpp_unittest(
     name = "collect_test",
     srcs = ["CollectTest.cpp"],
     deps = [
-        "//folly:default_keep_alive_executor",
-        "//folly:random",
-        "//folly:small_vector",
-        "//folly/executors:cpu_thread_pool_executor",
-        "//folly/executors:manual_executor",
-        "//folly/futures:core",
-        "//folly/portability:gtest",
-        "//folly/synchronization:baton",
+        "folly//folly:default_keep_alive_executor",
+        "folly//folly:random",
+        "folly//folly:small_vector",
+        "folly//folly/executors:cpu_thread_pool_executor",
+        "folly//folly/executors:manual_executor",
+        "folly//folly/futures:core",
+        "folly//folly/portability:gtest",
+        "folly//folly/synchronization:baton",
     ],
     external_deps = [
         ("boost", None, "boost_thread"),
@@ -49,8 +49,8 @@ cpp_unittest(
     name = "context_test",
     srcs = ["ContextTest.cpp"],
     deps = [
-        "//folly/futures:core",
-        "//folly/portability:gtest",
+        "folly//folly/futures:core",
+        "folly//folly/portability:gtest",
     ],
 )
 
@@ -58,9 +58,9 @@ cpp_unittest(
     name = "core_test",
     srcs = ["CoreTest.cpp"],
     deps = [
-        "//folly/futures:core",
-        "//folly/futures/detail:core",
-        "//folly/portability:gtest",
+        "folly//folly/futures:core",
+        "folly//folly/futures/detail:core",
+        "folly//folly/portability:gtest",
     ],
 )
 
@@ -68,8 +68,8 @@ cpp_unittest(
     name = "ensure_test",
     srcs = ["EnsureTest.cpp"],
     deps = [
-        "//folly/futures:core",
-        "//folly/portability:gtest",
+        "folly//folly/futures:core",
+        "folly//folly/portability:gtest",
     ],
 )
 
@@ -77,8 +77,8 @@ cpp_unittest(
     name = "filter_test",
     srcs = ["FilterTest.cpp"],
     deps = [
-        "//folly/futures:core",
-        "//folly/portability:gtest",
+        "folly//folly/futures:core",
+        "folly//folly/portability:gtest",
     ],
 )
 
@@ -86,9 +86,9 @@ cpp_unittest(
     name = "future_splitter_test",
     srcs = ["FutureSplitterTest.cpp"],
     deps = [
-        "//folly/executors:manual_executor",
-        "//folly/futures:future_splitter",
-        "//folly/portability:gtest",
+        "folly//folly/executors:manual_executor",
+        "folly//folly/futures:future_splitter",
+        "folly//folly/portability:gtest",
     ],
 )
 
@@ -96,14 +96,14 @@ cpp_unittest(
     name = "future_test",
     srcs = ["FutureTest.cpp"],
     deps = [
-        "//folly:executor",
-        "//folly:memory",
-        "//folly:unit",
-        "//folly/executors:manual_executor",
-        "//folly/futures:core",
-        "//folly/json:dynamic",
-        "//folly/portability:gtest",
-        "//folly/synchronization:baton",
+        "folly//folly:executor",
+        "folly//folly:memory",
+        "folly//folly:unit",
+        "folly//folly/executors:manual_executor",
+        "folly//folly/futures:core",
+        "folly//folly/json:dynamic",
+        "folly//folly/portability:gtest",
+        "folly//folly/synchronization:baton",
     ],
 )
 
@@ -111,15 +111,15 @@ cpp_unittest(
     name = "semi_future_test",
     srcs = ["SemiFutureTest.cpp"],
     deps = [
-        "//folly:executor",
-        "//folly:memory",
-        "//folly:unit",
-        "//folly/executors:manual_executor",
-        "//folly/futures:core",
-        "//folly/io/async:async_base",
-        "//folly/json:dynamic",
-        "//folly/portability:gtest",
-        "//folly/synchronization:baton",
+        "folly//folly:executor",
+        "folly//folly:memory",
+        "folly//folly:unit",
+        "folly//folly/executors:manual_executor",
+        "folly//folly/futures:core",
+        "folly//folly/io/async:async_base",
+        "folly//folly/json:dynamic",
+        "folly//folly/portability:gtest",
+        "folly//folly/synchronization:baton",
     ],
 )
 
@@ -132,12 +132,12 @@ cpp_benchmark(
     ],
     deps = [
         ":test_executor",
-        "//folly:benchmark",
-        "//folly/executors:inline_executor",
-        "//folly/futures:core",
-        "//folly/portability:gflags",
-        "//folly/synchronization:baton",
-        "//folly/synchronization:native_semaphore",
+        "folly//folly:benchmark",
+        "folly//folly/executors:inline_executor",
+        "folly//folly/futures:core",
+        "folly//folly/portability:gflags",
+        "folly//folly/synchronization:baton",
+        "folly//folly/synchronization:native_semaphore",
     ],
 )
 
@@ -145,9 +145,9 @@ cpp_unittest(
     name = "header_compile_test",
     srcs = ["HeaderCompileTest.cpp"],
     deps = [
-        "//folly:try",
-        "//folly/futures:core",
-        "//folly/portability:gtest",
+        "folly//folly:try",
+        "folly//folly/futures:core",
+        "folly//folly/portability:gtest",
     ],
 )
 
@@ -156,9 +156,9 @@ cpp_unittest(
     srcs = ["InterruptTest.cpp"],
     deps = [
         ":test_executor",
-        "//folly/futures:core",
-        "//folly/portability:gtest",
-        "//folly/synchronization:baton",
+        "folly//folly/futures:core",
+        "folly//folly/portability:gtest",
+        "folly//folly/synchronization:baton",
     ],
 )
 
@@ -166,8 +166,8 @@ cpp_unittest(
     name = "manual_timekeeper_test",
     srcs = ["ManualTimekeeperTest.cpp"],
     deps = [
-        "//folly/futures:manual_timekeeper",
-        "//folly/portability:gtest",
+        "folly//folly/futures:manual_timekeeper",
+        "folly//folly/portability:gtest",
     ],
 )
 
@@ -175,8 +175,8 @@ cpp_unittest(
     name = "map_test",
     srcs = ["MapTest.cpp"],
     deps = [
-        "//folly/futures:core",
-        "//folly/portability:gtest",
+        "folly//folly/futures:core",
+        "folly//folly/portability:gtest",
     ],
 )
 
@@ -184,8 +184,8 @@ cpp_unittest(
     name = "non_copyable_lambda_test",
     srcs = ["NonCopyableLambdaTest.cpp"],
     deps = [
-        "//folly/futures:core",
-        "//folly/portability:gtest",
+        "folly//folly/futures:core",
+        "folly//folly/portability:gtest",
     ],
 )
 
@@ -193,8 +193,8 @@ cpp_unittest(
     name = "poll_test",
     srcs = ["PollTest.cpp"],
     deps = [
-        "//folly/futures:core",
-        "//folly/portability:gtest",
+        "folly//folly/futures:core",
+        "folly//folly/portability:gtest",
     ],
 )
 
@@ -202,8 +202,8 @@ cpp_unittest(
     name = "promise_test",
     srcs = ["PromiseTest.cpp"],
     deps = [
-        "//folly/futures:core",
-        "//folly/portability:gtest",
+        "folly//folly/futures:core",
+        "folly//folly/portability:gtest",
     ],
 )
 
@@ -211,8 +211,8 @@ cpp_unittest(
     name = "reduce_test",
     srcs = ["ReduceTest.cpp"],
     deps = [
-        "//folly/futures:core",
-        "//folly/portability:gtest",
+        "folly//folly/futures:core",
+        "folly//folly/portability:gtest",
     ],
 )
 
@@ -221,9 +221,9 @@ cpp_unittest(
     srcs = ["RetryingTest.cpp"],
     deps = [
         ":test_executor",
-        "//folly/futures:core",
-        "//folly/portability:gtest",
-        "//folly/portability:sys_resource",
+        "folly//folly/futures:core",
+        "folly//folly/portability:gtest",
+        "folly//folly/portability:sys_resource",
     ],
 )
 
@@ -231,9 +231,9 @@ cpp_unittest(
     name = "self_destruct_test",
     srcs = ["SelfDestructTest.cpp"],
     deps = [
-        "//folly/executors:inline_executor",
-        "//folly/futures:core",
-        "//folly/portability:gtest",
+        "folly//folly/executors:inline_executor",
+        "folly//folly/futures:core",
+        "folly//folly/portability:gtest",
     ],
 )
 
@@ -241,8 +241,8 @@ cpp_unittest(
     name = "shared_promise_test",
     srcs = ["SharedPromiseTest.cpp"],
     deps = [
-        "//folly/futures:shared_promise",
-        "//folly/portability:gtest",
+        "folly//folly/futures:shared_promise",
+        "folly//folly/portability:gtest",
     ],
 )
 
@@ -251,7 +251,7 @@ cpp_library(
     srcs = ["TestExecutor.cpp"],
     headers = ["TestExecutor.h"],
     exported_deps = [
-        "//folly:executor",
+        "folly//folly:executor",
     ],
 )
 
@@ -260,7 +260,7 @@ cpp_unittest(
     srcs = ["TestExecutorTest.cpp"],
     deps = [
         ":test_executor",
-        "//folly/portability:gtest",
+        "folly//folly/portability:gtest",
     ],
 )
 
@@ -269,8 +269,8 @@ cpp_unittest(
     srcs = ["ThenCompileTest.cpp"],
     headers = ["ThenCompileTest.h"],
     deps = [
-        "//folly/futures:core",
-        "//folly/portability:gtest",
+        "folly//folly/futures:core",
+        "folly//folly/portability:gtest",
     ],
 )
 
@@ -278,8 +278,8 @@ cpp_unittest(
     name = "then_test",
     srcs = ["ThenTest.cpp"],
     deps = [
-        "//folly/futures:core",
-        "//folly/portability:gtest",
+        "folly//folly/futures:core",
+        "folly//folly/portability:gtest",
     ],
 )
 
@@ -287,9 +287,9 @@ cpp_unittest(
     name = "timekeeper_test",
     srcs = ["TimekeeperTest.cpp"],
     deps = [
-        "//folly:singleton",
-        "//folly/futures:core",
-        "//folly/portability:gtest",
+        "folly//folly:singleton",
+        "folly//folly/futures:core",
+        "folly//folly/portability:gtest",
     ],
 )
 
@@ -298,15 +298,15 @@ cpp_library(
     headers = ["TimekeeperTestLib.h"],
     exported_deps = [
         "fbsource//third-party/fmt:fmt",
-        "//folly:default_keep_alive_executor",
-        "//folly:random",
-        "//folly:singleton",
-        "//folly/executors:global_executor",
-        "//folly/executors:manual_executor",
-        "//folly/executors:serial_executor",
-        "//folly/executors:virtual_executor",
-        "//folly/futures:core",
-        "//folly/portability:gtest",
+        "folly//folly:default_keep_alive_executor",
+        "folly//folly:random",
+        "folly//folly:singleton",
+        "folly//folly/executors:global_executor",
+        "folly//folly/executors:manual_executor",
+        "folly//folly/executors:serial_executor",
+        "folly//folly/executors:virtual_executor",
+        "folly//folly/futures:core",
+        "folly//folly/portability:gtest",
     ],
     exported_external_deps = [
         "glog",
@@ -319,7 +319,7 @@ cpp_unittest(
     supports_static_listing = False,
     deps = [
         ":timekeeper_test_lib",
-        "//folly/futures:core",
+        "folly//folly/futures:core",
     ],
 )
 
@@ -329,7 +329,7 @@ cpp_unittest(
     supports_static_listing = False,
     deps = [
         ":timekeeper_test_lib",
-        "//folly/futures:core",
+        "folly//folly/futures:core",
     ],
 )
 
@@ -337,9 +337,9 @@ cpp_unittest(
     name = "times_test",
     srcs = ["TimesTest.cpp"],
     deps = [
-        "//folly/executors:manual_executor",
-        "//folly/futures:core",
-        "//folly/portability:gtest",
+        "folly//folly/executors:manual_executor",
+        "folly//folly/futures:core",
+        "folly//folly/portability:gtest",
     ],
 )
 
@@ -347,8 +347,8 @@ cpp_unittest(
     name = "unwrap_test",
     srcs = ["UnwrapTest.cpp"],
     deps = [
-        "//folly/futures:core",
-        "//folly/portability:gtest",
+        "folly//folly/futures:core",
+        "folly//folly/portability:gtest",
     ],
 )
 
@@ -356,13 +356,13 @@ cpp_unittest(
     name = "via_test",
     srcs = ["ViaTest.cpp"],
     deps = [
-        "//folly:mpmc_queue",
-        "//folly/executors:drivable_executor",
-        "//folly/executors:inline_executor",
-        "//folly/executors:manual_executor",
-        "//folly/futures:core",
-        "//folly/portability:gtest",
-        "//folly/synchronization:baton",
+        "folly//folly:mpmc_queue",
+        "folly//folly/executors:drivable_executor",
+        "folly//folly/executors:inline_executor",
+        "folly//folly/executors:manual_executor",
+        "folly//folly/futures:core",
+        "folly//folly/portability:gtest",
+        "folly//folly/synchronization:baton",
     ],
 )
 
@@ -371,11 +371,11 @@ cpp_unittest(
     srcs = ["WaitTest.cpp"],
     deps = [
         ":test_executor",
-        "//folly/executors:inline_executor",
-        "//folly/futures:core",
-        "//folly/io/async:async_base",
-        "//folly/portability:gtest",
-        "//folly/synchronization:baton",
+        "folly//folly/executors:inline_executor",
+        "folly//folly/futures:core",
+        "folly//folly/io/async:async_base",
+        "folly//folly/portability:gtest",
+        "folly//folly/synchronization:baton",
     ],
 )
 
@@ -383,8 +383,8 @@ cpp_unittest(
     name = "when_test",
     srcs = ["WhenTest.cpp"],
     deps = [
-        "//folly/futures:core",
-        "//folly/portability:gtest",
+        "folly//folly/futures:core",
+        "folly//folly/portability:gtest",
     ],
 )
 
@@ -392,9 +392,9 @@ cpp_unittest(
     name = "while_do_test",
     srcs = ["WhileDoTest.cpp"],
     deps = [
-        "//folly/executors:manual_executor",
-        "//folly/futures:core",
-        "//folly/portability:gtest",
+        "folly//folly/executors:manual_executor",
+        "folly//folly/futures:core",
+        "folly//folly/portability:gtest",
     ],
 )
 
@@ -402,8 +402,8 @@ cpp_unittest(
     name = "will_equal_test",
     srcs = ["WillEqualTest.cpp"],
     deps = [
-        "//folly/futures:core",
-        "//folly/portability:gtest",
+        "folly//folly/futures:core",
+        "folly//folly/portability:gtest",
     ],
 )
 
@@ -411,10 +411,10 @@ cpp_unittest(
     name = "window_test",
     srcs = ["WindowTest.cpp"],
     deps = [
-        "//folly:conv",
-        "//folly/executors:manual_executor",
-        "//folly/futures:core",
-        "//folly/portability:gtest",
+        "folly//folly:conv",
+        "folly//folly/executors:manual_executor",
+        "folly//folly/futures:core",
+        "folly//folly/portability:gtest",
     ],
     external_deps = [
         ("boost", None, "boost_thread"),
@@ -425,7 +425,7 @@ cpp_unittest(
     name = "conversion_operator",
     srcs = ["ConversionOperatorTest.cpp"],
     deps = [
-        "//folly/futures:core",
-        "//folly/portability:gtest",
+        "folly//folly/futures:core",
+        "folly//folly/portability:gtest",
     ],
 )

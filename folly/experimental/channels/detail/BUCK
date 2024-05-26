@@ -8,7 +8,7 @@ cpp_library(
         "AtomicQueue.h",
     ],
     exported_deps = [
-        "//folly/channels/detail:atomic_queue",
+        "folly//folly/channels/detail:atomic_queue",
     ],
 )
 
@@ -18,7 +18,7 @@ cpp_library(
         "ChannelBridge.h",
     ],
     exported_deps = [
-        "//folly/channels/detail:channel_bridge",
+        "folly//folly/channels/detail:channel_bridge",
     ],
 )
 
@@ -28,7 +28,7 @@ cpp_library(
         "FunctionTraits.h",
     ],
     exported_deps = [
-        "//folly/channels/detail:function_traits",
+        "folly//folly/channels/detail:function_traits",
     ],
 )
 
@@ -38,7 +38,7 @@ cpp_library(
         "IntrusivePtr.h",
     ],
     exported_deps = [
-        "//folly/channels/detail:intrusive_ptr",
+        "folly//folly/channels/detail:intrusive_ptr",
     ],
 )
 
@@ -48,7 +48,7 @@ cpp_library(
         "MultiplexerTraits.h",
     ],
     exported_deps = [
-        "//folly/channels/detail:multiplexer_traits",
+        "folly//folly/channels/detail:multiplexer_traits",
     ],
 )
 
@@ -58,7 +58,7 @@ cpp_library(
         "PointerVariant.h",
     ],
     exported_deps = [
-        "//folly/channels/detail:pointer_variant",
+        "folly//folly/channels/detail:pointer_variant",
     ],
 )
 
@@ -68,6 +68,6 @@ cpp_library(
         "Utility.h",
     ],
     exported_deps = [
-        "//folly/channels/detail:utility",
+        "folly//folly/channels/detail:utility",
     ],
 )

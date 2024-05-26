@@ -12,13 +12,13 @@ cpp_library(
         "Bser.h",
     ],
     deps = [
-        "//folly:string",
+        "folly//folly:string",
     ],
     exported_deps = [
-        "//folly:c_portability",
-        "//folly:json",  # @manual
-        "//folly:optional",
-        "//folly/io:iobuf",
-        "//folly/json:dynamic",
+        "folly//folly:c_portability",
+        "folly//folly:json",  # @manual
+        "folly//folly:optional",
+        "folly//folly/io:iobuf",
+        "folly//folly/json:dynamic",
     ],
 )

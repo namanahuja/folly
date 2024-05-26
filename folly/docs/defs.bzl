@@ -12,7 +12,7 @@ def copy(path):
         name = path,
         srcs = [path],
         build_args = shell.quote(path),
-        build_script_dep = "//folly/docs/facebook:copy.py",
+        build_script_dep = "folly//folly/docs/facebook:copy.py",
         output_gen_files = [path],
         strict = False,  # Remove (https://fburl.com/strict-custom-rules)
     )
@@ -30,7 +30,7 @@ def html(src, support = None, style = "style.css", copy_support = True):
         build_args =
             "--style %s %s" % (shell.quote(style), shell.quote(src)) +
             " --pandoc-path $(exe fbsource//third-party/stackage-lts:pandoc)",
-        build_script_dep = "//folly/docs/facebook:build_html.py",
+        build_script_dep = "folly//folly/docs/facebook:build_html.py",
         output_gen_files = [html],
         strict = False,  # Remove (https://fburl.com/strict-custom-rules)
     )

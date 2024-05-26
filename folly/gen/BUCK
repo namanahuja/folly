@@ -11,15 +11,15 @@ cpp_library(
     exported_deps = [
         "fbsource//third-party/range-v3:range-v3",
         ":core",
-        "//folly:conv",
-        "//folly:function",
-        "//folly:optional",
-        "//folly:portability",
-        "//folly:range",
-        "//folly:utility",
-        "//folly/container:access",
-        "//folly/container:f14_hash",
-        "//folly/functional:invoke",
+        "folly//folly:conv",
+        "folly//folly:function",
+        "folly//folly:optional",
+        "folly//folly:portability",
+        "folly//folly:range",
+        "folly//folly:utility",
+        "folly//folly/container:access",
+        "folly//folly/container:f14_hash",
+        "folly//folly/functional:invoke",
     ],
 )
 
@@ -38,7 +38,7 @@ cpp_library(
         "Core.h",
         "Core-inl.h",
     ],
-    exported_deps = ["//folly:portability"],
+    exported_deps = ["folly//folly:portability"],
 )
 
 cpp_library(
@@ -50,9 +50,9 @@ cpp_library(
     exported_deps = [
         ":base",
         ":string",
-        "//folly:exception",
-        "//folly:file",
-        "//folly/io:iobuf",
+        "folly//folly:exception",
+        "folly//folly:file",
+        "folly//folly/io:iobuf",
     ],
 )
 
@@ -64,9 +64,9 @@ cpp_library(
     ],
     exported_deps = [
         ":base",
-        "//folly:mpmc_queue",
-        "//folly:scope_guard",
-        "//folly/experimental:event_count",
+        "folly//folly:mpmc_queue",
+        "folly//folly:scope_guard",
+        "folly//folly/experimental:event_count",
     ],
 )
 
@@ -78,10 +78,10 @@ cpp_library(
     ],
     exported_deps = [
         ":core",
-        "//folly:expected",
-        "//folly:mpmc_pipeline",
-        "//folly/experimental:event_count",
-        "//folly/functional:invoke",
+        "folly//folly:expected",
+        "folly//folly:mpmc_pipeline",
+        "folly//folly/experimental:event_count",
+        "folly//folly/functional:invoke",
     ],
 )
 
@@ -93,11 +93,11 @@ cpp_library(
     ],
     exported_deps = [
         ":base",
-        "//folly:conv",
-        "//folly:portability",
-        "//folly:range",
-        "//folly:string",
-        "//folly/io:iobuf",
+        "folly//folly:conv",
+        "folly//folly:portability",
+        "folly//folly:range",
+        "folly//folly:string",
+        "folly//folly/io:iobuf",
     ],
 )
 

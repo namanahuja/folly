@@ -7,8 +7,8 @@ cpp_library(
     headers = ["ApplyTuple.h"],
     exported_deps = [
         ":invoke",
-        "//folly:traits",
-        "//folly:utility",
+        "folly//folly:traits",
+        "folly//folly:utility",
     ],
 )
 
@@ -16,12 +16,12 @@ cpp_library(
     name = "invoke",
     headers = ["Invoke.h"],
     exported_deps = [
-        "//folly:cpp_attributes",
-        "//folly:portability",
-        "//folly:preprocessor",
-        "//folly:traits",
-        "//folly:utility",
-        "//folly/lang:customization_point",
+        "folly//folly:cpp_attributes",
+        "folly//folly:portability",
+        "folly//folly:preprocessor",
+        "folly//folly:traits",
+        "folly//folly:utility",
+        "folly//folly/lang:customization_point",
     ],
     exported_external_deps = [
         ("boost", None, "boost_preprocessor"),
@@ -33,7 +33,7 @@ cpp_library(
     headers = ["Partial.h"],
     exported_deps = [
         ":invoke",
-        "//folly:utility",
+        "folly//folly:utility",
     ],
 )
 
@@ -43,8 +43,8 @@ cpp_library(
     exported_deps = [
         ":invoke",
         ":traits",
-        "//folly:portability",
-        "//folly:traits",
+        "folly//folly:portability",
+        "folly//folly:traits",
     ],
 )
 
@@ -52,6 +52,6 @@ cpp_library(
     name = "traits",
     headers = ["traits.h"],
     exported_deps = [
-        "//folly:traits",
+        "folly//folly:traits",
     ],
 )

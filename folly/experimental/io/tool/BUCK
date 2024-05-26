@@ -7,10 +7,10 @@ cpp_binary(
     srcs = ["HugePageUtil.cpp"],
     deps = [
         "fbsource//third-party/fmt:fmt",
-        "//folly:range",
-        "//folly/experimental/io:huge_pages",
-        "//folly/portability:gflags",
-        "//folly/system:memory_mapping",
+        "folly//folly:range",
+        "folly//folly/experimental/io:huge_pages",
+        "folly//folly/portability:gflags",
+        "folly//folly/system:memory_mapping",
     ],
     external_deps = [
         "glog",

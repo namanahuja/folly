@@ -28,11 +28,11 @@ cython_library(
     srcs = ["simplebridge.pyx"],
     headers = ["simple.h"],
     cpp_deps = [
-        "//folly/futures:core",
+        "folly//folly/futures:core",
     ],
     deps = [
-        "//folly/python:fibers",
-        "//folly/python:futures",
+        "folly//folly/python:fibers",
+        "folly//folly/python:futures",
     ],
 )
 
@@ -41,11 +41,11 @@ cpp_library(
     srcs = ["IOBufTestUtils.cpp"],
     headers = ["IOBufTestUtils.h"],
     deps = [
-        "//folly/python:iobuf_lib",
+        "folly//folly/python:iobuf_lib",
     ],
     exported_deps = [
         "fbsource//third-party/python:python",  # Python.h
-        "//folly/io:iobuf",
+        "folly//folly/io:iobuf",
     ],
 )
 
@@ -60,7 +60,7 @@ cython_library(
         "iobuf_helper.pyi",
     ],
     deps = [
-        "//folly/python:iobuf",
+        "folly//folly/python:iobuf",
     ],
 )
 
@@ -71,7 +71,7 @@ python_unittest(
     ],
     deps = [
         ":iobuf_helper",
-        "//folly/python:iobuf",
+        "folly//folly/python:iobuf",
     ],
 )
 
@@ -80,13 +80,13 @@ cython_library(
     srcs = ["simplebridgecoro.pyx"],
     headers = ["simplecoro.h"],
     cpp_deps = [
-        "//folly/experimental/coro:baton",
-        "//folly/experimental/coro:task",
-        "//folly/futures:core",
-        "//folly:cancellation_token",
+        "folly//folly/experimental/coro:baton",
+        "folly//folly/experimental/coro:task",
+        "folly//folly/futures:core",
+        "folly//folly:cancellation_token",
     ],
     deps = [
-        "//folly/python:coro",
+        "folly//folly/python:coro",
     ],
 )
 
@@ -95,11 +95,11 @@ cython_library(
     srcs = ["simplegenerator.pyx"],
     headers = ["simplegenerator.h"],
     cpp_deps = [
-        "//folly/experimental/coro:async_generator",
+        "folly//folly/experimental/coro:async_generator",
     ],
     deps = [
-        "//folly/python:async_generator",
-        "//folly/python:executor",
+        "folly//folly/python:async_generator",
+        "folly//folly/python:executor",
     ],
 )
 
@@ -118,10 +118,10 @@ cpp_unittest(
         "AsyncGeneratorTest.cpp",
     ],
     deps = [
-        "//folly/experimental/coro:blocking_wait",
-        "//folly/experimental/coro:task",
-        "//folly/portability:gtest",
-        "//folly/python:async_generator_lib",
+        "folly//folly/experimental/coro:blocking_wait",
+        "folly//folly/experimental/coro:task",
+        "folly//folly/portability:gtest",
+        "folly//folly/python:async_generator_lib",
     ],
 )
 
@@ -132,9 +132,9 @@ cpp_unittest(
     ],
     deps = [
         "fbsource//third-party/python:python",
-        "//folly:scope_guard",
-        "//folly/portability:gtest",
-        "//folly/python:error",
+        "folly//folly:scope_guard",
+        "folly//folly/portability:gtest",
+        "folly//folly/python:error",
     ],
 )
 
@@ -164,7 +164,7 @@ cython_library(
         ":test_set_executor_cpplib",
     ],
     deps = [
-        "//folly/python:executor",
+        "folly//folly/python:executor",
     ],
 )
 
@@ -173,6 +173,6 @@ cpp_library(
     headers = ["test_set_executor.h"],
     modular_headers = False,
     exported_deps = [
-        "//folly/python:asyncio_executor",
+        "folly//folly/python:asyncio_executor",
     ],
 )

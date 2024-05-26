@@ -16,13 +16,13 @@ cpp_library(
         ":serial_executor",  # @manual
         ":thread_pool_executor",  # @manual
         ":threaded_executor",  # @manual
-        "//folly/executors/task_queue:blocking_queue",  # @manual
-        "//folly/executors/task_queue:lifo_sem_mpmc_queue",  # @manual
-        "//folly/executors/task_queue:priority_lifo_sem_mpmc_queue",  # @manual
-        "//folly/executors/task_queue:unbounded_blocking_queue",  # @manual
-        "//folly/executors/thread_factory:named_thread_factory",  # @manual
-        "//folly/executors/thread_factory:priority_thread_factory",  # @manual
-        "//folly/executors/thread_factory:thread_factory",  # @manual
+        "folly//folly/executors/task_queue:blocking_queue",  # @manual
+        "folly//folly/executors/task_queue:lifo_sem_mpmc_queue",  # @manual
+        "folly//folly/executors/task_queue:priority_lifo_sem_mpmc_queue",  # @manual
+        "folly//folly/executors/task_queue:unbounded_blocking_queue",  # @manual
+        "folly//folly/executors/thread_factory:named_thread_factory",  # @manual
+        "folly//folly/executors/thread_factory:priority_thread_factory",  # @manual
+        "folly//folly/executors/thread_factory:thread_factory",  # @manual
     ],
 )
 
@@ -31,7 +31,7 @@ cpp_library(
     headers = ["Async.h"],
     exported_deps = [
         ":global_executor",
-        "//folly/futures:core",
+        "folly//folly/futures:core",
     ],
 )
 
@@ -40,7 +40,7 @@ cpp_library(
     srcs = ["Codel.cpp"],
     headers = ["Codel.h"],
     deps = [
-        "//folly/portability:gflags",
+        "folly//folly/portability:gflags",
     ],
 )
 
@@ -49,14 +49,14 @@ cpp_library(
     srcs = ["CPUThreadPoolExecutor.cpp"],
     headers = ["CPUThreadPoolExecutor.h"],
     deps = [
-        "//folly:executor",
-        "//folly:memory",
-        "//folly:optional",
-        "//folly/executors/task_queue:priority_lifo_sem_mpmc_queue",
-        "//folly/executors/task_queue:priority_unbounded_blocking_queue",
-        "//folly/executors/task_queue:unbounded_blocking_queue",
-        "//folly/portability:gflags",
-        "//folly/synchronization:throttled_lifo_sem",
+        "folly//folly:executor",
+        "folly//folly:memory",
+        "folly//folly:optional",
+        "folly//folly/executors/task_queue:priority_lifo_sem_mpmc_queue",
+        "folly//folly/executors/task_queue:priority_unbounded_blocking_queue",
+        "folly//folly/executors/task_queue:unbounded_blocking_queue",
+        "folly//folly/portability:gflags",
+        "folly//folly/synchronization:throttled_lifo_sem",
     ],
     exported_deps = [
         ":queue_observer",
@@ -68,7 +68,7 @@ cpp_library(
     name = "drivable_executor",
     headers = ["DrivableExecutor.h"],
     exported_deps = [
-        "//folly:executor",
+        "folly//folly:executor",
     ],
 )
 
@@ -77,11 +77,11 @@ cpp_library(
     srcs = ["EDFThreadPoolExecutor.cpp"],
     headers = ["EDFThreadPoolExecutor.h"],
     deps = [
-        "//folly:scope_guard",
-        "//folly/concurrency:process_local_unique_id",
-        "//folly/synchronization:lifo_sem",
-        "//folly/synchronization:throttled_lifo_sem",
-        "//folly/tracing:static_tracepoint",
+        "folly//folly:scope_guard",
+        "folly//folly/concurrency:process_local_unique_id",
+        "folly//folly/synchronization:lifo_sem",
+        "folly//folly/synchronization:throttled_lifo_sem",
+        "folly//folly/tracing:static_tracepoint",
     ],
     exported_deps = [
         ":soft_real_time_executor",
@@ -97,7 +97,7 @@ cpp_library(
     headers = ["FiberIOExecutor.h"],
     exported_deps = [
         ":io_executor",
-        "//folly/fibers:fiber_manager_map",
+        "folly//folly/fibers:fiber_manager_map",
     ],
 )
 
@@ -105,8 +105,8 @@ cpp_library(
     name = "future_executor",
     headers = ["FutureExecutor.h"],
     exported_deps = [
-        "//folly/functional:invoke",
-        "//folly/futures:core",
+        "folly//folly/functional:invoke",
+        "folly//folly/futures:core",
     ],
 )
 
@@ -118,16 +118,16 @@ cpp_library(
         ":cpu_thread_pool_executor",
         ":inline_executor",
         ":io_thread_pool_executor",
-        "//folly:function",
-        "//folly:shared_mutex",
-        "//folly:singleton",
-        "//folly/detail:async_trace",
-        "//folly/system:hardware_concurrency",
+        "folly//folly:function",
+        "folly//folly:shared_mutex",
+        "folly//folly:singleton",
+        "folly//folly/detail:async_trace",
+        "folly//folly/system:hardware_concurrency",
     ],
     exported_deps = [
         ":io_executor",
-        "//folly:executor",
-        "//folly/portability:gflags",
+        "folly//folly:executor",
+        "folly//folly/portability:gflags",
     ],
 )
 
@@ -136,13 +136,13 @@ cpp_library(
     srcs = ["GlobalThreadPoolList.cpp"],
     headers = ["GlobalThreadPoolList.h"],
     deps = [
-        "//folly:cpp_attributes",
-        "//folly/system:thread_id",
+        "folly//folly:cpp_attributes",
+        "folly//folly/system:thread_id",
     ],
     exported_deps = [
-        "//folly:indestructible",
-        "//folly:synchronized",
-        "//folly:thread_local",
+        "folly//folly:indestructible",
+        "folly//folly:synchronized",
+        "folly//folly:thread_local",
     ],
 )
 
@@ -151,12 +151,12 @@ cpp_library(
     srcs = ["InlineExecutor.cpp"],
     headers = ["InlineExecutor.h"],
     deps = [
-        "//folly:indestructible",
+        "folly//folly:indestructible",
     ],
     exported_deps = [
-        "//folly:c_portability",
-        "//folly:cpp_attributes",
-        "//folly:executor",
+        "folly//folly:c_portability",
+        "folly//folly:cpp_attributes",
+        "folly//folly:executor",
     ],
 )
 
@@ -165,10 +165,10 @@ cpp_library(
     srcs = ["ManualExecutor.cpp"],
     headers = ["ManualExecutor.h"],
     exported_deps = [
-        "//folly/executors:drivable_executor",
-        "//folly/executors:scheduled_executor",
-        "//folly/executors:sequenced_executor",
-        "//folly/synchronization:lifo_sem",
+        "folly//folly/executors:drivable_executor",
+        "folly//folly/executors:scheduled_executor",
+        "folly//folly/executors:sequenced_executor",
+        "folly//folly/synchronization:lifo_sem",
     ],
 )
 
@@ -176,7 +176,7 @@ cpp_library(
     name = "io_executor",
     headers = ["IOExecutor.h"],
     exported_deps = [
-        "//folly:executor",
+        "folly//folly:executor",
     ],
 )
 
@@ -185,8 +185,8 @@ cpp_library(
     headers = ["IOObjectCache.h"],
     exported_deps = [
         ":global_executor",
-        "//folly:thread_local",
-        "//folly/io/async:async_base",
+        "folly//folly:thread_local",
+        "folly//folly/io/async:async_base",
     ],
 )
 
@@ -195,16 +195,16 @@ cpp_library(
     srcs = ["IOThreadPoolExecutor.cpp"],
     headers = ["IOThreadPoolExecutor.h"],
     deps = [
-        "//folly/detail:memory_idler",
-        "//folly/portability:gflags",
+        "folly//folly/detail:memory_idler",
+        "folly//folly/portability:gflags",
     ],
     exported_deps = [
         ":io_executor",
         ":queue_observer",
         ":thread_pool_executor",
-        "//folly:portability",
-        "//folly/io/async:event_base_manager",
-        "//folly/synchronization:relaxed_atomic",
+        "folly//folly:portability",
+        "folly//folly/io/async:event_base_manager",
+        "folly//folly/synchronization:relaxed_atomic",
     ],
     external_deps = [
         "glog",
@@ -216,7 +216,7 @@ cpp_library(
     srcs = ["SoftRealTimeExecutor.cpp"],
     headers = ["SoftRealTimeExecutor.h"],
     exported_deps = [
-        "//folly:executor",
+        "folly//folly:executor",
     ],
     external_deps = [
         "glog",
@@ -227,8 +227,8 @@ cpp_library(
     name = "scheduled_executor",
     headers = ["ScheduledExecutor.h"],
     exported_deps = [
-        "//folly:executor",
-        "//folly/lang:exception",
+        "folly//folly:executor",
+        "folly//folly/lang:exception",
     ],
 )
 
@@ -241,11 +241,11 @@ cpp_library(
     exported_deps = [
         ":global_executor",
         ":serialized_executor",
-        "//folly:exception_string",
-        "//folly/concurrency:unbounded_queue",
-        "//folly/io/async:request_context",
-        "//folly/synchronization:distributed_mutex",
-        "//folly/synchronization:relaxed_atomic",
+        "folly//folly:exception_string",
+        "folly//folly/concurrency:unbounded_queue",
+        "folly//folly/io/async:request_context",
+        "folly//folly/synchronization:distributed_mutex",
+        "folly//folly/synchronization:relaxed_atomic",
     ],
     exported_external_deps = [
         "glog",
@@ -256,7 +256,7 @@ cpp_library(
     name = "sequenced_executor",
     headers = ["SequencedExecutor.h"],
     exported_deps = [
-        "//folly:executor",
+        "folly//folly:executor",
     ],
 )
 
@@ -274,13 +274,13 @@ cpp_library(
     headers = ["StrandExecutor.h"],
     deps = [
         ":global_executor",
-        "//folly:exception_string",
+        "folly//folly:exception_string",
     ],
     exported_deps = [
         ":serialized_executor",
-        "//folly:optional",
-        "//folly/concurrency:unbounded_queue",
-        "//folly/io/async:request_context",
+        "folly//folly:optional",
+        "folly//folly/concurrency:unbounded_queue",
+        "folly//folly/io/async:request_context",
     ],
     external_deps = [
         "glog",
@@ -292,22 +292,22 @@ cpp_library(
     srcs = ["ThreadPoolExecutor.cpp"],
     headers = ["ThreadPoolExecutor.h"],
     deps = [
-        "//folly/concurrency:process_local_unique_id",
-        "//folly/portability:pthread",
-        "//folly/synchronization:asymmetric_thread_fence",
-        "//folly/tracing:static_tracepoint",
+        "folly//folly/concurrency:process_local_unique_id",
+        "folly//folly/portability:pthread",
+        "folly//folly/synchronization:asymmetric_thread_fence",
+        "folly//folly/tracing:static_tracepoint",
     ],
     exported_deps = [
         ":global_thread_pool_list",
-        "//folly:default_keep_alive_executor",
-        "//folly:memory",
-        "//folly:shared_mutex",
-        "//folly/executors/task_queue:lifo_sem_mpmc_queue",
-        "//folly/executors/thread_factory:named_thread_factory",
-        "//folly/io/async:request_context",
-        "//folly/portability:gflags",
-        "//folly/synchronization:atomic_struct",
-        "//folly/synchronization:baton",
+        "folly//folly:default_keep_alive_executor",
+        "folly//folly:memory",
+        "folly//folly:shared_mutex",
+        "folly//folly/executors/task_queue:lifo_sem_mpmc_queue",
+        "folly//folly/executors/thread_factory:named_thread_factory",
+        "folly//folly/io/async:request_context",
+        "folly//folly/portability:gflags",
+        "folly//folly/synchronization:atomic_struct",
+        "folly//folly/synchronization:baton",
     ],
     exported_external_deps = [
         "glog",
@@ -319,15 +319,15 @@ cpp_library(
     srcs = ["ThreadedExecutor.cpp"],
     headers = ["ThreadedExecutor.h"],
     deps = [
-        "//folly:scope_guard",
-        "//folly/executors/thread_factory:named_thread_factory",
-        "//folly/system:thread_name",
+        "folly//folly:scope_guard",
+        "folly//folly/executors/thread_factory:named_thread_factory",
+        "folly//folly/system:thread_name",
     ],
     exported_deps = [
-        "//folly:executor",
-        "//folly/concurrency:unbounded_queue",
-        "//folly/container:f14_hash",
-        "//folly/executors/thread_factory:thread_factory",
+        "folly//folly:executor",
+        "folly//folly/concurrency:unbounded_queue",
+        "folly//folly/container:f14_hash",
+        "folly//folly/executors/thread_factory:thread_factory",
     ],
     external_deps = [
         "glog",
@@ -340,7 +340,7 @@ cpp_library(
     headers = ["TimedDrivableExecutor.h"],
     exported_deps = [
         ":drivable_executor",
-        "//folly/concurrency:unbounded_queue",
+        "folly//folly/concurrency:unbounded_queue",
     ],
 )
 
@@ -350,7 +350,7 @@ cpp_library(
     headers = ["TimekeeperScheduledExecutor.h"],
     exported_deps = [
         ":scheduled_executor",
-        "//folly/futures:core",
+        "folly//folly/futures:core",
     ],
     exported_external_deps = [
         "glog",
@@ -362,12 +362,12 @@ cpp_library(
     srcs = ["QueuedImmediateExecutor.cpp"],
     headers = ["QueuedImmediateExecutor.h"],
     deps = [
-        "//folly:indestructible",
+        "folly//folly:indestructible",
     ],
     exported_deps = [
         ":inline_executor",
-        "//folly:executor",
-        "//folly:thread_local",
+        "folly//folly:executor",
+        "folly//folly:thread_local",
     ],
 )
 
@@ -379,7 +379,7 @@ cpp_library(
         "ExecutorWithPriority-inl.h",
     ],
     exported_deps = [
-        "//folly:executor",
+        "folly//folly:executor",
     ],
     exported_external_deps = [
         "glog",
@@ -394,8 +394,8 @@ cpp_library(
     ],
     exported_deps = [
         ":queue_observer",
-        "//folly:default_keep_alive_executor",
-        "//folly/io/async:async_base",
+        "folly//folly:default_keep_alive_executor",
+        "folly//folly/io/async:async_base",
     ],
 )
 
@@ -404,10 +404,10 @@ cpp_library(
     srcs = ["IOThreadPoolDeadlockDetectorObserver.cpp"],
     headers = ["IOThreadPoolDeadlockDetectorObserver.h"],
     exported_deps = [
-        "//folly:singleton",
-        "//folly/concurrency:deadlock_detector",
-        "//folly/executors:io_thread_pool_executor",
-        "//folly/executors:thread_pool_executor",
+        "folly//folly:singleton",
+        "folly//folly/concurrency:deadlock_detector",
+        "folly//folly/executors:io_thread_pool_executor",
+        "folly//folly/executors:thread_pool_executor",
     ],
 )
 
@@ -418,10 +418,10 @@ cpp_library(
         "QueueObserver.h",
     ],
     exported_deps = [
-        "//folly:function",
-        "//folly:portability",
-        "//folly:synchronized",
-        "//folly/portability:sys_types",
+        "folly//folly:function",
+        "folly//folly:portability",
+        "folly//folly:synchronized",
+        "folly//folly/portability:sys_types",
     ],
 )
 
@@ -431,6 +431,6 @@ cpp_library(
         "VirtualExecutor.h",
     ],
     exported_deps = [
-        "//folly:default_keep_alive_executor",
+        "folly//folly:default_keep_alive_executor",
     ],
 )

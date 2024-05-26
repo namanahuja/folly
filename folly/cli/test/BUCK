@@ -13,10 +13,10 @@ cpp_unittest(
     resources = [
     ],
     deps = [
-        "//folly:subprocess",
-        "//folly/cli:program_options",
-        "//folly/experimental/io:fs_util",
-        "//folly/portability:gtest",
+        "folly//folly:subprocess",
+        "folly//folly/cli:program_options",
+        "folly//folly/experimental/io:fs_util",
+        "folly//folly/portability:gtest",
     ],
     external_deps = [
         "glog",
@@ -28,8 +28,8 @@ cpp_binary(
     srcs = ["NestedCommandLineAppTestHelper.cpp"],
     headers = [],
     deps = [
-        "//folly/cli:program_options",
-        "//folly/portability:gflags",
+        "folly//folly/cli:program_options",
+        "folly//folly/portability:gflags",
     ],
 )
 
@@ -41,11 +41,11 @@ cpp_unittest(
         "FOLLY_PROGRAM_OPTIONS_TEST_HELPER": "$(exe_target :program_options_test_helper)",
     },
     deps = [
-        "//folly:file_util",
-        "//folly:subprocess",
-        "//folly/cli:program_options",
-        "//folly/experimental/io:fs_util",
-        "//folly/portability:gtest",
+        "folly//folly:file_util",
+        "folly//folly:subprocess",
+        "folly//folly/cli:program_options",
+        "folly//folly/experimental/io:fs_util",
+        "folly//folly/portability:gtest",
     ],
     external_deps = [
         "glog",
@@ -57,8 +57,8 @@ cpp_binary(
     srcs = ["ProgramOptionsTestHelper.cpp"],
     headers = [],
     deps = [
-        "//folly:conv",
-        "//folly/cli:program_options",
+        "folly//folly:conv",
+        "folly//folly/cli:program_options",
     ],
     external_deps = [
         "glog",

@@ -11,10 +11,10 @@ cpp_library(
         "Blake2xb.h",
     ],
     deps = [
-        "//folly/lang:bits",
+        "folly//folly/lang:bits",
     ],
     exported_deps = [
-        "//folly:range",
+        "folly//folly:range",
     ],
     exported_external_deps = [
         ("libsodium", None, "sodium"),
@@ -31,19 +31,19 @@ cpp_library(
         "LtHash-inl.h",
     ],
     deps = [
-        "//folly:cpu_id",
-        "//folly:memory",
+        "folly//folly:cpu_id",
+        "folly//folly:memory",
     ],
     exported_deps = [
         ":blake2xb",
-        "//folly:optional",
-        "//folly:range",
-        "//folly/experimental/crypto/detail:lt_hash_internal",
-        "//folly/experimental/crypto/detail:math_operation_avx2_disable",  # @manual
-        "//folly/experimental/crypto/detail:math_operation_simple",  # @manual
-        "//folly/experimental/crypto/detail:math_operation_sse2_disable",  # @manual
-        "//folly/io:iobuf",
-        "//folly/lang:bits",
+        "folly//folly:optional",
+        "folly//folly:range",
+        "folly//folly/experimental/crypto/detail:lt_hash_internal",
+        "folly//folly/experimental/crypto/detail:math_operation_avx2_disable",  # @manual
+        "folly//folly/experimental/crypto/detail:math_operation_simple",  # @manual
+        "folly//folly/experimental/crypto/detail:math_operation_sse2_disable",  # @manual
+        "folly//folly/io:iobuf",
+        "folly//folly/lang:bits",
     ],
     exported_external_deps = [
         ("libsodium", None, "sodium"),
@@ -60,19 +60,19 @@ cpp_library(
         "LtHash-inl.h",
     ],
     deps = [
-        "//folly:cpu_id",
-        "//folly:memory",
+        "folly//folly:cpu_id",
+        "folly//folly:memory",
     ],
     exported_deps = [
         ":blake2xb",
-        "//folly:optional",
-        "//folly:range",
-        "//folly/experimental/crypto/detail:lt_hash_internal",
-        "//folly/experimental/crypto/detail:math_operation_avx2_disable",  # @manual
-        "//folly/experimental/crypto/detail:math_operation_simple",  # @manual
-        "//folly/experimental/crypto/detail:math_operation_sse2",  # @manual
-        "//folly/io:iobuf",
-        "//folly/lang:bits",
+        "folly//folly:optional",
+        "folly//folly:range",
+        "folly//folly/experimental/crypto/detail:lt_hash_internal",
+        "folly//folly/experimental/crypto/detail:math_operation_avx2_disable",  # @manual
+        "folly//folly/experimental/crypto/detail:math_operation_simple",  # @manual
+        "folly//folly/experimental/crypto/detail:math_operation_sse2",  # @manual
+        "folly//folly/io:iobuf",
+        "folly//folly/lang:bits",
     ],
     exported_external_deps = [
         ("libsodium", None, "sodium"),
@@ -89,19 +89,19 @@ cpp_library(
         "LtHash-inl.h",
     ],
     deps = [
-        "//folly:cpu_id",
-        "//folly:memory",
+        "folly//folly:cpu_id",
+        "folly//folly:memory",
     ],
     exported_deps = [
         ":blake2xb",
-        "//folly:optional",
-        "//folly:range",
-        "//folly/experimental/crypto/detail:lt_hash_internal",
-        "//folly/experimental/crypto/detail:math_operation_avx2",  # @manual
-        "//folly/experimental/crypto/detail:math_operation_simple",  # @manual
-        "//folly/experimental/crypto/detail:math_operation_sse2",  # @manual
-        "//folly/io:iobuf",
-        "//folly/lang:bits",
+        "folly//folly:optional",
+        "folly//folly:range",
+        "folly//folly/experimental/crypto/detail:lt_hash_internal",
+        "folly//folly/experimental/crypto/detail:math_operation_avx2",  # @manual
+        "folly//folly/experimental/crypto/detail:math_operation_simple",  # @manual
+        "folly//folly/experimental/crypto/detail:math_operation_sse2",  # @manual
+        "folly//folly/io:iobuf",
+        "folly//folly/lang:bits",
     ],
     exported_external_deps = [
         ("libsodium", None, "sodium"),

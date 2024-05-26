@@ -7,16 +7,16 @@ cpp_library(
     srcs = ["NetOps.cpp"],
     headers = ["NetOps.h"],
     deps = [
-        "//folly:scope_guard",
-        "//folly/net/detail:socket_file_descriptor_map",
+        "folly//folly:scope_guard",
+        "folly//folly/net/detail:socket_file_descriptor_map",
     ],
     exported_deps = [
         ":network_socket",
-        "//folly:portability",
-        "//folly/portability:iovec",
-        "//folly/portability:sys_types",
-        "//folly/portability:time",
-        "//folly/portability:windows",
+        "folly//folly:portability",
+        "folly//folly/portability:iovec",
+        "folly//folly/portability:sys_types",
+        "folly//folly/portability:time",
+        "folly//folly/portability:windows",
     ],
 )
 
@@ -33,8 +33,8 @@ cpp_library(
     name = "network_socket",
     headers = ["NetworkSocket.h"],
     exported_deps = [
-        "//folly/net/detail:socket_file_descriptor_map",
-        "//folly/portability:windows",
+        "folly//folly/net/detail:socket_file_descriptor_map",
+        "folly//folly/portability:windows",
     ],
 )
 
@@ -46,14 +46,14 @@ cpp_library(
         "TcpInfoTypes.h",
     ],
     deps = [
-        "//folly/portability:sockets",
+        "folly//folly/portability:sockets",
     ],
     exported_deps = [
         ":net_ops_dispatcher",
         ":network_socket",
-        "//folly:expected",
-        "//folly:optional",
-        "//folly:string",
+        "folly//folly:expected",
+        "folly//folly:optional",
+        "folly//folly:string",
     ],
     external_deps = [
         "glog",
@@ -67,6 +67,6 @@ cpp_library(
     exported_deps = [
         ":net_ops_dispatcher",
         ":tcpinfo",
-        "//folly:expected",
+        "folly//folly:expected",
     ],
 )

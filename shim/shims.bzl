@@ -414,9 +414,9 @@ def _fix_dep(x: str) -> [
         return "shim//third-party" + x.removeprefix("fbsource//third-party")
     elif x.startswith("third-party//"):
         return "shim//third-party/" + x.removeprefix("third-party//")
-    elif x.startswith("//folly"):
+    elif x.startswith("folly//folly"):
         return "root//" + x.removeprefix("//")
-    elif x.startswith("root//folly"):
+    elif x.startswith("rootfolly//folly"):
         return x
     elif x.startswith("shim//"):
         return x

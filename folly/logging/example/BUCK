@@ -8,9 +8,9 @@ cpp_binary(
     srcs = ["main.cpp"],
     deps = [
         ":lib",
-        "//folly/init:init",
-        "//folly/logging:init",
-        "//folly/logging:logging",
+        "folly//folly/init:init",
+        "folly//folly/logging:init",
+        "folly//folly/logging:logging",
     ],
 )
 
@@ -20,7 +20,7 @@ cpp_library(
     headers = ["lib.h"],
     exported_deps = [
         "fbsource//third-party/fmt:fmt",
-        "//folly:range",
-        "//folly/logging:logging",
+        "folly//folly:range",
+        "folly//folly/logging:logging",
     ],
 )

@@ -10,13 +10,13 @@ cpp_binary(
         "Addr2Line.cpp",
     ],
     deps = [
-        "//folly:range",
-        "//folly/experimental/symbolizer:dwarf",
-        "//folly/experimental/symbolizer:elf",
-        "//folly/experimental/symbolizer:symbolized_frame",
-        "//folly/experimental/symbolizer:symbolizer",
-        "//folly/init:init",
-        "//folly/portability:gflags",
+        "folly//folly:range",
+        "folly//folly/experimental/symbolizer:dwarf",
+        "folly//folly/experimental/symbolizer:elf",
+        "folly//folly/experimental/symbolizer:symbolized_frame",
+        "folly//folly/experimental/symbolizer:symbolizer",
+        "folly//folly/init:init",
+        "folly//folly/portability:gflags",
     ],
 )
 
@@ -67,8 +67,8 @@ cpp_binary(
         ),
     ],
     deps = [
-        "//folly:range",
-        "//folly/experimental/symbolizer:signal_handler",
+        "folly//folly:range",
+        "folly//folly/experimental/symbolizer:signal_handler",
     ],
 )
 

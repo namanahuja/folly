@@ -7,9 +7,9 @@ cpp_library(
     headers = ["NamedThreadFactory.h"],
     exported_deps = [
         ":thread_factory",
-        "//folly:conv",
-        "//folly:range",
-        "//folly/system:thread_name",
+        "folly//folly:conv",
+        "folly//folly:range",
+        "folly//folly/system:thread_name",
     ],
 )
 
@@ -17,10 +17,10 @@ cpp_library(
     name = "priority_thread_factory",
     srcs = ["PriorityThreadFactory.cpp"],
     deps = [
-        "//folly:string",
-        "//folly/portability:sys_resource",
-        "//folly/portability:sys_time",
-        "//folly/system:thread_name",
+        "folly//folly:string",
+        "folly//folly/portability:sys_resource",
+        "folly//folly/portability:sys_time",
+        "folly//folly/system:thread_name",
     ],
     exported_deps = [
         ":init_thread_factory",
@@ -35,7 +35,7 @@ cpp_library(
     headers = ["InitThreadFactory.h"],
     exported_deps = [
         ":thread_factory",
-        "//folly:scope_guard",
+        "folly//folly:scope_guard",
     ],
 )
 
@@ -43,6 +43,6 @@ cpp_library(
     name = "thread_factory",
     headers = ["ThreadFactory.h"],
     exported_deps = [
-        "//folly:executor",
+        "folly//folly:executor",
     ],
 )

@@ -8,11 +8,11 @@ cpp_benchmark(
     srcs = ["Blake2xbBenchmark.cpp"],
     headers = [],
     deps = [
-        "//folly:benchmark",
-        "//folly:random",
-        "//folly/experimental/crypto:blake2xb",
-        "//folly/init:init",
-        "//folly/io:iobuf",
+        "folly//folly:benchmark",
+        "folly//folly:random",
+        "folly//folly/experimental/crypto:blake2xb",
+        "folly//folly/init:init",
+        "folly//folly/io:iobuf",
     ],
     external_deps = [
         "glog",
@@ -25,10 +25,10 @@ cpp_unittest(
     srcs = ["Blake2xbTest.cpp"],
     headers = [],
     deps = [
-        "//folly:string",
-        "//folly/experimental/crypto:blake2xb",
-        "//folly/io:iobuf",
-        "//folly/portability:gtest",
+        "folly//folly:string",
+        "folly//folly/experimental/crypto:blake2xb",
+        "folly//folly/io:iobuf",
+        "folly//folly/portability:gtest",
     ],
     external_deps = [
         ("libsodium", None, "sodium"),
@@ -42,11 +42,11 @@ cpp_benchmark(
     ],
     headers = [],
     deps = [
-        "//folly:benchmark",
-        "//folly:random",
-        "//folly/experimental/crypto:lt_hash",
-        "//folly/init:init",
-        "//folly/io:iobuf",
+        "folly//folly:benchmark",
+        "folly//folly:random",
+        "folly//folly/experimental/crypto:lt_hash",
+        "folly//folly/init:init",
+        "folly//folly/io:iobuf",
     ],
     external_deps = [
         "glog",
@@ -61,11 +61,11 @@ cpp_benchmark(
     ],
     headers = [],
     deps = [
-        "//folly:benchmark",
-        "//folly:random",
-        "//folly/experimental/crypto:lt_hash_sse2",  # @manual
-        "//folly/init:init",
-        "//folly/io:iobuf",
+        "folly//folly:benchmark",
+        "folly//folly:random",
+        "folly//folly/experimental/crypto:lt_hash_sse2",  # @manual
+        "folly//folly/init:init",
+        "folly//folly/io:iobuf",
     ],
     external_deps = [
         "glog",
@@ -80,11 +80,11 @@ cpp_benchmark(
     ],
     headers = [],
     deps = [
-        "//folly:benchmark",
-        "//folly:random",
-        "//folly/experimental/crypto:lt_hash_avx2",  # @manual
-        "//folly/init:init",
-        "//folly/io:iobuf",
+        "folly//folly:benchmark",
+        "folly//folly:random",
+        "folly//folly/experimental/crypto:lt_hash_avx2",  # @manual
+        "folly//folly/init:init",
+        "folly//folly/io:iobuf",
     ],
     external_deps = [
         "glog",
@@ -99,11 +99,11 @@ cpp_unittest(
     ],
     headers = [],
     deps = [
-        "//folly:random",
-        "//folly:string",
-        "//folly/experimental/crypto:lt_hash",
-        "//folly/io:iobuf",
-        "//folly/portability:gtest",
+        "folly//folly:random",
+        "folly//folly:string",
+        "folly//folly/experimental/crypto:lt_hash",
+        "folly//folly/io:iobuf",
+        "folly//folly/portability:gtest",
     ],
     external_deps = [
         ("libsodium", None, "sodium"),
@@ -117,11 +117,11 @@ cpp_unittest(
     ],
     headers = [],
     deps = [
-        "//folly:random",
-        "//folly:string",
-        "//folly/experimental/crypto:lt_hash_sse2",  # @manual
-        "//folly/io:iobuf",
-        "//folly/portability:gtest",
+        "folly//folly:random",
+        "folly//folly:string",
+        "folly//folly/experimental/crypto:lt_hash_sse2",  # @manual
+        "folly//folly/io:iobuf",
+        "folly//folly/portability:gtest",
     ],
     external_deps = [
         ("libsodium", None, "sodium"),
@@ -135,11 +135,11 @@ cpp_unittest(
     ],
     headers = [],
     deps = [
-        "//folly:random",
-        "//folly:string",
-        "//folly/experimental/crypto:lt_hash_avx2",  # @manual
-        "//folly/io:iobuf",
-        "//folly/portability:gtest",
+        "folly//folly:random",
+        "folly//folly:string",
+        "folly//folly/experimental/crypto:lt_hash_avx2",  # @manual
+        "folly//folly/io:iobuf",
+        "folly//folly/portability:gtest",
     ],
     external_deps = [
         ("libsodium", None, "sodium"),

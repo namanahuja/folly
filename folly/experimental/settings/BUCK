@@ -11,21 +11,21 @@ cpp_library(
         "detail/SettingsImpl.h",
     ],
     deps = [
-        "//folly:synchronized",
+        "folly//folly:synchronized",
     ],
     exported_deps = [
         ":immutables",
         ":types",
-        "//folly:conv",
-        "//folly:function",
-        "//folly:likely",
-        "//folly:optional",
-        "//folly:range",
-        "//folly:shared_mutex",
-        "//folly:thread_local",
-        "//folly:utility",
-        "//folly/container:f14_hash",
-        "//folly/lang:aligned",
+        "folly//folly:conv",
+        "folly//folly:function",
+        "folly//folly:likely",
+        "folly//folly:optional",
+        "folly//folly:range",
+        "folly//folly:shared_mutex",
+        "folly//folly:thread_local",
+        "folly//folly:utility",
+        "folly//folly/container:f14_hash",
+        "folly//folly/lang:aligned",
     ],
 )
 
@@ -37,11 +37,11 @@ cpp_library(
     headers = [
     ],
     exported_deps = [
-        "//folly:conv",
-        "//folly:expected",
-        "//folly:range",
-        "//folly:unit",
-        "//folly:utility",
+        "folly//folly:conv",
+        "folly//folly:expected",
+        "folly//folly:range",
+        "folly//folly:unit",
+        "folly//folly:utility",
     ],
 )
 
@@ -53,10 +53,10 @@ cpp_library(
     headers = [
     ],
     deps = [
-        "//folly:indestructible",
-        "//folly:synchronized",
+        "folly//folly:indestructible",
+        "folly//folly:synchronized",
     ],
     exported_deps = [
-        "//folly/container:f14_hash",
+        "folly//folly/container:f14_hash",
     ],
 )

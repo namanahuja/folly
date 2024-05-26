@@ -15,12 +15,12 @@ cpp_library(
     deps = [
         ":exception_tracer_callbacks",
         ":stacktrace",
-        "//folly:range",
-        "//folly:synchronized",
-        "//folly:thread_local",
-        "//folly/experimental/symbolizer:symbolizer",
-        "//folly/hash:spooky_hash_v2",
-        "//folly/synchronization:rw_spin_lock",
+        "folly//folly:range",
+        "folly//folly:synchronized",
+        "folly//folly:thread_local",
+        "folly//folly/experimental/symbolizer:symbolizer",
+        "folly//folly/hash:spooky_hash_v2",
+        "folly//folly/synchronization:rw_spin_lock",
     ],
     exported_deps = [
         ":exception_tracer_base",
@@ -38,7 +38,7 @@ cpp_library(
         ":exception_tracer_base",
         ":exception_tracer_callbacks",
         ":stacktrace",
-        "//folly/experimental/symbolizer:symbolizer",
+        "folly//folly/experimental/symbolizer:symbolizer",
     ],
     exported_deps = [
         ":exception_tracer_callbacks",
@@ -55,13 +55,13 @@ cpp_library(
     deps = [
         ":exception_abi",
         ":stacktrace",
-        "//folly:cpp_attributes",
-        "//folly:portability",
-        "//folly:string",
-        "//folly/experimental/symbolizer:symbolizer",
+        "folly//folly:cpp_attributes",
+        "folly//folly:portability",
+        "folly//folly:string",
+        "folly//folly/experimental/symbolizer:symbolizer",
     ],
     exported_deps = [
-        "//folly/portability:config",
+        "folly//folly/portability:config",
     ],
     external_deps = [
         "glog",
@@ -75,27 +75,27 @@ cpp_library(
     headers = ["ExceptionTracerLib.h"],
     compiler_flags = select({
         "DEFAULT": [],
-        # @fb-only: "ovr_config//third-party/libgcc:11.x": ["-DFOLLY_STATIC_LIBSTDCXX=1"], 
+        # @fb-only: "ovr_config//third-party/libgcc:11.x": ["-DFOLLY_STATIC_LIBSTDCXX=1"],
     }),
     exported_linker_flags = select({
         "DEFAULT": [],
         # @lint-ignore-every BUCKFORMAT
         # @fb-only: "ovr_config//third-party/libgcc:11.x": [
-            # @fb-only: "-Wl,--wrap=__cxa_throw", 
-            # @fb-only: "-Wl,--wrap=__cxa_rethrow", 
-            # @fb-only: "-Wl,--wrap=__cxa_begin_catch", 
-            # @fb-only: "-Wl,--wrap=__cxa_end_catch", 
-            # @fb-only: "-Wl,--wrap=_ZSt17rethrow_exceptionNSt15__exception_ptr13exception_ptrE", 
-        # @fb-only: ], 
+            # @fb-only: "-Wl,--wrap=__cxa_throw",
+            # @fb-only: "-Wl,--wrap=__cxa_rethrow",
+            # @fb-only: "-Wl,--wrap=__cxa_begin_catch",
+            # @fb-only: "-Wl,--wrap=__cxa_end_catch",
+            # @fb-only: "-Wl,--wrap=_ZSt17rethrow_exceptionNSt15__exception_ptr13exception_ptrE",
+        # @fb-only: ],
     }),
     link_whole = True,
     supports_python_dlopen = True,
     tags = ["EXCLUDED_FROM_LINK_GROUPS"],
     deps = [
-        "//folly:indestructible",
-        "//folly:portability",
-        "//folly:shared_mutex",
-        "//folly:synchronized",
+        "folly//folly:indestructible",
+        "folly//folly:portability",
+        "folly//folly:shared_mutex",
+        "folly//folly:synchronized",
     ],
     external_deps = [
         ("glibc", None, "dl"),
@@ -107,10 +107,10 @@ cpp_library(
     srcs = ["StackTrace.cpp"],
     headers = ["StackTrace.h"],
     deps = [
-        "//folly/experimental/symbolizer:stack_trace",
+        "folly//folly/experimental/symbolizer:stack_trace",
     ],
     exported_deps = [
-        "//folly:portability",
+        "folly//folly:portability",
     ],
 )
 
@@ -124,8 +124,8 @@ cpp_library(
     ],
     exported_deps = [
         ":stacktrace",
-        "//folly:synchronized",
-        "//folly/container:f14_hash",
+        "folly//folly:synchronized",
+        "folly//folly/container:f14_hash",
     ],
 )
 
@@ -138,7 +138,7 @@ cpp_library(
     deps = [
         ":exception_tracer_callbacks",
         ":smart_exception_tracer_singleton",
-        "//folly/experimental/symbolizer:symbolizer",
+        "folly//folly/experimental/symbolizer:symbolizer",
     ],
 )
 
@@ -150,17 +150,17 @@ cpp_library(
         ":exception_tracer_callbacks",
         ":smart_exception_tracer_singleton",
         ":stacktrace",
-        "//folly:map_util",
-        "//folly:scope_guard",
-        "//folly:synchronized",
-        "//folly/container:f14_hash",
-        "//folly/experimental/symbolizer:symbolizer",
-        "//folly/lang:exception",
+        "folly//folly:map_util",
+        "folly//folly:scope_guard",
+        "folly//folly:synchronized",
+        "folly//folly/container:f14_hash",
+        "folly//folly/experimental/symbolizer:symbolizer",
+        "folly//folly/lang:exception",
     ],
     exported_deps = [
         ":exception_tracer_base",
         ":exception_tracer_callbacks",
-        "//folly:exception_wrapper",
+        "folly//folly:exception_wrapper",
     ],
     external_deps = [
         "glog",

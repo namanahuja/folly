@@ -7,9 +7,9 @@ cpp_benchmark(
     name = "UnboundedBlockingQueueBench",
     srcs = ["UnboundedBlockingQueueBench.cpp"],
     deps = [
-        "//folly:benchmark",
-        "//folly/executors/task_queue:unbounded_blocking_queue",
-        "//folly/init:init",
+        "folly//folly:benchmark",
+        "folly//folly/executors/task_queue:unbounded_blocking_queue",
+        "folly//folly/init:init",
     ],
     external_deps = [
         "glog",
@@ -21,10 +21,10 @@ cpp_unittest(
     name = "PriorityUnboundedBlockingQueueTest",
     srcs = ["PriorityUnboundedBlockingQueueTest.cpp"],
     deps = [
-        "//folly/container:enumerate",
-        "//folly/executors/task_queue:priority_unbounded_blocking_queue",
-        "//folly/portability:gtest",
-        "//folly/synchronization:baton",
+        "folly//folly/container:enumerate",
+        "folly//folly/executors/task_queue:priority_unbounded_blocking_queue",
+        "folly//folly/portability:gtest",
+        "folly//folly/synchronization:baton",
     ],
 )
 
@@ -32,9 +32,9 @@ cpp_unittest(
     name = "UnboundedBlockingQueueTest",
     srcs = ["UnboundedBlockingQueueTest.cpp"],
     deps = [
-        "//folly/executors/task_queue:unbounded_blocking_queue",
-        "//folly/portability:gtest",
-        "//folly/synchronization:baton",
+        "folly//folly/executors/task_queue:unbounded_blocking_queue",
+        "folly//folly/portability:gtest",
+        "folly//folly/synchronization:baton",
     ],
 )
 
@@ -42,9 +42,9 @@ cpp_unittest(
     name = "PriorityLifoSemMPMCQueueTest",
     srcs = ["PriorityLifoSemMPMCQueueTest.cpp"],
     deps = [
-        "//folly:range",
-        "//folly/container:enumerate",
-        "//folly/executors/task_queue:priority_lifo_sem_mpmc_queue",
-        "//folly/portability:gtest",
+        "folly//folly:range",
+        "folly//folly/container:enumerate",
+        "folly//folly/executors/task_queue:priority_lifo_sem_mpmc_queue",
+        "folly//folly/portability:gtest",
     ],
 )

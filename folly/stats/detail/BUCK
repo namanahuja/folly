@@ -6,7 +6,7 @@ cpp_library(
     name = "bucket",
     headers = ["Bucket.h"],
     exported_deps = [
-        "//folly:constexpr_math",
+        "folly//folly:constexpr_math",
     ],
 )
 
@@ -19,8 +19,8 @@ cpp_library(
     ],
     exported_deps = [
         ":sliding_window",
-        "//folly:shared_mutex",
-        "//folly/stats:digest_builder",
+        "folly//folly:shared_mutex",
+        "folly//folly/stats:digest_builder",
     ],
 )
 
@@ -33,7 +33,7 @@ cpp_library(
         "SlidingWindow-inl.h",
     ],
     exported_deps = [
-        "//folly:function",
+        "folly//folly:function",
     ],
 )
 

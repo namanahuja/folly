@@ -7,7 +7,7 @@ cpp_unittest(
     srcs = ["IOBuf.cpp"],
     headers = [],
     deps = [
-        "//folly/io:iobuf",
-        "//folly/portability:gtest",
+        "folly//folly/io:iobuf",
+        "folly//folly/portability:gtest",
     ],
 )

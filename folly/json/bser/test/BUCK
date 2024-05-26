@@ -7,8 +7,8 @@ cpp_unittest(
     srcs = ["BserTest.cpp"],
     headers = [],
     deps = [
-        "//folly:string",
-        "//folly/json/bser:bser",
-        "//folly/portability:gtest",
+        "folly//folly:string",
+        "folly//folly/json/bser:bser",
+        "folly//folly/portability:gtest",
     ],
 )

@@ -7,10 +7,10 @@ cpp_library(
     srcs = ["AsyncTrace.cpp"],
     headers = ["AsyncTrace.h"],
     deps = [
-        "//folly:portability",
+        "folly//folly:portability",
     ],
     exported_deps = [
-        "//folly:optional",
+        "folly//folly:optional",
     ],
 )
 
@@ -18,7 +18,7 @@ cpp_library(
     name = "atomic_hash_utils",
     headers = ["AtomicHashUtils.h"],
     exported_deps = [
-        "//folly/portability:asm",
+        "folly//folly/portability:asm",
     ],
 )
 
@@ -26,9 +26,9 @@ cpp_library(
     name = "atomic_unordered_map_utils",
     headers = ["AtomicUnorderedMapUtils.h"],
     exported_deps = [
-        "//folly:exception",
-        "//folly/portability:sys_mman",
-        "//folly/portability:unistd",
+        "folly//folly:exception",
+        "folly//folly/portability:sys_mman",
+        "folly//folly/portability:unistd",
     ],
 )
 
@@ -36,7 +36,7 @@ cpp_library(
     name = "discriminated_ptr_detail",
     headers = ["DiscriminatedPtrDetail.h"],
     exported_deps = [
-        "//folly/functional:invoke",
+        "folly//folly/functional:invoke",
     ],
 )
 
@@ -45,10 +45,10 @@ cpp_library(
     srcs = ["FileUtilDetail.cpp"],
     headers = ["FileUtilDetail.h"],
     deps = [
-        "//folly/portability:config",
+        "folly//folly/portability:config",
     ],
     exported_deps = [
-        "//folly/portability:sys_types",
+        "folly//folly/portability:sys_types",
     ],
 )
 
@@ -57,8 +57,8 @@ cpp_library(
     headers = ["FileUtilVectorDetail.h"],
     exported_deps = [
         ":file_util_detail",
-        "//folly/portability:sys_uio",
-        "//folly/portability:unistd",
+        "folly//folly/portability:sys_uio",
+        "folly//folly/portability:unistd",
     ],
 )
 
@@ -75,13 +75,13 @@ cpp_library(
         "Futex-inl.h",
     ],
     deps = [
-        "//folly:scope_guard",
-        "//folly/hash:hash",
-        "//folly/portability:sys_syscall",
+        "folly//folly:scope_guard",
+        "folly//folly/hash:hash",
+        "folly//folly/portability:sys_syscall",
     ],
     exported_deps = [
-        "//folly/portability:unistd",
-        "//folly/synchronization:parking_lot",
+        "folly//folly/portability:unistd",
+        "folly//folly/synchronization:parking_lot",
     ],
 )
 
@@ -95,10 +95,10 @@ cpp_library(
     srcs = ["IPAddress.cpp"],
     headers = ["IPAddress.h"],
     deps = [
-        "//folly/portability:fmt_compile",
+        "folly//folly/portability:fmt_compile",
     ],
     exported_deps = [
-        "//folly/portability:sockets",
+        "folly//folly/portability:sockets",
     ],
 )
 
@@ -124,23 +124,23 @@ cpp_library(
     srcs = ["MemoryIdler.cpp"],
     headers = ["MemoryIdler.h"],
     deps = [
-        "//folly:glog",
-        "//folly:portability",
-        "//folly:scope_guard",
-        "//folly/concurrency:cache_locality",
-        "//folly/memory:mallctl_helper",
-        "//folly/memory:malloc",
-        "//folly/portability:gflags",
-        "//folly/portability:pthread",
-        "//folly/portability:sys_mman",
-        "//folly/portability:unistd",
-        "//folly/system:pid",
+        "folly//folly:glog",
+        "folly//folly:portability",
+        "folly//folly:scope_guard",
+        "folly//folly/concurrency:cache_locality",
+        "folly//folly/memory:mallctl_helper",
+        "folly//folly/memory:malloc",
+        "folly//folly/portability:gflags",
+        "folly//folly/portability:pthread",
+        "folly//folly/portability:sys_mman",
+        "folly//folly/portability:unistd",
+        "folly//folly/system:pid",
     ],
     exported_deps = [
         ":futex",
-        "//folly/hash:hash",
-        "//folly/synchronization:atomic_struct",
-        "//folly/system:thread_id",
+        "folly//folly/hash:hash",
+        "folly//folly/synchronization:atomic_struct",
+        "folly//folly/system:thread_id",
     ],
 )
 
@@ -148,17 +148,17 @@ cpp_library(
     name = "perf_scoped",
     srcs = ["PerfScoped.cpp"],
     headers = ["PerfScoped.h"],
-    # folly subprocess is not supported on windows
-    os_deps = [
-        (
-            "linux",
-            ["//folly:subprocess"],
-        ),
-    ],
+    # # folly subprocess is not supported on windows
+    # os_deps = [
+    #     (
+    #         "linux",
+    #         ["folly//folly:subprocess"],
+    #     ),
+    # ],
     deps = [
-        "//folly:conv",
-        "//folly/experimental:test_util",
-        "//folly/system:pid",
+        "folly//folly:conv",
+        "folly//folly/experimental:test_util",
+        "folly//folly/system:pid",
     ],
 )
 
@@ -166,7 +166,7 @@ cpp_library(
     name = "mpmc_pipeline_detail",
     headers = ["MPMCPipelineDetail.h"],
     exported_deps = [
-        "//folly:mpmc_queue",
+        "folly//folly:mpmc_queue",
     ],
 )
 
@@ -175,13 +175,13 @@ cpp_library(
     headers = ["PolyDetail.h"],
     exported_deps = [
         ":typelist",
-        "//folly:poly_exception",
-        "//folly:portability",
-        "//folly:traits",
-        "//folly:utility",
-        "//folly/functional:invoke",
-        "//folly/lang:exception",
-        "//folly/lang:static_const",
+        "folly//folly:poly_exception",
+        "folly//folly:portability",
+        "folly//folly:traits",
+        "folly//folly:utility",
+        "folly//folly/functional:invoke",
+        "folly//folly/lang:exception",
+        "folly//folly/lang:static_const",
     ],
 )
 
@@ -191,10 +191,10 @@ cpp_library(
     headers = ["RangeCommon.h"],
     undefined_symbols = True,  # TODO(T23121628): fix deps and remove
     deps = [
-        "//folly/container:sparse_byte_set",
+        "folly//folly/container:sparse_byte_set",
     ],
     exported_deps = [
-        "//folly:likely",
+        "folly//folly:likely",
     ],
 )
 
@@ -205,8 +205,8 @@ cpp_library(
     undefined_symbols = True,  # TODO(T23121628): fix deps and remove
     deps = [
         ":sse",
-        "//folly:likely",
-        "//folly:portability",
+        "folly//folly:likely",
+        "folly//folly:portability",
     ],
     exported_deps = [
         ":range_common",
@@ -217,7 +217,7 @@ cpp_library(
     name = "singleton",
     headers = ["Singleton.h"],
     exported_deps = [
-        "//folly:traits",
+        "folly//folly:traits",
     ],
 )
 
@@ -226,8 +226,8 @@ cpp_library(
     headers = ["SlowFingerprint.h"],
     exported_deps = [
         ":fingerprint_polynomial",
-        "//folly:fingerprint",
-        "//folly:range",
+        "folly//folly:fingerprint",
+        "folly//folly:range",
     ],
 )
 
@@ -236,7 +236,7 @@ cpp_library(
     srcs = ["Sse.cpp"],
     headers = ["Sse.h"],
     exported_deps = [
-        "//folly:portability",
+        "folly//folly:portability",
     ],
 )
 
@@ -245,9 +245,9 @@ cpp_library(
     headers = ["SimdCharPlatform.h"],
     exported_deps = [
         ":simd_for_each",
-        "//folly:portability",
-        "//folly/algorithm/simd:movemask",
-        "//folly/lang:bits",
+        "folly//folly:portability",
+        "folly//folly/algorithm/simd:movemask",
+        "folly//folly/lang:bits",
     ],
 )
 
@@ -257,7 +257,7 @@ cpp_library(
     exported_deps = [
         ":simd_for_each",
         ":unroll_utils",
-        "//folly:c_portability",
+        "folly//folly:c_portability",
     ],
 )
 
@@ -266,7 +266,7 @@ cpp_library(
     headers = ["SimdForEach.h"],
     exported_deps = [
         ":unroll_utils",
-        "//folly:c_portability",
+        "folly//folly:c_portability",
     ],
 )
 
@@ -280,7 +280,7 @@ cpp_library(
     exported_deps = [
         ":simd_any_of",
         ":simd_char_platform",
-        "//folly:range",
+        "folly//folly:range",
     ],
 )
 
@@ -292,16 +292,16 @@ cpp_library(
         "SplitStringSimdImpl.h",
     ],
     deps = [
-        "//folly:fbstring",
-        "//folly:fbvector",
-        "//folly:small_vector",
+        "folly//folly:fbstring",
+        "folly//folly:fbvector",
+        "folly//folly:small_vector",
     ],
     exported_deps = [
         ":simd_char_platform",
         ":simd_for_each",
-        "//folly:portability",
-        "//folly:range",
-        "//folly/lang:bits",
+        "folly//folly:portability",
+        "folly//folly:range",
+        "folly//folly/lang:bits",
     ],
 )
 
@@ -310,8 +310,8 @@ cpp_library(
     srcs = ["SocketFastOpen.cpp"],
     headers = ["SocketFastOpen.h"],
     exported_deps = [
-        "//folly/net:network_socket",
-        "//folly/portability:sockets",
+        "folly//folly/net:network_socket",
+        "folly//folly/portability:sockets",
     ],
 )
 
@@ -320,16 +320,16 @@ cpp_library(
     srcs = ["StaticSingletonManager.cpp"],
     headers = ["StaticSingletonManager.h"],
     deps = [
-        "//folly/memory:reentrant_allocator",
+        "folly//folly/memory:reentrant_allocator",
     ],
     exported_deps = [
         ":singleton",
-        "//folly:c_portability",
-        "//folly:indestructible",
-        "//folly:likely",
-        "//folly:utility",
-        "//folly/lang:thunk",
-        "//folly/lang:type_info",
+        "folly//folly:c_portability",
+        "folly//folly:indestructible",
+        "folly//folly:likely",
+        "folly//folly:utility",
+        "folly//folly/lang:thunk",
+        "folly//folly/lang:type_info",
     ],
 )
 
@@ -338,27 +338,27 @@ cpp_library(
     srcs = ["ThreadLocalDetail.cpp"],
     headers = ["ThreadLocalDetail.h"],
     deps = [
-        "//folly/lang:hint",
-        "//folly/memory:sanitize_leak",
-        "//folly/synchronization:call_once",
+        "folly//folly/lang:hint",
+        "folly//folly/memory:sanitize_leak",
+        "folly//folly/synchronization:call_once",
     ],
     exported_deps = [
         ":static_singleton_manager",
         ":unique_instance",
-        "//folly:exception",
-        "//folly:function",
-        "//folly:map_util",
-        "//folly:portability",
-        "//folly:scope_guard",
-        "//folly:shared_mutex",
-        "//folly/container:foreach",
-        "//folly/lang:exception",
-        "//folly/memory:malloc",
-        "//folly/portability:pthread",
-        "//folly/synchronization:micro_spin_lock",
-        "//folly/synchronization:relaxed_atomic",
-        "//folly/system:at_fork",
-        "//folly/system:thread_id",
+        "folly//folly:exception",
+        "folly//folly:function",
+        "folly//folly:map_util",
+        "folly//folly:portability",
+        "folly//folly:scope_guard",
+        "folly//folly:shared_mutex",
+        "folly//folly/container:foreach",
+        "folly//folly/lang:exception",
+        "folly//folly/memory:malloc",
+        "folly//folly/portability:pthread",
+        "folly//folly/synchronization:micro_spin_lock",
+        "folly//folly/synchronization:relaxed_atomic",
+        "folly//folly/system:at_fork",
+        "folly//folly/system:thread_id",
     ],
     exported_external_deps = [
         "glog",
@@ -370,10 +370,10 @@ cpp_library(
     headers = ["TurnSequencer.h"],
     exported_deps = [
         ":futex",
-        "//folly:portability",
-        "//folly/chrono:hardware",
-        "//folly/portability:asm",
-        "//folly/portability:unistd",
+        "folly//folly:portability",
+        "folly//folly/chrono:hardware",
+        "folly//folly/portability:asm",
+        "folly//folly/portability:unistd",
     ],
     exported_external_deps = [
         "glog",
@@ -384,8 +384,8 @@ cpp_library(
     name = "typelist",
     headers = ["TypeList.h"],
     exported_deps = [
-        "//folly:traits",
-        "//folly:utility",
+        "folly//folly:traits",
+        "folly//folly:utility",
     ],
 )
 
@@ -394,12 +394,12 @@ cpp_library(
     srcs = ["UniqueInstance.cpp"],
     headers = ["UniqueInstance.h"],
     deps = [
-        "//folly:demangle",
-        "//folly/lang:exception",
+        "folly//folly:demangle",
+        "folly//folly/lang:exception",
     ],
     exported_deps = [
         ":static_singleton_manager",
-        "//folly:cpp_attributes",
+        "folly//folly:cpp_attributes",
     ],
 )
 
@@ -407,7 +407,7 @@ cpp_library(
     name = "unroll_utils",
     headers = ["UnrollUtils.h"],
     exported_deps = [
-        "//folly:portability",
+        "folly//folly:portability",
     ],
 )
 
@@ -423,6 +423,6 @@ cpp_library(
         ],
     },
     deps = [
-        "//folly:portability",
+        "folly//folly:portability",
     ],
 )

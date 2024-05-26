@@ -6,6 +6,6 @@ cpp_library(
     name = "debug",
     headers = ["Debug.h"],
     exported_deps = [
-        "//folly:cpp_attributes",
+        "folly//folly:cpp_attributes",
     ],
 )

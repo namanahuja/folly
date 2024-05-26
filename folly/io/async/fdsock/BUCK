@@ -11,7 +11,7 @@ cpp_library(
     ],
     exported_deps = [
         ":socket_fds",
-        "//folly/io/async:async_socket",
+        "folly//folly/io/async:async_socket",
     ],
 )
 
@@ -19,7 +19,7 @@ cpp_library(
     name = "socket_fds",
     srcs = ["SocketFds.cpp"],
     headers = ["SocketFds.h"],
-    exported_deps = ["//folly:file"],
+    exported_deps = ["folly//folly:file"],
     exported_external_deps = [
         "glog",
     ],

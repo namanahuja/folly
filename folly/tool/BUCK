@@ -6,9 +6,9 @@ cpp_binary(
     name = "benchmark_compare",
     srcs = ["BenchmarkCompare.cpp"],
     deps = [
-        "//folly:benchmark",
-        "//folly:file_util",
-        "//folly/init:init",
-        "//folly/json:dynamic",
+        "folly//folly:benchmark",
+        "folly//folly:file_util",
+        "folly//folly/init:init",
+        "folly//folly/json:dynamic",
     ],
 )

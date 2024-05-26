@@ -11,13 +11,13 @@ cpp_library(
     ],
     exported_deps = [
         ":malloc",
-        "//folly:conv",
-        "//folly:likely",
-        "//folly:memory",
-        "//folly/lang:align",
-        "//folly/lang:checked_math",
-        "//folly/lang:exception",
-        "//folly/lang:safe_assert",
+        "folly//folly:conv",
+        "folly//folly:likely",
+        "folly//folly:memory",
+        "folly//folly/lang:align",
+        "folly//folly/lang:checked_math",
+        "folly//folly/lang:exception",
+        "folly//folly/lang:safe_assert",
     ],
     exported_external_deps = [
         "boost",
@@ -29,8 +29,8 @@ cpp_library(
     srcs = ["MallctlHelper.cpp"],
     headers = ["MallctlHelper.h"],
     deps = [
-        "//folly:format",
-        "//folly:string",
+        "folly//folly:format",
+        "folly//folly:string",
     ],
     exported_deps = [
         ":malloc",
@@ -45,11 +45,11 @@ cpp_library(
         ["third-party//jemalloc:headers"],
     )],
     exported_deps = [
-        "//folly:portability",
-        "//folly/lang:bits",
-        "//folly/lang:exception",
-        "//folly/memory/detail:malloc_impl",
-        "//folly/portability:malloc",
+        "folly//folly:portability",
+        "folly//folly/lang:bits",
+        "folly//folly/lang:exception",
+        "folly//folly/memory/detail:malloc_impl",
+        "folly//folly/portability:malloc",
     ],
 )
 
@@ -66,9 +66,9 @@ cpp_library(
         "not_null-inl.h",
     ],
     exported_deps = [
-        "//folly:memory",
-        "//folly:portability",
-        "//folly/lang:exception",
+        "folly//folly:memory",
+        "folly//folly:portability",
+        "folly//folly/lang:exception",
     ],
 )
 
@@ -77,12 +77,12 @@ cpp_library(
     srcs = ["ReentrantAllocator.cpp"],
     headers = ["ReentrantAllocator.h"],
     deps = [
-        "//folly/lang:bits",
-        "//folly/lang:safe_assert",
-        "//folly/portability:sys_mman",
+        "folly//folly/lang:bits",
+        "folly//folly/lang:safe_assert",
+        "folly//folly/portability:sys_mman",
     ],
     exported_deps = [
-        "//folly:portability",
+        "folly//folly:portability",
     ],
 )
 
@@ -91,10 +91,10 @@ cpp_library(
     srcs = ["SanitizeAddress.cpp"],
     headers = ["SanitizeAddress.h"],
     deps = [
-        "//folly/lang:extern",
+        "folly//folly/lang:extern",
     ],
     exported_deps = [
-        "//folly:portability",
+        "folly//folly:portability",
     ],
 )
 
@@ -103,10 +103,10 @@ cpp_library(
     srcs = ["SanitizeLeak.cpp"],
     headers = ["SanitizeLeak.h"],
     deps = [
-        "//folly/lang:extern",
+        "folly//folly/lang:extern",
     ],
     exported_deps = [
-        "//folly:portability",
+        "folly//folly:portability",
     ],
 )
 
@@ -115,10 +115,10 @@ cpp_library(
     srcs = ["ThreadCachedArena.cpp"],
     headers = ["ThreadCachedArena.h"],
     exported_deps = [
-        "//folly:likely",
-        "//folly:synchronized",
-        "//folly:thread_local",
-        "//folly/memory:arena",
+        "folly//folly:likely",
+        "folly//folly:synchronized",
+        "folly//folly:thread_local",
+        "folly//folly/memory:arena",
     ],
 )
 
@@ -132,15 +132,15 @@ cpp_library(
     srcs = ["JemallocNodumpAllocator.cpp"],
     headers = ["JemallocNodumpAllocator.h"],
     deps = [
-        "//folly:conv",
-        "//folly:string",
-        "//folly/memory:malloc",
+        "folly//folly:conv",
+        "folly//folly:string",
+        "folly//folly/memory:malloc",
     ],
     exported_deps = [
-        "//folly:c_portability",
-        "//folly/portability:config",
-        "//folly/portability:malloc",
-        "//folly/portability:sys_mman",
+        "folly//folly:c_portability",
+        "folly//folly/portability:config",
+        "folly//folly/portability:malloc",
+        "folly//folly/portability:sys_mman",
     ],
     external_deps = [
         "glog",
@@ -152,12 +152,12 @@ cpp_library(
     srcs = ["JemallocHugePageAllocator.cpp"],
     headers = ["JemallocHugePageAllocator.h"],
     deps = [
-        "//folly:c_portability",
-        "//folly/memory:malloc",
-        "//folly/portability:malloc",
-        "//folly/portability:string",
-        "//folly/portability:sys_mman",
-        "//folly/portability:sys_types",
+        "folly//folly:c_portability",
+        "folly//folly/memory:malloc",
+        "folly//folly/portability:malloc",
+        "folly//folly/portability:string",
+        "folly//folly/portability:sys_mman",
+        "folly//folly/portability:sys_types",
     ],
     external_deps = [
         "glog",
@@ -170,10 +170,10 @@ cpp_unittest(
     headers = [],
     allocator = "jemalloc",
     deps = [
-        "//folly/container:f14_hash",
-        "//folly/memory:jemalloc_huge_page_allocator",
-        "//folly/memory:malloc",
-        "//folly/portability:gtest",
+        "folly//folly/container:f14_hash",
+        "folly//folly/memory:jemalloc_huge_page_allocator",
+        "folly//folly/memory:malloc",
+        "folly//folly/portability:gtest",
     ],
 )
 
@@ -183,9 +183,9 @@ cpp_unittest(
     headers = [],
     allocator = "jemalloc",
     deps = [
-        "//folly/io:iobuf",
-        "//folly/memory:jemalloc_nodump_allocator",
-        "//folly/memory:malloc",
-        "//folly/portability:gtest",
+        "folly//folly/io:iobuf",
+        "folly//folly/memory:jemalloc_nodump_allocator",
+        "folly//folly/memory:malloc",
+        "folly//folly/portability:gtest",
     ],
 )

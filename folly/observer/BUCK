@@ -9,8 +9,8 @@ cpp_library(
         "Observable-inl.h",
     ],
     exported_deps = [
-        "//folly/observer:observer",
-        "//folly/synchronization:baton",
+        "folly//folly/observer:observer",
+        "folly//folly/synchronization:baton",
     ],
 )
 
@@ -22,11 +22,11 @@ cpp_library(
         "Observer-pre.h",
     ],
     exported_deps = [
-        "//folly:shared_mutex",
-        "//folly:synchronized",
-        "//folly:thread_local",
-        "//folly/experimental/observer/detail:observer_manager",
-        "//folly/functional:invoke",
+        "folly//folly:shared_mutex",
+        "folly//folly:synchronized",
+        "folly//folly:thread_local",
+        "folly//folly/experimental/observer/detail:observer_manager",
+        "folly//folly/functional:invoke",
     ],
 )
 
@@ -36,10 +36,10 @@ cpp_library(
         "HazptrObserver.h",
     ],
     exported_deps = [
-        "//folly:synchronized",
-        "//folly/experimental/observer/detail:observer_manager",
-        "//folly/observer:observer",
-        "//folly/synchronization:hazptr",
+        "folly//folly:synchronized",
+        "folly//folly/experimental/observer/detail:observer_manager",
+        "folly//folly/observer:observer",
+        "folly//folly/synchronization:hazptr",
     ],
 )
 
@@ -49,9 +49,9 @@ cpp_library(
         "ReadMostlyTLObserver.h",
     ],
     exported_deps = [
-        "//folly/experimental:read_mostly_shared_ptr",
-        "//folly/experimental/observer/detail:observer_manager",
-        "//folly/observer:observer",
+        "folly//folly/experimental:read_mostly_shared_ptr",
+        "folly//folly/experimental/observer/detail:observer_manager",
+        "folly//folly/observer:observer",
     ],
 )
 
@@ -61,9 +61,9 @@ cpp_library(
         "CoreCachedObserver.h",
     ],
     exported_deps = [
-        "//folly/concurrency:core_cached_shared_ptr",
-        "//folly/experimental/observer/detail:observer_manager",
-        "//folly/observer:observer",
+        "folly//folly/concurrency:core_cached_shared_ptr",
+        "folly//folly/experimental/observer/detail:observer_manager",
+        "folly//folly/observer:observer",
     ],
 )
 
@@ -74,11 +74,11 @@ cpp_library(
         "SimpleObservable-inl.h",
     ],
     exported_deps = [
-        "//folly:function",
-        "//folly:synchronized",
-        "//folly/observer:observable",
-        "//folly/observer:observer",
-        "//folly/synchronization:delayed_init",
+        "folly//folly:function",
+        "folly//folly:synchronized",
+        "folly//folly/observer:observable",
+        "folly//folly/observer:observer",
+        "folly//folly/synchronization:delayed_init",
     ],
 )
 
@@ -90,13 +90,13 @@ cpp_library(
     ],
     exported_deps = [
         "fbsource//third-party/fmt:fmt",
-        "//folly:default_keep_alive_executor",
-        "//folly:random",
-        "//folly:synchronized",
-        "//folly/executors:global_executor",
-        "//folly/futures:core",
-        "//folly/observer:observable",
-        "//folly/observer:observer",
+        "folly//folly:default_keep_alive_executor",
+        "folly//folly:random",
+        "folly//folly:synchronized",
+        "folly//folly/executors:global_executor",
+        "folly//folly/futures:core",
+        "folly//folly/observer:observable",
+        "folly//folly/observer:observer",
     ],
     exported_external_deps = [
         "glog",

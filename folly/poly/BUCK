@@ -9,6 +9,6 @@ cpp_library(
         "Regular.h",
     ],
     exported_deps = [
-        "//folly:poly",
+        "folly//folly:poly",
     ],
 )

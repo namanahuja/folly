@@ -9,8 +9,8 @@ cpp_library(
         "BucketedTimeSeries-inl.h",
     ],
     exported_deps = [
-        "//folly:likely",
-        "//folly/stats/detail:bucket",
+        "folly//folly:likely",
+        "folly//folly/stats/detail:bucket",
     ],
     exported_external_deps = [
         "glog",
@@ -24,11 +24,11 @@ cpp_library(
         "Histogram-inl.h",
     ],
     exported_deps = [
-        "//folly:c_portability",
-        "//folly:conv",
-        "//folly:traits",
-        "//folly/lang:exception",
-        "//folly/stats/detail:bucket",
+        "folly//folly:c_portability",
+        "folly//folly:conv",
+        "folly//folly:traits",
+        "folly//folly/lang:exception",
+        "folly//folly/stats/detail:bucket",
     ],
     exported_external_deps = [
         "glog",
@@ -41,7 +41,7 @@ cpp_library(
         "StreamingStats.h",
     ],
     exported_deps = [
-        "//folly/lang:exception",
+        "folly//folly/lang:exception",
     ],
 )
 
@@ -53,8 +53,8 @@ cpp_library(
     ],
     exported_deps = [
         ":bucketed_time_series",
-        "//folly:constexpr_math",
-        "//folly:string",
+        "folly//folly:constexpr_math",
+        "folly//folly:string",
     ],
     exported_external_deps = [
         "glog",
@@ -72,7 +72,7 @@ cpp_library(
     ],
     exported_deps = [
         ":tdigest",
-        "//folly/stats/detail:buffered_stat",
+        "folly//folly/stats/detail:buffered_stat",
     ],
 )
 
@@ -84,12 +84,12 @@ cpp_library(
     ],
     exported_deps = [
         ":digest_builder",
-        "//folly:conv",
-        "//folly:glog",
-        "//folly:likely",
-        "//folly:range",
-        "//folly:shared_mutex",
-        "//folly/lang:align",
+        "folly//folly:conv",
+        "folly//folly:glog",
+        "folly//folly:likely",
+        "folly//folly:range",
+        "folly//folly:shared_mutex",
+        "folly//folly/lang:align",
     ],
 )
 
@@ -102,11 +102,11 @@ cpp_library(
         "TDigest.h",
     ],
     deps = [
-        "//folly/stats/detail:double_radix_sort",
+        "folly//folly/stats/detail:double_radix_sort",
     ],
     exported_deps = [
-        "//folly:range",
-        "//folly:utility",
+        "folly//folly:range",
+        "folly//folly:utility",
     ],
     external_deps = [
         "glog",
@@ -121,11 +121,11 @@ cpp_library(
         "DigestBuilder-inl.h",
     ],
     exported_deps = [
-        "//folly:memory",
-        "//folly:spin_lock",
-        "//folly/concurrency:cache_locality",
-        "//folly/lang:bits",
-        "//folly/synchronization:lock",
+        "folly//folly:memory",
+        "folly//folly:spin_lock",
+        "folly//folly/concurrency:cache_locality",
+        "folly//folly/lang:bits",
+        "folly//folly/synchronization:lock",
     ],
 )
 

@@ -7,7 +7,7 @@ cpp_unittest(
     srcs = ["Hash.cpp"],
     headers = [],
     deps = [
-        "//folly/hash:hash",
-        "//folly/portability:gtest",
+        "folly//folly/hash:hash",
+        "folly//folly/portability:gtest",
     ],
 )

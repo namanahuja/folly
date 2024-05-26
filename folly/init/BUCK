@@ -9,23 +9,23 @@ cpp_library(
     os_deps = [
         (
             "linux",
-            ["//folly/experimental/symbolizer:signal_handler"],
+            ["folly//folly/experimental/symbolizer:signal_handler"],
         ),
         (
             "macos",
-            ["//folly/experimental/symbolizer:signal_handler"],
+            ["folly//folly/experimental/symbolizer:signal_handler"],
         ),
     ],
     deps = [
         ":phase",
-        "//folly:singleton",
-        "//folly/logging:init",
-        "//folly/portability:config",
-        "//folly/portability:gflags",
-        "//folly/synchronization:hazptr_thread_pool_executor",
+        "folly//folly:singleton",
+        "folly//folly/logging:init",
+        "folly//folly/portability:config",
+        "folly//folly/portability:gflags",
+        "folly//folly/synchronization:hazptr_thread_pool_executor",
     ],
     exported_deps = [
-        "//folly:portability",
+        "folly//folly:portability",
     ],
     external_deps = [
         "glog",

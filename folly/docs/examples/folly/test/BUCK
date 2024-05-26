@@ -7,7 +7,7 @@ cpp_unittest(
     srcs = ["TestUtils.cpp"],
     headers = [],
     deps = [
-        "//folly/portability:gtest",
-        "//folly/test:test_utils",
+        "folly//folly/portability:gtest",
+        "folly//folly/test:test_utils",
     ],
 )

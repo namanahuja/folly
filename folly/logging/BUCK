@@ -56,20 +56,20 @@ cpp_library(
         "-DFOLLY_XLOG_SUPPORT_BUCK2" if is_buck2() else "-DFOLLY_XLOG_SUPPORT_BUCK1",
     ],
     deps = [
-        "//folly:constexpr_math",
-        "//folly:demangle",
-        "//folly:exception",
-        "//folly:file_util",
-        "//folly:format",
-        "//folly:map_util",
-        "//folly:string",
-        "//folly/portability:fcntl",
-        "//folly/portability:pthread",
-        "//folly/portability:time",
-        "//folly/portability:unistd",
-        "//folly/system:at_fork",
-        "//folly/system:thread_id",
-        "//folly/system:thread_name",
+        "folly//folly:constexpr_math",
+        "folly//folly:demangle",
+        "folly//folly:exception",
+        "folly//folly:file_util",
+        "folly//folly:format",
+        "folly//folly:map_util",
+        "folly//folly:string",
+        "folly//folly/portability:fcntl",
+        "folly//folly/portability:pthread",
+        "folly//folly/portability:time",
+        "folly//folly/portability:unistd",
+        "folly//folly/system:at_fork",
+        "folly//folly/system:thread_id",
+        "folly//folly/system:thread_name",
     ],
     exported_deps = [
         "fbsource//third-party/fmt:fmt",
@@ -77,20 +77,20 @@ cpp_library(
         ":log_level",
         ":log_name",
         ":rate_limiter",
-        "//folly:c_portability",
-        "//folly:conv",
-        "//folly:cpp_attributes",
-        "//folly:exception_string",
-        "//folly:file",
-        "//folly:likely",
-        "//folly:optional",
-        "//folly:portability",
-        "//folly:range",
-        "//folly:scope_guard",
-        "//folly:synchronized",
-        "//folly/detail:static_singleton_manager",
-        "//folly/lang:exception",
-        "//folly/lang:type_info",
+        "folly//folly:c_portability",
+        "folly//folly:conv",
+        "folly//folly:cpp_attributes",
+        "folly//folly:exception_string",
+        "folly//folly:file",
+        "folly//folly:likely",
+        "folly//folly:optional",
+        "folly//folly:portability",
+        "folly//folly:range",
+        "folly//folly:scope_guard",
+        "folly//folly:synchronized",
+        "folly//folly/detail:static_singleton_manager",
+        "folly//folly/lang:exception",
+        "folly//folly/lang:type_info",
     ],
 )
 
@@ -109,16 +109,16 @@ cpp_library(
     ],
     deps = [
         ":log_name",
-        "//folly:conv",
-        "//folly:string",
-        "//folly/json:dynamic",
-        "//folly/lang:safe_assert",
+        "folly//folly:conv",
+        "folly//folly:string",
+        "folly//folly/json:dynamic",
+        "folly//folly/lang:safe_assert",
     ],
     exported_deps = [
         ":init_weak",  # @manual
         ":logging",
-        "//folly:c_portability",
-        "//folly:range",
+        "folly//folly:c_portability",
+        "folly//folly:range",
     ],
 )
 
@@ -128,7 +128,7 @@ cpp_library(
         "InitWeak.cpp",
     ],
     deps = [
-        "//folly:c_portability",
+        "folly//folly:c_portability",
     ],
 )
 
@@ -155,13 +155,13 @@ cpp_library(
         "LogHandlerFactory.h",
     ],
     deps = [
-        "//folly/lang:safe_assert",
+        "folly//folly/lang:safe_assert",
     ],
     exported_deps = [
         ":log_level",
-        "//folly:cpp_attributes",
-        "//folly:optional",
-        "//folly:range",
+        "folly//folly:cpp_attributes",
+        "folly//folly:optional",
+        "folly//folly:range",
     ],
 )
 
@@ -170,11 +170,11 @@ cpp_library(
     srcs = ["LogLevel.cpp"],
     headers = ["LogLevel.h"],
     deps = [
-        "//folly:conv",
+        "folly//folly:conv",
     ],
     exported_deps = [
-        "//folly:portability",
-        "//folly:range",
+        "folly//folly:portability",
+        "folly//folly:range",
     ],
 )
 
@@ -183,7 +183,7 @@ cpp_library(
     srcs = ["LogName.cpp"],
     headers = ["LogName.h"],
     exported_deps = [
-        "//folly:range",
+        "folly//folly:range",
     ],
 )
 
@@ -192,7 +192,7 @@ cpp_library(
     srcs = ["RateLimiter.cpp"],
     headers = ["RateLimiter.h"],
     exported_deps = [
-        "//folly:chrono",
+        "folly//folly:chrono",
     ],
 )
 
@@ -202,7 +202,7 @@ cpp_library(
     headers = ["BridgeFromGoogleLogging.h"],
     deps = [
         ":logging",
-        "//folly:utility",
+        "folly//folly:utility",
     ],
     exported_external_deps = ["glog"],
 )

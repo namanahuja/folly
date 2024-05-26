@@ -6,9 +6,9 @@ cpp_unittest(
     name = "phase_test",
     srcs = ["PhaseTest.cpp"],
     deps = [
-        "//folly:singleton",
-        "//folly/init:phase",
-        "//folly/portability:gtest",
+        "folly//folly:singleton",
+        "folly//folly/init:phase",
+        "folly//folly/portability:gtest",
     ],
     external_deps = [
         "glog",

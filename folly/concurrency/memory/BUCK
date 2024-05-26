@@ -11,11 +11,11 @@ cpp_library(
         "AtomicReadMostlyMainPtr.h",
     ],
     deps = [
-        "//folly/executors:inline_executor",
+        "folly//folly/executors:inline_executor",
     ],
     exported_deps = [
-        "//folly:indestructible",
-        "//folly/experimental:read_mostly_shared_ptr",
-        "//folly/synchronization:rcu",
+        "folly//folly:indestructible",
+        "folly//folly/experimental:read_mostly_shared_ptr",
+        "folly//folly/synchronization:rcu",
     ],
 )

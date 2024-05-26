@@ -9,7 +9,7 @@ cpp_library(
         "Observable-inl.h",
     ],
     exported_deps = [
-        "//folly/observer:observable",
+        "folly//folly/observer:observable",
     ],
 )
 
@@ -21,7 +21,7 @@ cpp_library(
         "Observer-pre.h",
     ],
     exported_deps = [
-        "//folly/observer:observer",
+        "folly//folly/observer:observer",
     ],
 )
 
@@ -31,7 +31,7 @@ cpp_library(
         "HazptrObserver.h",
     ],
     exported_deps = [
-        "//folly/observer:hazptr_observer",
+        "folly//folly/observer:hazptr_observer",
     ],
 )
 
@@ -41,7 +41,7 @@ cpp_library(
         "ReadMostlyTLObserver.h",
     ],
     exported_deps = [
-        "//folly/observer:read_mostly_tl_observer",
+        "folly//folly/observer:read_mostly_tl_observer",
     ],
 )
 
@@ -51,7 +51,7 @@ cpp_library(
         "CoreCachedObserver.h",
     ],
     exported_deps = [
-        "//folly/observer:core_cached_observer",
+        "folly//folly/observer:core_cached_observer",
     ],
 )
 
@@ -62,7 +62,7 @@ cpp_library(
         "SimpleObservable-inl.h",
     ],
     exported_deps = [
-        "//folly/observer:simple_observable",
+        "folly//folly/observer:simple_observable",
     ],
 )
 
@@ -73,6 +73,6 @@ cpp_library(
         "WithJitter-inl.h",
     ],
     exported_deps = [
-        "//folly/observer:with_jitter",
+        "folly//folly/observer:with_jitter",
     ],
 )

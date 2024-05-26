@@ -7,9 +7,9 @@ cpp_unittest(
     srcs = ["ApplyTupleTest.cpp"],
     headers = [],
     deps = [
-        "//folly:overload",
-        "//folly/functional:apply_tuple",
-        "//folly/portability:gtest",
+        "folly//folly:overload",
+        "folly//folly/functional:apply_tuple",
+        "folly//folly/portability:gtest",
     ],
 )
 
@@ -18,9 +18,9 @@ cpp_unittest(
     srcs = ["InvokeTest.cpp"],
     headers = [],
     deps = [
-        "//folly:cpp_attributes",
-        "//folly/functional:invoke",
-        "//folly/portability:gtest",
+        "folly//folly:cpp_attributes",
+        "folly//folly/functional:invoke",
+        "folly//folly/portability:gtest",
     ],
 )
 
@@ -29,9 +29,9 @@ cpp_unittest(
     srcs = ["PartialTest.cpp"],
     headers = [],
     deps = [
-        "//folly:function",
-        "//folly/functional:partial",
-        "//folly/portability:gtest",
+        "folly//folly:function",
+        "folly//folly/functional:partial",
+        "folly//folly/portability:gtest",
     ],
 )
 
@@ -40,9 +40,9 @@ cpp_unittest(
     srcs = ["protocol_test.cpp"],
     headers = [],
     deps = [
-        "//folly:traits",
-        "//folly/functional:protocol",
-        "//folly/portability:gtest",
+        "folly//folly:traits",
+        "folly//folly/functional:protocol",
+        "folly//folly/portability:gtest",
     ],
 )
 
@@ -51,7 +51,7 @@ cpp_unittest(
     srcs = ["traits_test.cpp"],
     headers = [],
     deps = [
-        "//folly/functional:traits",
-        "//folly/portability:gtest",
+        "folly//folly/functional:traits",
+        "folly//folly/portability:gtest",
     ],
 )

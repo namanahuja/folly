@@ -10,8 +10,8 @@ cpp_unittest(
     srcs = ["AutoTimerTest.cpp"],
     headers = [],
     deps = [
-        "//folly/experimental:auto_timer",
-        "//folly/portability:gtest",
+        "folly//folly/experimental:auto_timer",
+        "folly//folly/portability:gtest",
     ],
 )
 
@@ -20,8 +20,8 @@ cpp_binary(
     srcs = ["BitsBenchmark.cpp"],
     headers = [],
     deps = [
-        "//folly:benchmark",
-        "//folly/experimental:bits",
+        "folly//folly:benchmark",
+        "folly//folly/experimental:bits",
     ],
     external_deps = [
         "glog",
@@ -33,9 +33,9 @@ cpp_unittest(
     srcs = ["BitsTest.cpp"],
     headers = [],
     deps = [
-        "//folly/experimental:bits",
-        "//folly/portability:gflags",
-        "//folly/portability:gtest",
+        "folly//folly/experimental:bits",
+        "folly//folly/portability:gflags",
+        "folly//folly/portability:gtest",
     ],
     external_deps = [
         "glog",
@@ -47,10 +47,10 @@ cpp_unittest(
     srcs = ["CleanupTest.cpp"],
     headers = [],
     deps = [
-        "//folly/executors:cpu_thread_pool_executor",
-        "//folly/executors:manual_executor",
-        "//folly/experimental:cleanup",
-        "//folly/portability:gtest",
+        "folly//folly/executors:cpu_thread_pool_executor",
+        "folly//folly/executors:manual_executor",
+        "folly//folly/experimental:cleanup",
+        "folly//folly/portability:gtest",
     ],
 )
 
@@ -59,14 +59,14 @@ cpp_library(
     srcs = ["CodingTestUtils.cpp"],
     headers = ["CodingTestUtils.h"],
     deps = [
-        "//folly/portability:gflags",
+        "folly//folly/portability:gflags",
     ],
     exported_deps = [
-        "//folly:benchmark",
-        "//folly:likely",
-        "//folly:optional",
-        "//folly/experimental:instructions",
-        "//folly/portability:gtest",
+        "folly//folly:benchmark",
+        "folly//folly:likely",
+        "folly//folly:optional",
+        "folly//folly/experimental:instructions",
+        "folly//folly/portability:gtest",
     ],
     exported_external_deps = [
         "glog",
@@ -78,9 +78,9 @@ cpp_unittest(
     srcs = ["FlatCombiningPriorityQueueTest.cpp"],
     headers = [],
     deps = [
-        "//folly:benchmark",
-        "//folly/experimental:flat_combining_priority_queue",
-        "//folly/portability:gtest",
+        "folly//folly:benchmark",
+        "folly//folly/experimental:flat_combining_priority_queue",
+        "folly//folly/portability:gtest",
     ],
     external_deps = [
         "glog",
@@ -92,10 +92,10 @@ cpp_unittest(
     srcs = ["FunctionSchedulerTest.cpp"],
     headers = [],
     deps = [
-        "//folly:random",
-        "//folly/experimental:function_scheduler",
-        "//folly/portability:gtest",
-        "//folly/synchronization:baton",
+        "folly//folly:random",
+        "folly//folly/experimental:function_scheduler",
+        "folly//folly/portability:gtest",
+        "folly//folly/synchronization:baton",
     ],
     external_deps = [
         "glog",
@@ -108,10 +108,10 @@ cpp_unittest(
     srcs = ["HHWheelTimerHighResTest.cpp"],
     headers = [],
     deps = [
-        "//folly/experimental:timerfd",
-        "//folly/io/async:async_base",
-        "//folly/io/async/test:util",
-        "//folly/portability:gtest",
+        "folly//folly/experimental:timerfd",
+        "folly//folly/io/async:async_base",
+        "folly//folly/io/async/test:util",
+        "folly//folly/portability:gtest",
     ],
 )
 
@@ -120,9 +120,9 @@ cpp_binary(
     srcs = ["HHWheelTimerHighResBenchmark.cpp"],
     headers = [],
     deps = [
-        "//folly:benchmark",
-        "//folly/experimental:timerfd",
-        "//folly/io/async/test:util",
+        "folly//folly:benchmark",
+        "folly//folly/experimental:timerfd",
+        "folly//folly/io/async/test:util",
     ],
 )
 
@@ -131,8 +131,8 @@ cpp_unittest(
     srcs = ["InstructionsTest.cpp"],
     headers = [],
     deps = [
-        "//folly/experimental:instructions",
-        "//folly/portability:gtest",
+        "folly//folly/experimental:instructions",
+        "folly//folly/portability:gtest",
     ],
     external_deps = [
         "glog",
@@ -144,9 +144,9 @@ cpp_unittest(
     srcs = ["LockFreeRingBufferTest.cpp"],
     headers = [],
     deps = [
-        "//folly/experimental:lock_free_ring_buffer",
-        "//folly/portability:gtest",
-        "//folly/test:deterministic_schedule",
+        "folly//folly/experimental:lock_free_ring_buffer",
+        "folly//folly/portability:gtest",
+        "folly//folly/test:deterministic_schedule",
     ],
 )
 
@@ -155,11 +155,11 @@ cpp_unittest(
     srcs = ["PrimaryPtrTest.cpp"],
     headers = [],
     deps = [
-        "//folly/executors:cpu_thread_pool_executor",
-        "//folly/executors:manual_executor",
-        "//folly/experimental:primary_ptr",
-        "//folly/portability:gtest",
-        "//folly/synchronization:baton",
+        "folly//folly/executors:cpu_thread_pool_executor",
+        "folly//folly/executors:manual_executor",
+        "folly//folly/experimental:primary_ptr",
+        "folly//folly/portability:gtest",
+        "folly//folly/synchronization:baton",
     ],
 )
 
@@ -168,9 +168,9 @@ cpp_binary(
     srcs = ["NestedCommandLineAppExample.cpp"],
     headers = [],
     deps = [
-        "//folly:scope_guard",
-        "//folly:string",
-        "//folly/cli:program_options",
+        "folly//folly:scope_guard",
+        "folly//folly:string",
+        "folly//folly/cli:program_options",
     ],
 )
 
@@ -182,10 +182,10 @@ cpp_benchmark(
         "--json",
     ],
     deps = [
-        "//folly:benchmark",
-        "//folly:memory",
-        "//folly/experimental:read_mostly_shared_ptr",
-        "//folly/portability:gflags",
+        "folly//folly:benchmark",
+        "folly//folly:memory",
+        "folly//folly/experimental:read_mostly_shared_ptr",
+        "folly//folly/portability:gflags",
     ],
 )
 
@@ -194,10 +194,10 @@ cpp_unittest(
     srcs = ["ReadMostlySharedPtrTest.cpp"],
     headers = [],
     deps = [
-        "//folly:memory",
-        "//folly/experimental:read_mostly_shared_ptr",
-        "//folly/portability:gtest",
-        "//folly/synchronization:baton",
+        "folly//folly:memory",
+        "folly//folly/experimental:read_mostly_shared_ptr",
+        "folly//folly/portability:gtest",
+        "folly//folly/synchronization:baton",
     ],
 )
 
@@ -206,8 +206,8 @@ cpp_unittest(
     srcs = ["ReadMostlySharedPtrStressTest.cpp"],
     headers = [],
     deps = [
-        "//folly/experimental:read_mostly_shared_ptr",
-        "//folly/portability:gtest",
+        "folly//folly/experimental:read_mostly_shared_ptr",
+        "folly//folly/portability:gtest",
     ],
 )
 
@@ -216,8 +216,8 @@ cpp_benchmark(
     srcs = ["RefCountBenchmark.cpp"],
     headers = [],
     deps = [
-        "//folly:benchmark",
-        "//folly/experimental:tl_ref_count",
+        "folly//folly:benchmark",
+        "folly//folly/experimental:tl_ref_count",
     ],
 )
 
@@ -226,10 +226,10 @@ cpp_unittest(
     srcs = ["RefCountTest.cpp"],
     headers = [],
     deps = [
-        "//folly/experimental:tl_ref_count",
-        "//folly/portability:gtest",
-        "//folly/synchronization:baton",
-        "//folly/synchronization/test:barrier",
+        "folly//folly/experimental:tl_ref_count",
+        "folly//folly/portability:gtest",
+        "folly//folly/synchronization:baton",
+        "folly//folly/synchronization/test:barrier",
     ],
 )
 
@@ -237,9 +237,9 @@ cpp_unittest(
     name = "select64_test",
     srcs = ["Select64Test.cpp"],
     deps = [
-        "//folly/experimental:instructions",
-        "//folly/experimental:select64",
-        "//folly/portability:gtest",
+        "folly//folly/experimental:instructions",
+        "folly//folly/experimental:select64",
+        "folly//folly/portability:gtest",
     ],
 )
 
@@ -248,12 +248,12 @@ cpp_unittest(
     srcs = ["SingleWriterFixedHashMapTest.cpp"],
     headers = [],
     deps = [
-        "//folly:benchmark",
-        "//folly/container:array",
-        "//folly/experimental:single_writer_fixed_hash_map",
-        "//folly/portability:gflags",
-        "//folly/portability:gtest",
-        "//folly/synchronization/test:barrier",
+        "folly//folly:benchmark",
+        "folly//folly/container:array",
+        "folly//folly/experimental:single_writer_fixed_hash_map",
+        "folly//folly/portability:gflags",
+        "folly//folly/portability:gtest",
+        "folly//folly/synchronization/test:barrier",
     ],
     external_deps = [
         ("boost", None, "boost_thread"),
@@ -267,11 +267,11 @@ cpp_binary(
         "SingletonRelaxedCounterBench.cpp",
     ],
     deps = [
-        "//folly:benchmark",
-        "//folly/experimental:singleton_relaxed_counter",
-        "//folly/init:init",
-        "//folly/lang:keep",
-        "//folly/portability:gflags",
+        "folly//folly:benchmark",
+        "folly//folly/experimental:singleton_relaxed_counter",
+        "folly//folly/init:init",
+        "folly//folly/lang:keep",
+        "folly//folly/portability:gflags",
     ],
     external_deps = [
         ("boost", None, "boost_thread"),
@@ -284,9 +284,9 @@ cpp_unittest(
         "SingletonRelaxedCounterTest.cpp",
     ],
     deps = [
-        "//folly:thread_local",
-        "//folly/experimental:singleton_relaxed_counter",
-        "//folly/portability:gtest",
+        "folly//folly:thread_local",
+        "folly//folly/experimental:singleton_relaxed_counter",
+        "folly//folly/portability:gtest",
     ],
     external_deps = [
         ("boost", None, "boost_thread"),
@@ -298,11 +298,11 @@ cpp_unittest(
     srcs = ["TestUtilTest.cpp"],
     headers = [],
     deps = [
-        "//folly:memory",
-        "//folly/experimental:test_util",
-        "//folly/portability:fcntl",
-        "//folly/portability:gtest",
-        "//folly/portability:stdlib",
+        "folly//folly:memory",
+        "folly//folly/experimental:test_util",
+        "folly//folly/portability:fcntl",
+        "folly//folly/portability:gtest",
+        "folly//folly/portability:stdlib",
     ],
     external_deps = [
         "glog",
@@ -315,8 +315,8 @@ cpp_unittest(
     srcs = ["ThreadedRepeatingFunctionRunnerTest.cpp"],
     headers = [],
     deps = [
-        "//folly/experimental:threaded_repeating_function_runner",
-        "//folly/portability:gtest",
+        "folly//folly/experimental:threaded_repeating_function_runner",
+        "folly//folly/portability:gtest",
     ],
 )
 
@@ -325,9 +325,9 @@ cpp_unittest(
     srcs = ["TimerFDTimeoutManagerTest.cpp"],
     headers = [],
     deps = [
-        "//folly/experimental:timerfd",
-        "//folly/io/async/test:util",
-        "//folly/portability:gtest",
+        "folly//folly/experimental:timerfd",
+        "folly//folly/io/async/test:util",
+        "folly//folly/portability:gtest",
     ],
 )
 
@@ -337,12 +337,12 @@ cpp_unittest(
         "QuotientMultiSetTest.cpp",
     ],
     deps = [
-        "//folly:format",
-        "//folly:random",
-        "//folly/container:enumerate",
-        "//folly/experimental:quotient_multiset",
-        "//folly/io:iobuf",
-        "//folly/portability:gtest",
+        "folly//folly:format",
+        "folly//folly:random",
+        "folly//folly/container:enumerate",
+        "folly//folly/experimental:quotient_multiset",
+        "folly//folly/io:iobuf",
+        "folly//folly/portability:gtest",
     ],
 )
 
@@ -353,16 +353,16 @@ cpp_binary(
     ],
     deps = [
         ":coding_test_utils",
-        "//folly:benchmark",
-        "//folly:format",
-        "//folly:random",
-        "//folly:string",
-        "//folly/compression/elias_fano:elias_fano_coding",
-        "//folly/container:enumerate",
-        "//folly/container:f14_hash",
-        "//folly/container:foreach",
-        "//folly/experimental:quotient_multiset",
-        "//folly/init:init",
+        "folly//folly:benchmark",
+        "folly//folly:format",
+        "folly//folly:random",
+        "folly//folly:string",
+        "folly//folly/compression/elias_fano:elias_fano_coding",
+        "folly//folly/container:enumerate",
+        "folly//folly/container:f14_hash",
+        "folly//folly/container:foreach",
+        "folly//folly/experimental:quotient_multiset",
+        "folly//folly/init:init",
     ],
     external_deps = [
         ("boost", None, "boost_sort"),

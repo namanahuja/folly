@@ -9,12 +9,12 @@ cpp_unittest(
     supports_static_listing = False,
     deps = [
         "fbsource//third-party/zstd:zstd",
-        "//folly:random",
-        "//folly:varint",
-        "//folly/compression:compression",
-        "//folly/hash:hash",
-        "//folly/io:iobuf",
-        "//folly/portability:gtest",
+        "folly//folly:random",
+        "folly//folly:varint",
+        "folly//folly/compression:compression",
+        "folly//folly/hash:hash",
+        "folly//folly/io:iobuf",
+        "folly//folly/portability:gtest",
     ],
     external_deps = [
         "glog",
@@ -27,8 +27,8 @@ cpp_unittest(
         "CompressionContextPoolTest.cpp",
     ],
     deps = [
-        "//folly/compression:compression_context_pool",
-        "//folly/compression:compression_context_pool_singletons",
-        "//folly/portability:gtest",
+        "folly//folly/compression:compression_context_pool",
+        "folly//folly/compression:compression_context_pool_singletons",
+        "folly//folly/portability:gtest",
     ],
 )

@@ -9,7 +9,7 @@ cpp_library(
         "StaticTracepoint-ELF.h",
     ],
     exported_deps = [
-        "//folly/portability:config",
+        "folly//folly/portability:config",
     ],
 )
 
@@ -30,15 +30,15 @@ cpp_library(
         "AsyncStack-inl.h",
     ],
     deps = [
-        "//folly:likely",
-        "//folly/lang:hint",
-        "//folly/portability:pthread",
+        "folly//folly:likely",
+        "folly//folly/lang:hint",
+        "folly//folly/portability:pthread",
     ],
     exported_deps = [
-        "//folly:c_portability",
-        "//folly:cpp_attributes",
-        "//folly:portability",
-        "//folly/experimental/coro:coroutine",
+        "folly//folly:c_portability",
+        "folly//folly:cpp_attributes",
+        "folly//folly:portability",
+        "folly//folly/experimental/coro:coroutine",
     ],
     external_deps = [
         "glog",

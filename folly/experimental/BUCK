@@ -8,7 +8,7 @@ cpp_library(
         "AtomicReadMostlyMainPtr.h",
     ],
     exported_deps = [
-        "//folly/concurrency/memory:atomic_read_mostly_main_ptr",
+        "folly//folly/concurrency/memory:atomic_read_mostly_main_ptr",
     ],
 )
 
@@ -16,10 +16,10 @@ cpp_library(
     name = "auto_timer",
     headers = ["AutoTimer.h"],
     exported_deps = [
-        "//folly:conv",
-        "//folly:format",
-        "//folly:optional",
-        "//folly:string",
+        "folly//folly:conv",
+        "folly//folly:format",
+        "folly//folly:optional",
+        "folly//folly:string",
     ],
     exported_external_deps = [
         "glog",
@@ -32,7 +32,7 @@ cpp_library(
         "BitVectorCoding.h",
     ],
     exported_deps = [
-        "//folly/compression/elias_fano:bit_vector_coding",
+        "folly//folly/compression/elias_fano:bit_vector_coding",
     ],
 )
 
@@ -40,9 +40,9 @@ cpp_library(
     name = "bits",
     headers = ["Bits.h"],
     exported_deps = [
-        "//folly:portability",
-        "//folly:range",
-        "//folly/lang:bits",
+        "folly//folly:portability",
+        "folly//folly:range",
+        "folly//folly/lang:bits",
     ],
     exported_external_deps = [
         "glog",
@@ -55,7 +55,7 @@ cpp_library(
         "CodingDetail.h",
     ],
     exported_deps = [
-        "//folly/compression/elias_fano:coding_detail",
+        "folly//folly/compression/elias_fano:coding_detail",
     ],
 )
 
@@ -66,7 +66,7 @@ cpp_library(
         "DynamicParser-inl.h",
     ],
     exported_deps = [
-        "//folly/json:dynamic_parser",
+        "folly//folly/json:dynamic_parser",
     ],
 )
 
@@ -76,7 +76,7 @@ cpp_library(
         "EliasFanoCoding.h",
     ],
     exported_deps = [
-        "//folly/compression/elias_fano:elias_fano_coding",
+        "folly//folly/compression/elias_fano:elias_fano_coding",
     ],
 )
 
@@ -86,7 +86,7 @@ cpp_library(
         "EnvUtil.h",
     ],
     exported_deps = [
-        "//folly/system:env_util",
+        "folly//folly/system:env_util",
     ],
 )
 
@@ -96,7 +96,7 @@ cpp_library(
         "EventCount.h",
     ],
     exported_deps = [
-        "//folly/synchronization:event_count",
+        "folly//folly/synchronization:event_count",
     ],
 )
 
@@ -105,7 +105,7 @@ cpp_library(
     srcs = ["ExecutionObserver.cpp"],
     headers = ["ExecutionObserver.h"],
     deps = [
-        "//folly/tracing:static_tracepoint",
+        "folly//folly/tracing:static_tracepoint",
     ],
     exported_external_deps = [
         "boost",
@@ -116,9 +116,9 @@ cpp_library(
     name = "flat_combining_priority_queue",
     headers = ["FlatCombiningPriorityQueue.h"],
     exported_deps = [
-        "//folly:optional",
-        "//folly/detail:futex",
-        "//folly/synchronization:flat_combining",
+        "folly//folly:optional",
+        "folly//folly/detail:futex",
+        "folly//folly/synchronization:flat_combining",
     ],
     exported_external_deps = [
         "glog",
@@ -131,7 +131,7 @@ cpp_library(
         "RelaxedConcurrentPriorityQueue.h",
     ],
     exported_deps = [
-        "//folly/concurrency/container:relaxed_concurrent_priority_queue",
+        "folly//folly/concurrency/container:relaxed_concurrent_priority_queue",
     ],
 )
 
@@ -140,16 +140,16 @@ cpp_library(
     srcs = ["FunctionScheduler.cpp"],
     headers = ["FunctionScheduler.h"],
     deps = [
-        "//folly:conv",
-        "//folly:random",
-        "//folly:string",
-        "//folly/system:thread_name",
+        "folly//folly:conv",
+        "folly//folly:random",
+        "folly//folly:string",
+        "folly//folly/system:thread_name",
     ],
     exported_deps = [
-        "//folly:function",
-        "//folly:range",
-        "//folly/container:f14_hash",
-        "//folly/hash:hash",
+        "folly//folly:function",
+        "folly//folly:range",
+        "folly//folly/container:f14_hash",
+        "folly//folly/hash:hash",
     ],
     external_deps = [
         "glog",
@@ -160,10 +160,10 @@ cpp_library(
     name = "instructions",
     headers = ["Instructions.h"],
     exported_deps = [
-        "//folly:cpu_id",
-        "//folly:portability",
-        "//folly/lang:assume",
-        "//folly/portability:builtins",
+        "folly//folly:cpu_id",
+        "folly//folly:portability",
+        "folly//folly/lang:assume",
+        "folly//folly/portability:builtins",
     ],
     exported_external_deps = [
         "glog",
@@ -176,7 +176,7 @@ cpp_library(
         "JemallocHugePageAllocator.h",
     ],
     exported_deps = [
-        "//folly/memory:jemalloc_huge_page_allocator",
+        "folly//folly/memory:jemalloc_huge_page_allocator",
     ],
 )
 
@@ -186,7 +186,7 @@ cpp_library(
         "JSONSchema.h",
     ],
     exported_deps = [
-        "//folly/json:json_schema",
+        "folly//folly/json:json_schema",
     ],
 )
 
@@ -194,11 +194,11 @@ cpp_library(
     name = "lock_free_ring_buffer",
     headers = ["LockFreeRingBuffer.h"],
     exported_deps = [
-        "//folly:portability",
-        "//folly:traits",
-        "//folly/detail:turn_sequencer",
-        "//folly/portability:unistd",
-        "//folly/synchronization:sanitize_thread",
+        "folly//folly:portability",
+        "folly//folly:traits",
+        "folly//folly/detail:turn_sequencer",
+        "folly//folly/portability:unistd",
+        "folly//folly/synchronization:sanitize_thread",
     ],
     exported_external_deps = [
         "boost",
@@ -209,7 +209,7 @@ cpp_library(
     name = "cleanup",
     headers = ["Cleanup.h"],
     exported_deps = [
-        "//folly/futures:core",
+        "folly//folly/futures:core",
     ],
     exported_external_deps = [
         "glog",
@@ -221,8 +221,8 @@ cpp_library(
     headers = ["PrimaryPtr.h"],
     exported_deps = [
         ":cleanup",
-        "//folly:function",
-        "//folly/futures:core",
+        "folly//folly:function",
+        "folly//folly/futures:core",
     ],
     exported_external_deps = [
         "glog",
@@ -236,7 +236,7 @@ cpp_library(
         "ProgramOptions.h",
     ],
     exported_deps = [
-        "//folly/cli:program_options",
+        "folly//folly/cli:program_options",
     ],
 )
 
@@ -245,7 +245,7 @@ cpp_library(
     headers = ["ReadMostlySharedPtr.h"],
     exported_deps = [
         ":tl_ref_count",
-        "//folly:function",
+        "folly//folly:function",
     ],
 )
 
@@ -254,12 +254,12 @@ cpp_library(
     srcs = ["Select64.cpp"],
     headers = ["Select64.h"],
     deps = [
-        "//folly:constexpr_math",
-        "//folly:utility",
+        "folly//folly:constexpr_math",
+        "folly//folly:utility",
     ],
     exported_deps = [
         ":instructions",
-        "//folly:portability",
+        "folly//folly:portability",
     ],
     exported_external_deps = [
         "glog",
@@ -272,7 +272,7 @@ cpp_library(
         "SingleWriterFixedHashMap.h",
     ],
     exported_deps = [
-        "//folly/lang:bits",
+        "folly//folly/lang:bits",
     ],
     exported_external_deps = [
         "glog",
@@ -285,12 +285,12 @@ cpp_library(
         "SingletonRelaxedCounter.h",
     ],
     exported_deps = [
-        "//folly:likely",
-        "//folly:portability",
-        "//folly:synchronized",
-        "//folly:utility",
-        "//folly/detail:static_singleton_manager",
-        "//folly/detail:thread_local_detail",
+        "folly//folly:likely",
+        "folly//folly:portability",
+        "folly//folly:synchronized",
+        "folly//folly:utility",
+        "folly//folly/detail:static_singleton_manager",
+        "folly//folly/detail:thread_local_detail",
     ],
 )
 
@@ -299,19 +299,19 @@ cpp_library(
     srcs = ["TestUtil.cpp"],
     headers = ["TestUtil.h"],
     deps = [
-        "//folly:exception",
-        "//folly:file",
-        "//folly:file_util",
-        "//folly:memory",
-        "//folly:string",
-        "//folly/ext:test_ext",
-        # @fb-only: "//folly/facebook:test_ext", 
-        "//folly/portability:fcntl",
+        "folly//folly:exception",
+        "folly//folly:file",
+        "folly//folly:file_util",
+        "folly//folly:memory",
+        "folly//folly:string",
+        "folly//folly/ext:test_ext",
+        # @fb-only: "folly//folly/facebook:test_ext",
+        "folly//folly/portability:fcntl",
     ],
     exported_deps = [
-        "//folly:range",
-        "//folly:scope_guard",
-        "//folly/experimental/io:fs_util",
+        "folly//folly:range",
+        "folly//folly:scope_guard",
+        "folly//folly/experimental/io:fs_util",
     ],
     external_deps = [
         "glog",
@@ -332,12 +332,12 @@ cpp_library(
         "TimerFDTimeoutManager.h",
     ],
     deps = [
-        "//folly:file_util",
-        "//folly/io/async:event_util",
+        "folly//folly:file_util",
+        "folly//folly/io/async:event_util",
     ],
     exported_deps = [
-        "//folly/io/async:async_base",
-        "//folly/io/async:delayed_destruction",
+        "folly//folly/io/async:async_base",
+        "folly//folly/io/async:delayed_destruction",
     ],
 )
 
@@ -346,10 +346,10 @@ cpp_library(
     srcs = ["ThreadedRepeatingFunctionRunner.cpp"],
     headers = ["ThreadedRepeatingFunctionRunner.h"],
     deps = [
-        "//folly/system:thread_name",
+        "folly//folly/system:thread_name",
     ],
     exported_deps = [
-        "//folly:function",
+        "folly//folly:function",
     ],
     external_deps = [
         "glog",
@@ -360,9 +360,9 @@ cpp_library(
     name = "tl_ref_count",
     headers = ["TLRefCount.h"],
     exported_deps = [
-        "//folly:thread_local",
-        "//folly/synchronization:asymmetric_thread_fence",
-        "//folly/synchronization/detail:sleeper",
+        "folly//folly:thread_local",
+        "folly//folly/synchronization:asymmetric_thread_fence",
+        "folly//folly/synchronization/detail:sleeper",
     ],
 )
 
@@ -376,18 +376,18 @@ cpp_library(
         "QuotientMultiSet-inl.h",
     ],
     deps = [
-        "//folly:math",
+        "folly//folly:math",
     ],
     exported_deps = [
         ":bits",
         ":instructions",
         ":select64",
-        "//folly:format",
-        "//folly:portability",
-        "//folly:range",
-        "//folly/io:iobuf",
-        "//folly/lang:bits",
-        "//folly/lang:safe_assert",
+        "folly//folly:format",
+        "folly//folly:portability",
+        "folly//folly:range",
+        "folly//folly/io:iobuf",
+        "folly//folly/lang:bits",
+        "folly//folly/lang:safe_assert",
     ],
     exported_external_deps = [
         "glog",

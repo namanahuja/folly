@@ -8,9 +8,9 @@ cpp_unittest(
         "AtomicQueueTest.cpp",
     ],
     deps = [
-        "//folly/experimental/channels/detail:atomic_queue",
-        "//folly/portability:gtest",
-        "//folly/synchronization:baton",
+        "folly//folly/experimental/channels/detail:atomic_queue",
+        "folly//folly/portability:gtest",
+        "folly//folly/synchronization:baton",
     ],
 )
 
@@ -20,7 +20,7 @@ cpp_unittest(
         "PointerVariantTest.cpp",
     ],
     deps = [
-        "//folly/experimental/channels/detail:pointer_variant",
-        "//folly/portability:gtest",
+        "folly//folly/experimental/channels/detail:pointer_variant",
+        "folly//folly/portability:gtest",
     ],
 )

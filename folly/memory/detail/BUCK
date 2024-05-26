@@ -6,5 +6,5 @@ cpp_library(
     name = "malloc_impl",
     srcs = ["MallocImpl.cpp"],
     headers = ["MallocImpl.h"],
-    exported_deps = ["//folly:portability"],
+    exported_deps = ["folly//folly:portability"],
 )

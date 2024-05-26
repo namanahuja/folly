@@ -11,12 +11,12 @@ cpp_library(
     name = "conv",
     headers = ["Conv.h"],
     exported_deps = [
-        "//folly:constexpr_math",
-        "//folly:conv",
-        "//folly:expected",
-        "//folly:utility",
-        "//folly/portability:sys_time",
-        "//folly/portability:sys_types",
+        "folly//folly:constexpr_math",
+        "folly//folly:conv",
+        "folly//folly:expected",
+        "folly//folly:utility",
+        "folly//folly/portability:sys_time",
+        "folly//folly/portability:sys_types",
     ],
 )
 
@@ -24,6 +24,6 @@ cpp_library(
     name = "hardware",
     headers = ["Hardware.h"],
     exported_deps = [
-        "//folly:portability",
+        "folly//folly:portability",
     ],
 )

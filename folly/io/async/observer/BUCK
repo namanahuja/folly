@@ -6,10 +6,10 @@ cpp_library(
     name = "async_socket_observer_interface",
     headers = ["AsyncSocketObserverInterface.h"],
     exported_deps = [
-        "//folly:cpp_attributes",
-        "//folly:glog",
-        "//folly:optional",
-        "//folly/io/async:write_flags",
+        "folly//folly:cpp_attributes",
+        "folly//folly:glog",
+        "folly//folly:optional",
+        "folly//folly/io/async:write_flags",
     ],
 )
 
@@ -18,6 +18,6 @@ cpp_library(
     headers = ["AsyncSocketObserverContainer.h"],
     exported_deps = [
         ":async_socket_observer_interface",
-        "//folly:observer_container",
+        "folly//folly:observer_container",
     ],
 )

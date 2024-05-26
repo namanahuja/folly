@@ -8,9 +8,9 @@ cpp_unittest(
     srcs = ["BufferedStatTest.cpp"],
     headers = [],
     deps = [
-        "//folly:range",
-        "//folly/portability:gtest",
-        "//folly/stats/detail:buffered_stat",
+        "folly//folly:range",
+        "folly//folly/portability:gtest",
+        "folly//folly/stats/detail:buffered_stat",
     ],
 )
 
@@ -22,11 +22,11 @@ cpp_benchmark(
         "--json",
     ],
     deps = [
-        "//folly:benchmark",
-        "//folly:range",
-        "//folly/lang:keep",
-        "//folly/portability:gflags",
-        "//folly/stats:digest_builder",
+        "folly//folly:benchmark",
+        "folly//folly:range",
+        "folly//folly/lang:keep",
+        "folly//folly/portability:gflags",
+        "folly//folly/stats:digest_builder",
     ],
     external_deps = [
         ("boost", None, "boost_thread"),
@@ -38,9 +38,9 @@ cpp_unittest(
     srcs = ["DigestBuilderTest.cpp"],
     headers = [],
     deps = [
-        "//folly:range",
-        "//folly/portability:gtest",
-        "//folly/stats:digest_builder",
+        "folly//folly:range",
+        "folly//folly/portability:gtest",
+        "folly//folly/stats:digest_builder",
     ],
 )
 
@@ -52,10 +52,10 @@ cpp_benchmark(
         "--json",
     ],
     deps = [
-        "//folly:benchmark",
-        "//folly/container:foreach",
-        "//folly/portability:gflags",
-        "//folly/stats:histogram",
+        "folly//folly:benchmark",
+        "folly//folly/container:foreach",
+        "folly//folly/portability:gflags",
+        "folly//folly/stats:histogram",
     ],
 )
 
@@ -64,8 +64,8 @@ cpp_unittest(
     srcs = ["HistogramTest.cpp"],
     headers = [],
     deps = [
-        "//folly/portability:gtest",
-        "//folly/stats:histogram",
+        "folly//folly/portability:gtest",
+        "folly//folly/stats:histogram",
     ],
 )
 
@@ -74,8 +74,8 @@ cpp_unittest(
     srcs = ["StreamingStatsTest.cpp"],
     headers = [],
     deps = [
-        "//folly/portability:gtest",
-        "//folly/stats:streaming_stats",
+        "folly//folly/portability:gtest",
+        "folly//folly/stats:streaming_stats",
     ],
 )
 
@@ -87,8 +87,8 @@ cpp_benchmark(
         "--json",
     ],
     deps = [
-        "//folly:benchmark",
-        "//folly/stats:bucketed_time_series",
+        "folly//folly:benchmark",
+        "folly//folly/stats:bucketed_time_series",
     ],
     external_deps = [
         "glog",
@@ -103,9 +103,9 @@ cpp_benchmark(
         "--json",
     ],
     deps = [
-        "//folly:benchmark",
-        "//folly/portability:gflags",
-        "//folly/stats:quantile_estimator",
+        "folly//folly:benchmark",
+        "folly//folly/portability:gflags",
+        "folly//folly/stats:quantile_estimator",
     ],
 )
 
@@ -114,8 +114,8 @@ cpp_unittest(
     srcs = ["QuantileEstimatorTest.cpp"],
     headers = [],
     deps = [
-        "//folly/portability:gtest",
-        "//folly/stats:quantile_estimator",
+        "folly//folly/portability:gtest",
+        "folly//folly/stats:quantile_estimator",
     ],
 )
 
@@ -127,9 +127,9 @@ cpp_benchmark(
         "--json",
     ],
     deps = [
-        "//folly:benchmark",
-        "//folly/portability:gflags",
-        "//folly/stats:quantile_histogram",
+        "folly//folly:benchmark",
+        "folly//folly/portability:gflags",
+        "folly//folly/stats:quantile_histogram",
     ],
 )
 
@@ -138,9 +138,9 @@ cpp_unittest(
     srcs = ["QuantileHistogramTest.cpp"],
     headers = [],
     deps = [
-        "//folly:range",
-        "//folly/portability:gtest",
-        "//folly/stats:quantile_histogram",
+        "folly//folly:range",
+        "folly//folly/portability:gtest",
+        "folly//folly/stats:quantile_histogram",
     ],
 )
 
@@ -149,8 +149,8 @@ cpp_unittest(
     srcs = ["SlidingWindowTest.cpp"],
     headers = [],
     deps = [
-        "//folly/portability:gtest",
-        "//folly/stats/detail:sliding_window",
+        "folly//folly/portability:gtest",
+        "folly//folly/stats/detail:sliding_window",
     ],
 )
 
@@ -162,10 +162,10 @@ cpp_benchmark(
         "--json",
     ],
     deps = [
-        "//folly:benchmark",
-        "//folly/portability:gflags",
-        "//folly/stats:digest_builder",
-        "//folly/stats:tdigest",
+        "folly//folly:benchmark",
+        "folly//folly/portability:gflags",
+        "folly//folly/stats:digest_builder",
+        "folly//folly/stats:tdigest",
     ],
 )
 
@@ -175,8 +175,8 @@ cpp_unittest(
     headers = [],
     supports_static_listing = False,
     deps = [
-        "//folly/portability:gtest",
-        "//folly/stats:tdigest",
+        "folly//folly/portability:gtest",
+        "folly//folly/stats:tdigest",
     ],
 )
 
@@ -185,11 +185,11 @@ cpp_unittest(
     srcs = ["TimeSeriesTest.cpp"],
     headers = [],
     deps = [
-        "//folly/container:foreach",
-        "//folly/portability:gtest",
-        "//folly/stats:bucketed_time_series",
-        "//folly/stats:multi_level_time_series",
-        "//folly/stats/detail:bucket",
+        "folly//folly/container:foreach",
+        "folly//folly/portability:gtest",
+        "folly//folly/stats:bucketed_time_series",
+        "folly//folly/stats:multi_level_time_series",
+        "folly//folly/stats/detail:bucket",
     ],
     external_deps = [
         "glog",
@@ -201,7 +201,7 @@ cpp_unittest(
     srcs = ["TimeseriesHistogramTest.cpp"],
     headers = [],
     deps = [
-        "//folly/portability:gtest",
-        "//folly/stats:timeseries_histogram",
+        "folly//folly/portability:gtest",
+        "folly//folly/stats:timeseries_histogram",
     ],
 )

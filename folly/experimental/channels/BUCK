@@ -10,7 +10,7 @@ cpp_library(
         "Channel-inl.h",
     ],
     exported_deps = [
-        "//folly/channels:channel",
+        "folly//folly/channels:channel",
     ],
 )
 
@@ -20,7 +20,7 @@ cpp_library(
         "ChannelCallbackHandle.h",
     ],
     exported_deps = [
-        "//folly/channels:channel_callback_handle",
+        "folly//folly/channels:channel_callback_handle",
     ],
 )
 
@@ -31,7 +31,7 @@ cpp_library(
         "ChannelProcessor-inl.h",
     ],
     exported_deps = [
-        "//folly/channels:channel_processor",
+        "folly//folly/channels:channel_processor",
     ],
 )
 
@@ -42,7 +42,7 @@ cpp_library(
         "ConsumeChannel-inl.h",
     ],
     exported_deps = [
-        "//folly/channels:consume_channel",
+        "folly//folly/channels:consume_channel",
     ],
 )
 
@@ -53,7 +53,7 @@ cpp_library(
         "FanoutChannel-inl.h",
     ],
     exported_deps = [
-        "//folly/channels:fanout_channel",
+        "folly//folly/channels:fanout_channel",
     ],
 )
 
@@ -64,7 +64,7 @@ cpp_library(
         "FanoutSender-inl.h",
     ],
     exported_deps = [
-        "//folly/channels:fanout_sender",
+        "folly//folly/channels:fanout_sender",
     ],
 )
 
@@ -75,7 +75,7 @@ cpp_library(
         "Merge-inl.h",
     ],
     exported_deps = [
-        "//folly/channels:merge",
+        "folly//folly/channels:merge",
     ],
 )
 
@@ -86,7 +86,7 @@ cpp_library(
         "MergeChannel-inl.h",
     ],
     exported_deps = [
-        "//folly/channels:merge_channel",
+        "folly//folly/channels:merge_channel",
     ],
 )
 
@@ -97,7 +97,7 @@ cpp_library(
         "MultiplexChannel-inl.h",
     ],
     exported_deps = [
-        "//folly/channels:multiplex_channel",
+        "folly//folly/channels:multiplex_channel",
     ],
 )
 
@@ -107,7 +107,7 @@ cpp_library(
         "OnClosedException.h",
     ],
     exported_deps = [
-        "//folly/channels:on_closed_exception",
+        "folly//folly/channels:on_closed_exception",
     ],
 )
 
@@ -118,7 +118,7 @@ cpp_library(
         "Producer-inl.h",
     ],
     exported_deps = [
-        "//folly/channels:producer",
+        "folly//folly/channels:producer",
     ],
 )
 
@@ -129,7 +129,7 @@ cpp_library(
         "ProxyChannel-inl.h",
     ],
     exported_deps = [
-        "//folly/channels:proxy_channel",
+        "folly//folly/channels:proxy_channel",
     ],
 )
 
@@ -139,7 +139,7 @@ cpp_library(
         "RateLimiter.h",
     ],
     exported_deps = [
-        "//folly/channels:rate_limiter",
+        "folly//folly/channels:rate_limiter",
     ],
 )
 
@@ -149,7 +149,7 @@ cpp_library(
         "MaxConcurrentRateLimiter.h",
     ],
     exported_deps = [
-        "//folly/channels:max_concurrent_rate_limiter",
+        "folly//folly/channels:max_concurrent_rate_limiter",
     ],
 )
 
@@ -160,6 +160,6 @@ cpp_library(
         "Transform-inl.h",
     ],
     exported_deps = [
-        "//folly/channels:transform",
+        "folly//folly/channels:transform",
     ],
 )

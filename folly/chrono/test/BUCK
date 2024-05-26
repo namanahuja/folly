@@ -7,8 +7,8 @@ cpp_unittest(
     srcs = ["ClockTest.cpp"],
     headers = [],
     deps = [
-        "//folly/chrono:clock",
-        "//folly/portability:gtest",
+        "folly//folly/chrono:clock",
+        "folly//folly/portability:gtest",
     ],
 )
 
@@ -17,8 +17,8 @@ cpp_unittest(
     srcs = ["ConvTest.cpp"],
     headers = [],
     deps = [
-        "//folly/chrono:conv",
-        "//folly/portability:gtest",
+        "folly//folly/chrono:conv",
+        "folly//folly/portability:gtest",
     ],
     external_deps = [
         "glog",

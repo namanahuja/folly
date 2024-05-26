@@ -7,9 +7,9 @@ cpp_unittest(
     srcs = ["AsyncFdSocketTest.cpp"],
     supports_static_listing = False,
     deps = [
-        "//folly/io/async/fdsock:async_fd_socket",
-        "//folly/io/async/test:async_socket_test_lib",
-        "//folly/portability:gmock",
-        "//folly/portability:gtest",
+        "folly//folly/io/async/fdsock:async_fd_socket",
+        "folly//folly/io/async/test:async_socket_test_lib",
+        "folly//folly/portability:gmock",
+        "folly//folly/portability:gtest",
     ],
 )

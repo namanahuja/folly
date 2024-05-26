@@ -31,11 +31,11 @@ cpp_library(
         ":via_if_async",
         ":with_async_stack",
         ":with_cancellation",
-        "//folly:cancellation_token",
-        "//folly:exception_wrapper",
-        "//folly:traits",
-        "//folly:try",
-        "//folly/tracing:async_stack",
+        "folly//folly:cancellation_token",
+        "folly//folly:exception_wrapper",
+        "folly//folly:traits",
+        "folly//folly:try",
+        "folly//folly/tracing:async_stack",
     ],
     exported_external_deps = [
         "glog",
@@ -52,8 +52,8 @@ cpp_library(
         ":invoke",
         ":small_unbounded_queue",
         ":via_if_async",
-        "//folly:try",
-        "//folly/fibers:semaphore",
+        "folly//folly:try",
+        "folly//folly/fibers:semaphore",
     ],
 )
 
@@ -67,10 +67,10 @@ cpp_library(
         ":detail_barrier",
         ":detail_barrier_task",
         ":task",
-        "//folly:cancellation_token",
-        "//folly:exception_wrapper",
-        "//folly/futures:core",
-        "//folly/portability:source_location",
+        "folly//folly:cancellation_token",
+        "folly//folly:exception_wrapper",
+        "folly//folly/futures:core",
+        "folly//folly/portability:source_location",
     ],
     exported_external_deps = [
         "glog",
@@ -83,8 +83,8 @@ cpp_library(
     exported_deps = [
         ":coroutine",
         ":with_async_stack",
-        "//folly:executor",
-        "//folly/tracing:async_stack",
+        "folly//folly:executor",
+        "folly//folly/tracing:async_stack",
     ],
 )
 
@@ -93,7 +93,7 @@ cpp_library(
     srcs = ["Baton.cpp"],
     headers = ["Baton.h"],
     deps = [
-        "//folly/synchronization:atomic_util",
+        "folly//folly/synchronization:atomic_util",
     ],
     exported_deps = [
         ":coroutine",
@@ -111,11 +111,11 @@ cpp_library(
         ":traits",
         ":via_if_async",
         ":with_async_stack",
-        "//folly:try",
-        "//folly/executors:manual_executor",
-        "//folly/fibers:core",
-        "//folly/synchronization:baton",
-        "//folly/tracing:async_stack",
+        "folly//folly:try",
+        "folly//folly/executors:manual_executor",
+        "folly//folly/fibers:core",
+        "folly//folly/synchronization:baton",
+        "folly//folly/tracing:async_stack",
     ],
 )
 
@@ -138,12 +138,12 @@ cpp_library(
         ":mutex",
         ":task",
         ":via_if_async",
-        "//folly:cancellation_token",
-        "//folly:exception_wrapper",
-        "//folly:try",
-        "//folly:unit",
-        "//folly/container:access",
-        "//folly/container:iterator",
+        "folly//folly:cancellation_token",
+        "folly//folly:exception_wrapper",
+        "folly//folly:try",
+        "folly//folly:unit",
+        "folly//folly/container:access",
+        "folly//folly/container:iterator",
     ],
 )
 
@@ -163,8 +163,8 @@ cpp_library(
     name = "coroutine",
     headers = ["Coroutine.h"],
     exported_deps = [
-        "//folly:portability",
-        "//folly:utility",
+        "folly//folly:portability",
+        "folly//folly:utility",
     ],
 )
 
@@ -175,8 +175,8 @@ cpp_library(
         ":coroutine",
         ":via_if_async",
         ":with_async_stack",
-        "//folly:executor",
-        "//folly/io/async:request_context",
+        "folly//folly:executor",
+        "folly//folly/io/async:request_context",
     ],
 )
 
@@ -200,7 +200,7 @@ cpp_library(
         ":coroutine",
         ":traits",
         ":with_async_stack",
-        "//folly/tracing:async_stack",
+        "folly//folly/tracing:async_stack",
     ],
 )
 
@@ -221,8 +221,8 @@ cpp_library(
     exported_deps = [
         ":coroutine",
         ":with_async_stack",
-        "//folly:executor",
-        "//folly/tracing:async_stack",
+        "folly//folly:executor",
+        "folly//folly/tracing:async_stack",
     ],
 )
 
@@ -231,10 +231,10 @@ cpp_library(
     headers = ["detail/Helpers.h"],
     exported_deps = [
         ":coroutine",
-        "//folly:executor",
-        "//folly:singleton_thread_local",
-        "//folly/io/async:request_context",
-        "//folly/tracing:async_stack",
+        "folly//folly:executor",
+        "folly//folly:singleton_thread_local",
+        "folly//folly/io/async:request_context",
+        "folly//folly/tracing:async_stack",
     ],
 )
 
@@ -243,11 +243,11 @@ cpp_library(
     srcs = ["detail/Malloc.cpp"],
     headers = ["detail/Malloc.h"],
     deps = [
-        "//folly/lang:hint",
-        "//folly/lang:new",
+        "folly//folly/lang:hint",
+        "folly//folly/lang:new",
     ],
     exported_deps = [
-        "//folly:c_portability",
+        "folly//folly:c_portability",
     ],
 )
 
@@ -255,7 +255,7 @@ cpp_library(
     name = "detail_manual_lifetime",
     headers = ["detail/ManualLifetime.h"],
     exported_deps = [
-        "//folly:scope_guard",
+        "folly//folly:scope_guard",
     ],
 )
 
@@ -263,7 +263,7 @@ cpp_library(
     name = "detail_traits",
     headers = ["detail/Traits.h"],
     exported_deps = [
-        "//folly:traits",
+        "folly//folly:traits",
     ],
 )
 
@@ -287,7 +287,7 @@ cpp_library(
         ":invoke",
         ":task",
         ":traits",
-        "//folly/futures:core",
+        "folly//folly/futures:core",
     ],
 )
 
@@ -308,7 +308,7 @@ cpp_library(
         ":gtest_helpers",
         ":result",
         ":task",
-        "//folly/portability:gmock",
+        "folly//folly/portability:gmock",
     ],
 )
 
@@ -319,9 +319,9 @@ cpp_library(
         ":blocking_wait",
         ":coroutine",
         ":task",
-        "//folly/experimental/exception_tracer:smart_exception_stack_trace_hooks",  # @manual
-        "//folly/experimental/exception_tracer:smart_exception_tracer",
-        "//folly/portability:gtest",
+        "folly//folly/experimental/exception_tracer:smart_exception_stack_trace_hooks",  # @manual
+        "folly//folly/experimental/exception_tracer:smart_exception_tracer",
+        "folly//folly/portability:gtest",
     ],
 )
 
@@ -332,10 +332,10 @@ cpp_library(
         ":coroutine",
         ":detail_malloc",
         ":with_async_stack",
-        "//folly:scope_guard",
-        "//folly:try",
-        "//folly/lang:assume",
-        "//folly/tracing:async_stack",
+        "folly//folly:scope_guard",
+        "folly//folly:try",
+        "folly//folly/lang:assume",
+        "folly//folly/tracing:async_stack",
     ],
 )
 
@@ -343,8 +343,8 @@ cpp_library(
     name = "invoke",
     headers = ["Invoke.h"],
     exported_deps = [
-        "//folly/functional:invoke",
-        "//folly/lang:customization_point",
+        "folly//folly/functional:invoke",
+        "folly//folly/lang:customization_point",
     ],
 )
 
@@ -366,9 +366,9 @@ cpp_library(
         ":task",
         ":via_if_async",
         ":with_cancellation",
-        "//folly:cancellation_token",
-        "//folly:executor",
-        "//folly:scope_guard",
+        "folly//folly:cancellation_token",
+        "folly//folly:executor",
+        "folly//folly:scope_guard",
     ],
 )
 
@@ -379,7 +379,7 @@ cpp_library(
     exported_deps = [
         ":coroutine",
         ":via_if_async",
-        "//folly:executor",
+        "folly//folly:executor",
     ],
 )
 
@@ -389,10 +389,10 @@ cpp_library(
     exported_deps = [
         ":baton",
         ":coroutine",
-        "//folly:cancellation_token",
-        "//folly:try",
-        "//folly/futures:core",
-        "//folly/synchronization:relaxed_atomic",
+        "folly//folly:cancellation_token",
+        "folly//folly:try",
+        "folly//folly/futures:core",
+        "folly//folly/synchronization:relaxed_atomic",
     ],
 )
 
@@ -400,9 +400,9 @@ cpp_library(
     name = "result",
     headers = ["Result.h"],
     exported_deps = [
-        "//folly:cancellation_token",
-        "//folly:exception_wrapper",
-        "//folly:try",
+        "folly//folly:cancellation_token",
+        "folly//folly:exception_wrapper",
+        "folly//folly:try",
     ],
 )
 
@@ -415,11 +415,11 @@ cpp_library(
         ":sleep",
         ":task",
         ":traits",
-        "//folly:cancellation_token",
-        "//folly:constexpr_math",
-        "//folly:exception_wrapper",
-        "//folly:random",
-        "//folly:try",
+        "folly//folly:cancellation_token",
+        "folly//folly:constexpr_math",
+        "folly//folly:exception_wrapper",
+        "folly//folly:random",
+        "folly//folly:try",
     ],
 )
 
@@ -429,11 +429,11 @@ cpp_library(
     exported_deps = [
         ":async_generator",
         ":task",
-        "//folly:cancellation_token",
-        "//folly:executor",
-        "//folly:optional",
-        "//folly/futures:core",
-        "//folly/synchronization:baton",
+        "folly//folly:cancellation_token",
+        "folly//folly:executor",
+        "folly//folly:optional",
+        "folly//folly/futures:core",
+        "folly//folly/synchronization:baton",
     ],
 )
 
@@ -444,13 +444,13 @@ cpp_library(
         ":coroutine",
         ":traits",
         ":via_if_async",
-        "//folly:exception_wrapper",
-        "//folly:executor",
-        "//folly:scope_guard",
-        "//folly/functional:invoke",
-        "//folly/lang:assume",
-        "//folly/lang:customization_point",
-        "//folly/tracing:async_stack",
+        "folly//folly:exception_wrapper",
+        "folly//folly:executor",
+        "folly//folly:scope_guard",
+        "folly//folly/functional:invoke",
+        "folly//folly/lang:assume",
+        "folly//folly/lang:customization_point",
+        "folly//folly/tracing:async_stack",
     ],
 )
 
@@ -459,7 +459,7 @@ cpp_library(
     headers = ["SharedLock.h"],
     exported_deps = [
         ":coroutine",
-        "//folly:portability",
+        "folly//folly:portability",
     ],
     exported_external_deps = ["glog"],
 )
@@ -472,9 +472,9 @@ cpp_library(
         ":coroutine",
         ":shared_lock",
         ":via_if_async",
-        "//folly:executor",
-        "//folly:spin_lock",
-        "//folly:synchronized",
+        "folly//folly:executor",
+        "folly//folly:spin_lock",
+        "folly//folly:synchronized",
     ],
 )
 
@@ -489,8 +489,8 @@ cpp_library(
         ":coroutine",
         ":current_executor",
         ":task",
-        "//folly:cancellation_token",
-        "//folly/futures:core",
+        "folly//folly:cancellation_token",
+        "folly//folly/futures:core",
     ],
 )
 
@@ -503,7 +503,7 @@ cpp_library(
         ":coroutine",
         ":mutex",
         ":task",
-        "//folly/experimental/channels/detail:atomic_queue",
+        "folly//folly/experimental/channels/detail:atomic_queue",
     ],
 )
 
@@ -523,17 +523,17 @@ cpp_library(
         ":via_if_async",
         ":with_async_stack",
         ":with_cancellation",
-        "//folly:cancellation_token",
-        "//folly:executor",
-        "//folly:glog",
-        "//folly:portability",
-        "//folly:scope_guard",
-        "//folly:traits",
-        "//folly:try",
-        "//folly/futures:core",
-        "//folly/io/async:request_context",
-        "//folly/lang:assume",
-        "//folly/tracing:async_stack",
+        "folly//folly:cancellation_token",
+        "folly//folly:executor",
+        "folly//folly:glog",
+        "folly//folly:portability",
+        "folly//folly:scope_guard",
+        "folly//folly:traits",
+        "folly//folly:try",
+        "folly//folly/futures:core",
+        "folly//folly/io/async:request_context",
+        "folly//folly/lang:assume",
+        "folly//folly/tracing:async_stack",
     ],
     exported_external_deps = [
         "glog",
@@ -550,8 +550,8 @@ cpp_library(
         ":invoke",
         ":task",
         ":traits",
-        "//folly:optional",
-        "//folly/futures:core",
+        "folly//folly:optional",
+        "folly//folly/futures:core",
     ],
 )
 
@@ -567,8 +567,8 @@ cpp_library(
         ":task",
         ":traits",
         ":with_cancellation",
-        "//folly:cancellation_token",
-        "//folly/futures:core",
+        "folly//folly:cancellation_token",
+        "folly//folly/futures:core",
     ],
 )
 
@@ -577,7 +577,7 @@ cpp_library(
     headers = ["Traits.h"],
     exported_deps = [
         ":coroutine",
-        "//folly:traits",
+        "folly//folly:traits",
     ],
     exported_external_deps = [],
 )
@@ -591,7 +591,7 @@ cpp_library(
     exported_deps = [
         ":async_generator",
         ":coroutine",
-        "//folly:traits",
+        "folly//folly:traits",
     ],
 )
 
@@ -602,8 +602,8 @@ cpp_library(
     exported_deps = [
         ":coroutine",
         ":task",
-        "//folly/concurrency:unbounded_queue",
-        "//folly/fibers:semaphore",
+        "folly//folly/concurrency:unbounded_queue",
+        "folly//folly/fibers:semaphore",
     ],
 )
 
@@ -616,11 +616,11 @@ cpp_library(
         ":traits",
         ":with_async_stack",
         ":with_cancellation",
-        "//folly:executor",
-        "//folly:traits",
-        "//folly/io/async:request_context",
-        "//folly/lang:customization_point",
-        "//folly/tracing:async_stack",
+        "folly//folly:executor",
+        "folly//folly:traits",
+        "folly//folly/io/async:request_context",
+        "folly//folly/lang:customization_point",
+        "folly//folly/tracing:async_stack",
     ],
     exported_external_deps = [
         "glog",
@@ -633,10 +633,10 @@ cpp_library(
     exported_deps = [
         ":coroutine",
         ":traits",
-        "//folly/functional:invoke",
-        "//folly/lang:assume",
-        "//folly/lang:customization_point",
-        "//folly/tracing:async_stack",
+        "folly//folly/functional:invoke",
+        "folly//folly/lang:assume",
+        "folly//folly/lang:customization_point",
+        "folly//folly/tracing:async_stack",
     ],
 )
 
@@ -645,8 +645,8 @@ cpp_library(
     headers = ["WithCancellation.h"],
     exported_deps = [
         ":coroutine",
-        "//folly:cancellation_token",
-        "//folly/lang:customization_point",
+        "folly//folly:cancellation_token",
+        "folly//folly/lang:customization_point",
     ],
 )
 
@@ -656,9 +656,9 @@ cpp_library(
     headers = ["BoundedQueue.h"],
     exported_deps = [
         ":task",
-        "//folly:mpmc_queue",
-        "//folly:producer_consumer_queue",
-        "//folly/fibers:semaphore",
+        "folly//folly:mpmc_queue",
+        "folly//folly:producer_consumer_queue",
+        "folly//folly/fibers:semaphore",
     ],
 )
 
@@ -669,10 +669,10 @@ cpp_library(
     ],
     exported_deps = [
         ":promise",
-        "//folly:small_vector",
-        "//folly:synchronized",
-        "//folly:utility",
-        "//folly/futures:core",
+        "folly//folly:small_vector",
+        "folly//folly:synchronized",
+        "folly//folly:utility",
+        "folly//folly/futures:core",
     ],
 )
 
@@ -682,7 +682,7 @@ cpp_library(
         "Cleanup.h",
     ],
     exported_deps = [
-        "//folly/functional:invoke",
+        "folly//folly/functional:invoke",
     ],
 )
 

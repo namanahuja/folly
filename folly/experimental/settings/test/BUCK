@@ -13,7 +13,7 @@ cpp_library(
         "a.h",
     ],
     exported_deps = [
-        "//folly/experimental/settings:settings",
+        "folly//folly/experimental/settings:settings",
     ],
 )
 
@@ -26,7 +26,7 @@ cpp_library(
         "b.h",
     ],
     exported_deps = [
-        "//folly/experimental/settings:settings",
+        "folly//folly/experimental/settings:settings",
     ],
 )
 
@@ -38,11 +38,11 @@ cpp_unittest(
     deps = [
         ":a",
         ":b",
-        "//folly:format",
-        "//folly:string",
-        "//folly/experimental/settings:settings",
-        "//folly/portability:gmock",
-        "//folly/portability:gtest",
+        "folly//folly:format",
+        "folly//folly:string",
+        "folly//folly/experimental/settings:settings",
+        "folly//folly/portability:gmock",
+        "folly//folly/portability:gtest",
     ],
 )
 
@@ -50,8 +50,8 @@ cpp_benchmark(
     name = "settings_bench",
     srcs = ["SettingsBenchmarks.cpp"],
     deps = [
-        "//folly:benchmark",
-        "//folly/experimental/settings:settings",
-        "//folly/init:init",
+        "folly//folly:benchmark",
+        "folly//folly/experimental/settings:settings",
+        "folly//folly/init:init",
     ],
 )

@@ -8,7 +8,7 @@ cpp_library(
         "LtHashInternal.h",
     ],
     exported_deps = [
-        "//folly:range",
+        "folly//folly:range",
     ],
 )
 
@@ -26,8 +26,8 @@ cpp_library(
     },
     deps = [
         ":lt_hash_internal",
-        "//folly:memory",
-        "//folly/lang:bits",
+        "folly//folly:memory",
+        "folly//folly/lang:bits",
     ],
     external_deps = [
         "glog",
@@ -48,8 +48,8 @@ cpp_library(
     },
     deps = [
         ":lt_hash_internal",
-        "//folly:memory",
-        "//folly/lang:bits",
+        "folly//folly:memory",
+        "folly//folly/lang:bits",
     ],
     external_deps = [
         "glog",
@@ -71,8 +71,8 @@ cpp_library(
     },
     deps = [
         ":lt_hash_internal",
-        "//folly:memory",
-        "//folly/lang:bits",
+        "folly//folly:memory",
+        "folly//folly/lang:bits",
     ],
     external_deps = [
         "glog",
@@ -94,8 +94,8 @@ cpp_library(
     },
     deps = [
         ":lt_hash_internal",
-        "//folly:memory",
-        "//folly/lang:bits",
+        "folly//folly:memory",
+        "folly//folly/lang:bits",
     ],
     external_deps = [
         "glog",
@@ -117,8 +117,8 @@ cpp_library(
     },
     deps = [
         ":lt_hash_internal",
-        "//folly:memory",
-        "//folly/lang:bits",
+        "folly//folly:memory",
+        "folly//folly/lang:bits",
     ],
     external_deps = [
         "glog",

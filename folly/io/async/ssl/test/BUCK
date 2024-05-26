@@ -1,5 +1,5 @@
 load("@fbcode_macros//build_defs:cpp_unittest.bzl", "cpp_unittest")
-load("//folly/io/async/test/certs:defs.bzl", "alias_pem")
+load("folly//folly/io/async/test/certs:defs.bzl", "alias_pem")
 
 oncall("fbcode_entropy_wardens_folly")
 
@@ -13,9 +13,9 @@ cpp_unittest(
     headers = [],
     emails = ["oncall+secure_pipes@xmail.facebook.com"],
     deps = [
-        "//folly/io/async/ssl:ssl_errors",
-        "//folly/portability:gtest",
-        "//folly/portability:openssl",
+        "folly//folly/io/async/ssl:ssl_errors",
+        "folly//folly/portability:gtest",
+        "folly//folly/portability:openssl",
     ],
 )
 
@@ -28,11 +28,11 @@ cpp_unittest(
         ":tests-cert.pem",
     ],
     deps = [
-        "//folly:file_util",
-        "//folly/experimental:test_util",
-        "//folly/io/async/ssl:basic_transport_certificate",
-        "//folly/portability:gtest",
-        "//folly/ssl:openssl_cert_utils",
+        "folly//folly:file_util",
+        "folly//folly/experimental:test_util",
+        "folly//folly/io/async/ssl:basic_transport_certificate",
+        "folly//folly/portability:gtest",
+        "folly//folly/ssl:openssl_cert_utils",
     ],
 )
 
@@ -42,10 +42,10 @@ cpp_unittest(
     headers = [],
     emails = ["oncall+secure_pipes@xmail.facebook.com"],
     deps = [
-        "//folly:string",
-        "//folly/io/async/ssl:openssl_utils",
-        "//folly/portability:gtest",
-        "//folly/portability:openssl",
-        "//folly/ssl:openssl_ptr_types",
+        "folly//folly:string",
+        "folly//folly/io/async/ssl:openssl_utils",
+        "folly//folly/portability:gtest",
+        "folly//folly/portability:openssl",
+        "folly//folly/ssl:openssl_ptr_types",
     ],
 )

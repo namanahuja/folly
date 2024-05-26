@@ -7,9 +7,9 @@ cpp_unittest(
     name = "at_fork_test",
     srcs = ["AtForkTest.cpp"],
     deps = [
-        "//folly/portability:gmock",
-        "//folly/portability:gtest",
-        "//folly/system:at_fork",
+        "folly//folly/portability:gmock",
+        "folly//folly/portability:gtest",
+        "folly//folly/system:at_fork",
     ],
     external_deps = [
         "glog",
@@ -29,14 +29,14 @@ cpp_unittest(
         "--env_util_subprocess_binary=$(location :env_util_subprocess)",
     ],
     deps = [
-        "//folly:memory",
-        "//folly:subprocess",
-        "//folly/container:array",
-        "//folly/portability:fcntl",
-        "//folly/portability:gflags",
-        "//folly/portability:gtest",
-        "//folly/portability:stdlib",
-        "//folly/system:env_util",
+        "folly//folly:memory",
+        "folly//folly:subprocess",
+        "folly//folly/container:array",
+        "folly//folly/portability:fcntl",
+        "folly//folly/portability:gflags",
+        "folly//folly/portability:gtest",
+        "folly//folly/portability:stdlib",
+        "folly//folly/system:env_util",
     ],
     external_deps = [
         "glog",
@@ -48,8 +48,8 @@ cpp_unittest(
     name = "pid_test",
     srcs = ["PidTest.cpp"],
     deps = [
-        "//folly/portability:gtest",
-        "//folly/system:pid",
+        "folly//folly/portability:gtest",
+        "folly//folly/system:pid",
     ],
     external_deps = [
         "glog",
@@ -61,11 +61,11 @@ cpp_unittest(
     srcs = ["MemoryMappingTest.cpp"],
     headers = [],
     deps = [
-        "//folly:file_util",
-        "//folly:random",
-        "//folly/portability:gtest",
-        "//folly/portability:sys_mman",
-        "//folly/system:memory_mapping",
+        "folly//folly:file_util",
+        "folly//folly:random",
+        "folly//folly/portability:gtest",
+        "folly//folly/portability:sys_mman",
+        "folly//folly/system:memory_mapping",
     ],
     external_deps = [
         "glog",
@@ -77,8 +77,8 @@ cpp_unittest(
     srcs = ["ShellTest.cpp"],
     headers = [],
     deps = [
-        "//folly/portability:gtest",
-        "//folly/system:shell",
+        "folly//folly/portability:gtest",
+        "folly//folly/system:shell",
     ],
     external_deps = [
         "glog",
@@ -90,10 +90,10 @@ cpp_unittest(
     srcs = ["ThreadIdTest.cpp"],
     headers = [],
     deps = [
-        "//folly:benchmark",
-        "//folly/portability:gtest",
-        "//folly/portability:unistd",
-        "//folly/system:thread_id",
+        "folly//folly:benchmark",
+        "folly//folly/portability:gtest",
+        "folly//folly/portability:unistd",
+        "folly//folly/system:thread_id",
     ],
 )
 
@@ -102,9 +102,9 @@ cpp_unittest(
     srcs = ["ThreadNameTest.cpp"],
     headers = [],
     deps = [
-        "//folly:scope_guard",
-        "//folly/portability:gtest",
-        "//folly/synchronization:baton",
-        "//folly/system:thread_name",
+        "folly//folly:scope_guard",
+        "folly//folly/portability:gtest",
+        "folly//folly/synchronization:baton",
+        "folly//folly/system:thread_name",
     ],
 )

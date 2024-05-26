@@ -8,15 +8,15 @@ cpp_unittest(
     srcs = ["ChecksumTest.cpp"],
     headers = [],
     deps = [
-        "//folly:benchmark",
-        "//folly:random",
-        "//folly/external/fast-crc32:avx512_crc32c_v8s3x4",
-        "//folly/external/fast-crc32:sse_crc32c_v8s3x3",
-        "//folly/hash:checksum",
-        "//folly/hash:hash",
-        "//folly/hash/detail:checksum_detail",
-        "//folly/portability:gflags",
-        "//folly/portability:gtest",
+        "folly//folly:benchmark",
+        "folly//folly:random",
+        "folly//folly/external/fast-crc32:avx512_crc32c_v8s3x4",
+        "folly//folly/external/fast-crc32:sse_crc32c_v8s3x3",
+        "folly//folly/hash:checksum",
+        "folly//folly/hash:hash",
+        "folly//folly/hash/detail:checksum_detail",
+        "folly//folly/portability:gflags",
+        "folly//folly/portability:gtest",
     ],
     external_deps = [
         "boost",
@@ -28,9 +28,9 @@ cpp_benchmark(
     srcs = ["ChecksumBenchmark.cpp"],
     headers = [],
     deps = [
-        "//folly:benchmark",
-        "//folly:memory",
-        "//folly/hash:checksum",
+        "folly//folly:benchmark",
+        "folly//folly:memory",
+        "folly//folly/hash:checksum",
     ],
     external_deps = [
         "glog",
@@ -42,8 +42,8 @@ cpp_unittest(
     srcs = ["FarmHashTest.cpp"],
     headers = [],
     deps = [
-        "//folly/hash:farm_hash",
-        "//folly/portability:gtest",
+        "folly//folly/hash:farm_hash",
+        "folly//folly/portability:gtest",
     ],
 )
 
@@ -53,10 +53,10 @@ cpp_benchmark(
     headers = [],
     deps = [
         "fbsource//third-party/fmt:fmt",
-        "//folly:benchmark",
-        "//folly:preprocessor",
-        "//folly/hash:hash",
-        "//folly/portability:gflags",
+        "folly//folly:benchmark",
+        "folly//folly:preprocessor",
+        "folly//folly/hash:hash",
+        "folly//folly/portability:gflags",
     ],
     external_deps = [
         "glog",
@@ -69,12 +69,12 @@ cpp_unittest(
     headers = [],
     supports_static_listing = False,
     deps = [
-        "//folly:conv",
-        "//folly:map_util",
-        "//folly:random",
-        "//folly:range",
-        "//folly/hash:hash",
-        "//folly/portability:gtest",
+        "folly//folly:conv",
+        "folly//folly:map_util",
+        "folly//folly:random",
+        "folly//folly:range",
+        "folly//folly/hash:hash",
+        "folly//folly/portability:gtest",
     ],
 )
 
@@ -83,9 +83,9 @@ cpp_unittest(
     srcs = ["SpookyHashV1Test.cpp"],
     headers = [],
     deps = [
-        "//folly/hash:spooky_hash_v1",
-        "//folly/portability:gtest",
-        "//folly/portability:time",
+        "folly//folly/hash:spooky_hash_v1",
+        "folly//folly/portability:gtest",
+        "folly//folly/portability:time",
     ],
     external_deps = [
         "glog",
@@ -97,9 +97,9 @@ cpp_unittest(
     srcs = ["SpookyHashV2Test.cpp"],
     headers = [],
     deps = [
-        "//folly/hash:spooky_hash_v2",
-        "//folly/portability:gtest",
-        "//folly/portability:time",
+        "folly//folly/hash:spooky_hash_v2",
+        "folly//folly/portability:gtest",
+        "folly//folly/portability:time",
     ],
     external_deps = [
         "glog",

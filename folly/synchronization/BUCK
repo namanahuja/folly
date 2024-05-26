@@ -8,13 +8,13 @@ cpp_library(
     headers = ["AsymmetricThreadFence.h"],
     deps = [
         ":relaxed_atomic",
-        "//folly:exception",
-        "//folly:indestructible",
-        "//folly/portability:sys_membarrier",
-        "//folly/portability:sys_mman",
+        "folly//folly:exception",
+        "folly//folly:indestructible",
+        "folly//folly/portability:sys_membarrier",
+        "folly//folly/portability:sys_mman",
     ],
     exported_deps = [
-        "//folly/portability:asm",
+        "folly//folly/portability:asm",
     ],
 )
 
@@ -22,8 +22,8 @@ cpp_library(
     name = "atomic_ref",
     headers = ["AtomicRef.h"],
     exported_deps = [
-        "//folly:traits",
-        "//folly/lang:safe_assert",
+        "folly//folly:traits",
+        "folly//folly/lang:safe_assert",
     ],
 )
 
@@ -34,10 +34,10 @@ cpp_library(
         "AtomicUtil-inl.h",
     ],
     exported_deps = [
-        "//folly:constexpr_math",
-        "//folly:likely",
-        "//folly:portability",
-        "//folly:traits",
+        "folly//folly:constexpr_math",
+        "folly//folly:likely",
+        "folly//folly:portability",
+        "folly//folly:traits",
     ],
 )
 
@@ -52,8 +52,8 @@ cpp_library(
     ],
     exported_deps = [
         ":parking_lot",
-        "//folly:portability",
-        "//folly/detail:futex",
+        "folly//folly:portability",
+        "folly//folly/detail:futex",
     ],
 )
 
@@ -61,9 +61,9 @@ cpp_library(
     name = "atomic_struct",
     headers = ["AtomicStruct.h"],
     exported_deps = [
-        "//folly:constexpr_math",
-        "//folly:traits",
-        "//folly/synchronization/detail:atomic_utils",
+        "folly//folly:constexpr_math",
+        "folly//folly:traits",
+        "folly//folly/synchronization/detail:atomic_utils",
     ],
 )
 
@@ -73,12 +73,12 @@ cpp_library(
     exported_deps = [
         ":atomic_util",
         ":wait_options",
-        "//folly:likely",
-        "//folly/detail:async_trace",
-        "//folly/detail:futex",
-        "//folly/detail:memory_idler",
-        "//folly/portability:asm",
-        "//folly/synchronization/detail:spin",
+        "folly//folly:likely",
+        "folly//folly/detail:async_trace",
+        "folly//folly/detail:futex",
+        "folly//folly/detail:memory_idler",
+        "folly//folly/portability:asm",
+        "folly//folly/synchronization/detail:spin",
     ],
 )
 
@@ -86,11 +86,11 @@ cpp_library(
     name = "call_once",
     headers = ["CallOnce.h"],
     exported_deps = [
-        "//folly:likely",
-        "//folly:micro_lock",
-        "//folly:portability",
-        "//folly:shared_mutex",
-        "//folly/functional:invoke",
+        "folly//folly:likely",
+        "folly//folly:micro_lock",
+        "folly//folly:portability",
+        "folly//folly:shared_mutex",
+        "folly//folly/functional:invoke",
     ],
 )
 
@@ -107,21 +107,21 @@ cpp_library(
         ":atomic_notification",
         ":atomic_util",
         ":lock",
-        "//folly:constexpr_math",
-        "//folly:likely",
-        "//folly:optional",
-        "//folly:portability",
-        "//folly:scope_guard",
-        "//folly:utility",
-        "//folly/chrono:hardware",
-        "//folly/detail:futex",
-        "//folly/functional:invoke",
-        "//folly/lang:align",
-        "//folly/lang:bits",
-        "//folly/lang:exception",
-        "//folly/portability:asm",
-        "//folly/synchronization/detail:inline_function_ref",
-        "//folly/synchronization/detail:sleeper",
+        "folly//folly:constexpr_math",
+        "folly//folly:likely",
+        "folly//folly:optional",
+        "folly//folly:portability",
+        "folly//folly:scope_guard",
+        "folly//folly:utility",
+        "folly//folly/chrono:hardware",
+        "folly//folly/detail:futex",
+        "folly//folly/functional:invoke",
+        "folly//folly/lang:align",
+        "folly//folly/lang:bits",
+        "folly//folly/lang:exception",
+        "folly//folly/portability:asm",
+        "folly//folly/synchronization/detail:inline_function_ref",
+        "folly//folly/synchronization/detail:sleeper",
     ],
     exported_external_deps = [
         "glog",
@@ -145,20 +145,20 @@ cpp_library(
         "HazptrThrLocal.h",
     ],
     deps = [
-        "//folly/executors:queued_immediate_executor",
-        "//folly/portability:gflags",
+        "folly//folly/executors:queued_immediate_executor",
+        "folly//folly/portability:gflags",
     ],
     exported_deps = [
         ":asymmetric_thread_fence",
-        "//folly:c_portability",
-        "//folly:executor",
-        "//folly:memory",
-        "//folly:portability",
-        "//folly:singleton_thread_local",
-        "//folly:traits",
-        "//folly/concurrency:cache_locality",
-        "//folly/container:f14_hash",
-        "//folly/synchronization/detail:hazptr_utils",
+        "folly//folly:c_portability",
+        "folly//folly:executor",
+        "folly//folly:memory",
+        "folly//folly:portability",
+        "folly//folly:singleton_thread_local",
+        "folly//folly:traits",
+        "folly//folly/concurrency:cache_locality",
+        "folly//folly/container:f14_hash",
+        "folly//folly/synchronization/detail:hazptr_utils",
     ],
     exported_external_deps = [
         "glog",
@@ -172,8 +172,8 @@ cpp_library(
         "HazptrThreadPoolExecutor.h",
     ],
     deps = [
-        "//folly:singleton",
-        "//folly/executors:cpu_thread_pool_executor",
+        "folly//folly:singleton",
+        "folly//folly/executors:cpu_thread_pool_executor",
     ],
     exported_deps = [
         ":hazptr",
@@ -185,9 +185,9 @@ cpp_library(
     headers = ["Latch.h"],
     exported_deps = [
         ":saturating_semaphore",
-        "//folly:c_portability",
-        "//folly:likely",
-        "//folly/lang:exception",
+        "folly//folly:c_portability",
+        "folly//folly:likely",
+        "folly//folly/lang:exception",
     ],
 )
 
@@ -197,14 +197,14 @@ cpp_library(
     exported_deps = [
         ":atomic_struct",
         ":saturating_semaphore",
-        "//folly:c_portability",
-        "//folly:indexed_mem_pool",
-        "//folly:likely",
-        "//folly:portability",
-        "//folly:traits",
-        "//folly/detail:static_singleton_manager",
-        "//folly/lang:aligned",
-        "//folly/lang:safe_assert",
+        "folly//folly:c_portability",
+        "folly//folly:indexed_mem_pool",
+        "folly//folly:likely",
+        "folly//folly:portability",
+        "folly//folly:traits",
+        "folly//folly/detail:static_singleton_manager",
+        "folly//folly/lang:aligned",
+        "folly//folly/lang:safe_assert",
     ],
 )
 
@@ -212,11 +212,11 @@ cpp_library(
     name = "lock",
     headers = ["Lock.h"],
     exported_deps = [
-        "//folly:portability",
-        "//folly:traits",
-        "//folly/functional:invoke",
-        "//folly/lang:exception",
-        "//folly/lang:hint",
+        "folly//folly:portability",
+        "folly//folly:traits",
+        "folly//folly/functional:invoke",
+        "folly//folly/lang:exception",
+        "folly//folly/lang:hint",
     ],
 )
 
@@ -225,9 +225,9 @@ cpp_library(
     headers = ["MicroSpinLock.h"],
     exported_deps = [
         ":sanitize_thread",
-        "//folly:portability",
-        "//folly/lang:align",
-        "//folly/synchronization/detail:sleeper",
+        "folly//folly:portability",
+        "folly//folly/lang:align",
+        "folly//folly/synchronization/detail:sleeper",
     ],
 )
 
@@ -235,9 +235,9 @@ cpp_library(
     name = "native_semaphore",
     headers = ["NativeSemaphore.h"],
     exported_deps = [
-        "//folly:utility",
-        "//folly/lang:exception",
-        "//folly/portability:windows",
+        "folly//folly:utility",
+        "folly//folly/lang:exception",
+        "folly//folly/portability:windows",
     ],
 )
 
@@ -248,9 +248,9 @@ cpp_library(
         ":atomic_ref",
         ":atomic_util",
         ":sanitize_thread",
-        "//folly:portability",
-        "//folly/lang:safe_assert",
-        "//folly/synchronization/detail:sleeper",
+        "folly//folly:portability",
+        "folly//folly/lang:safe_assert",
+        "folly//folly/synchronization/detail:sleeper",
     ],
 )
 
@@ -261,11 +261,11 @@ cpp_library(
     ],
     headers = ["ParkingLot.h"],
     exported_deps = [
-        "//folly:hash",
-        "//folly:indestructible",
-        "//folly:portability",
-        "//folly:unit",
-        "//folly/lang:safe_assert",
+        "folly//folly:hash",
+        "folly//folly:indestructible",
+        "folly//folly:portability",
+        "folly//folly:unit",
+        "folly//folly/lang:safe_assert",
     ],
 )
 
@@ -278,15 +278,15 @@ cpp_library(
         "Rcu.h",
     ],
     deps = [
-        "//folly/detail:static_singleton_manager",
+        "folly//folly/detail:static_singleton_manager",
     ],
     exported_deps = [
-        "//folly:function",
-        "//folly:indestructible",
-        "//folly:optional",
-        "//folly/detail:turn_sequencer",
-        "//folly/executors:queued_immediate_executor",
-        "//folly/synchronization/detail:rcu-detail",
+        "folly//folly:function",
+        "folly//folly:indestructible",
+        "folly//folly:optional",
+        "folly//folly/detail:turn_sequencer",
+        "folly//folly/executors:queued_immediate_executor",
+        "folly//folly/synchronization/detail:rcu-detail",
     ],
 )
 
@@ -295,9 +295,9 @@ cpp_library(
     headers = ["RWSpinLock.h"],
     exported_deps = [
         ":lock",
-        "//folly:likely",
-        "//folly:portability",
-        "//folly/portability:asm",
+        "folly//folly:likely",
+        "folly//folly:portability",
+        "folly//folly/portability:asm",
     ],
 )
 
@@ -313,10 +313,10 @@ cpp_library(
     ],
     headers = ["SanitizeThread.h"],
     deps = [
-        "//folly/lang:extern",
+        "folly//folly/lang:extern",
     ],
     exported_deps = [
-        "//folly:portability",
+        "folly//folly:portability",
     ],
 )
 
@@ -326,11 +326,11 @@ cpp_library(
     exported_deps = [
         ":atomic_util",
         ":wait_options",
-        "//folly:likely",
-        "//folly/detail:futex",
-        "//folly/detail:memory_idler",
-        "//folly/portability:asm",
-        "//folly/synchronization/detail:spin",
+        "folly//folly:likely",
+        "folly//folly/detail:futex",
+        "folly//folly/detail:memory_idler",
+        "folly//folly/portability:asm",
+        "folly//folly/synchronization/detail:spin",
     ],
     exported_external_deps = [
         "glog",
@@ -343,8 +343,8 @@ cpp_library(
     exported_deps = [
         ":micro_spin_lock",
         ":pico_spin_lock",
-        "//folly:micro_lock",
-        "//folly:portability",
+        "folly//folly:micro_lock",
+        "folly//folly:portability",
     ],
 )
 
@@ -353,10 +353,10 @@ cpp_library(
     srcs = ["WaitOptions.cpp"],
     headers = ["WaitOptions.h"],
     deps = [
-        "//folly:portability",
+        "folly//folly:portability",
     ],
     exported_deps = [
-        "//folly:c_portability",
+        "folly//folly:c_portability",
     ],
 )
 
@@ -365,7 +365,7 @@ cpp_library(
     headers = ["DelayedInit.h"],
     exported_deps = [
         ":call_once",
-        "//folly/lang:safe_assert",
+        "folly//folly/lang:safe_assert",
     ],
 )
 
@@ -378,11 +378,11 @@ cpp_library(
         ":distributed_mutex",
         ":saturating_semaphore",
         ":wait_options",
-        "//folly:glog",
-        "//folly:intrusive_list",
-        "//folly:optional",
-        "//folly/lang:align",
-        "//folly/synchronization/detail:spin",
+        "folly//folly:glog",
+        "folly//folly:intrusive_list",
+        "folly//folly:optional",
+        "folly//folly/lang:align",
+        "folly//folly/synchronization/detail:spin",
     ],
 )
 
@@ -390,12 +390,12 @@ cpp_library(
     name = "flat_combining",
     headers = ["FlatCombining.h"],
     exported_deps = [
-        "//folly:function",
-        "//folly:indexed_mem_pool",
-        "//folly:portability",
-        "//folly/concurrency:cache_locality",
-        "//folly/synchronization:saturating_semaphore",
-        "//folly/system:thread_name",
+        "folly//folly:function",
+        "folly//folly:indexed_mem_pool",
+        "folly//folly:portability",
+        "folly//folly/concurrency:cache_locality",
+        "folly//folly/synchronization:saturating_semaphore",
+        "folly//folly/system:thread_name",
     ],
 )
 
@@ -403,11 +403,11 @@ cpp_library(
     name = "event_count",
     headers = ["EventCount.h"],
     exported_deps = [
-        "//folly:likely",
-        "//folly/detail:futex",
-        "//folly/lang:bits",
-        "//folly/portability:sys_time",
-        "//folly/portability:unistd",
+        "folly//folly:likely",
+        "folly//folly/detail:futex",
+        "folly//folly/lang:bits",
+        "folly//folly/portability:sys_time",
+        "folly//folly/portability:unistd",
     ],
     exported_external_deps = [
         "glog",

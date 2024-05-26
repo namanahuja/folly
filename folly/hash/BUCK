@@ -7,11 +7,11 @@ cpp_library(
     srcs = ["Checksum.cpp"],
     headers = ["Checksum.h"],
     deps = [
-        "//folly:cpu_id",
-        "//folly/detail:traponavx512",
-        "//folly/external/fast-crc32:avx512_crc32c_v8s3x4",  # @manual
-        "//folly/external/fast-crc32:sse_crc32c_v8s3x3",  # @manual
-        "//folly/hash/detail:checksum_detail",
+        "folly//folly:cpu_id",
+        "folly//folly/detail:traponavx512",
+        "folly//folly/external/fast-crc32:avx512_crc32c_v8s3x4",  # @manual
+        "folly//folly/external/fast-crc32:sse_crc32c_v8s3x3",  # @manual
+        "folly//folly/hash/detail:checksum_detail",
     ],
     external_deps = [
         "boost",
@@ -22,7 +22,7 @@ cpp_library(
     name = "farm_hash",
     headers = ["FarmHash.h"],
     exported_deps = [
-        "//folly/external/farmhash:farmhash",
+        "folly//folly/external/farmhash:farmhash",
     ],
 )
 
@@ -32,11 +32,11 @@ cpp_library(
     exported_deps = [
         ":spooky_hash_v1",
         ":spooky_hash_v2",
-        "//folly:c_portability",
-        "//folly:traits",
-        "//folly:utility",
-        "//folly/functional:apply_tuple",
-        "//folly/lang:bits",
+        "folly//folly:c_portability",
+        "folly//folly:traits",
+        "folly//folly:utility",
+        "folly//folly/functional:apply_tuple",
+        "folly//folly/lang:bits",
     ],
 )
 
@@ -45,7 +45,7 @@ cpp_library(
     srcs = ["SpookyHashV1.cpp"],
     headers = ["SpookyHashV1.h"],
     deps = [
-        "//folly:cpp_attributes",
+        "folly//folly:cpp_attributes",
     ],
 )
 
@@ -54,7 +54,7 @@ cpp_library(
     srcs = ["SpookyHashV2.cpp"],
     headers = ["SpookyHashV2.h"],
     deps = [
-        "//folly:cpp_attributes",
-        "//folly:portability",
+        "folly//folly:cpp_attributes",
+        "folly//folly:portability",
     ],
 )

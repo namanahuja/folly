@@ -82,19 +82,19 @@ def customized_unittest(
                                 ("_dwarf{}".format(dwarf_size)) +
                                 ("" if split_dwarf_option == "none" else "_" + split_dwarf_option) +
                                 ("_aaranges" if use_aaranges else "_noaaranges"),  # @manual
-                                "//folly:demangle",
-                                "//folly:range",
-                                "//folly:scope_guard",
-                                "//folly:string",
-                                "//folly/experimental/symbolizer:elf_cache",
-                                "//folly/experimental/symbolizer:symbolized_frame",
-                                "//folly/experimental/symbolizer:symbolizer",
-                                "//folly/experimental/symbolizer/detail:debug",
-                                "//folly/portability:filesystem",
-                                "//folly/portability:gtest",
-                                "//folly/portability:unistd",
-                                "//folly/synchronization:baton",
-                                "//folly/test:test_utils",
+                                "folly//folly:demangle",
+                                "folly//folly:range",
+                                "folly//folly:scope_guard",
+                                "folly//folly:string",
+                                "folly//folly/experimental/symbolizer:elf_cache",
+                                "folly//folly/experimental/symbolizer:symbolized_frame",
+                                "folly//folly/experimental/symbolizer:symbolizer",
+                                "folly//folly/experimental/symbolizer/detail:debug",
+                                "folly//folly/portability:filesystem",
+                                "folly//folly/portability:gtest",
+                                "folly//folly/portability:unistd",
+                                "folly//folly/synchronization:baton",
+                                "folly//folly/test:test_utils",
                             ],
                             external_deps = [
                                 "glog",
@@ -105,8 +105,8 @@ def validate_folly_symbolizer(name, binary):
     custom_unittest(
         name = name,
         command = [
-            "$(exe //folly/experimental/symbolizer/test:compare-addr2line.sh)",
-            "$(location //folly/experimental/symbolizer/tool:folly-addr2line)",
+            "$(exe folly//folly/experimental/symbolizer/test:compare-addr2line.sh)",
+            "$(location folly//folly/experimental/symbolizer/tool:folly-addr2line)",
             "$(location //third-party-buck/platform010/build/llvm-fb/15:bin/llvm-addr2line)",
             "$(location {})".format(binary),
         ],
@@ -121,7 +121,7 @@ def validate_symbolizer_dwp(name, binary):
         custom_unittest(
             name = name,
             command = [
-                "$(exe //folly/experimental/symbolizer/test:symbolizer_dwp_compability.sh)",
+                "$(exe folly//folly/experimental/symbolizer/test:symbolizer_dwp_compability.sh)",
                 "$(location {})".format(binary),
                 "$(location {}[dwp])".format(binary),
                 config.get_build_mode(),

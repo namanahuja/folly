@@ -7,10 +7,10 @@ cpp_unittest(
     srcs = ["Promise.cpp"],
     headers = [],
     deps = [
-        "//folly/experimental/coro:gtest_helpers",
-        "//folly/experimental/coro:promise",
-        "//folly/experimental/coro:task",
-        "//folly/portability:gtest",
+        "folly//folly/experimental/coro:gtest_helpers",
+        "folly//folly/experimental/coro:promise",
+        "folly//folly/experimental/coro:task",
+        "folly//folly/portability:gtest",
     ],
 )
 
@@ -19,12 +19,12 @@ cpp_unittest(
     srcs = ["DetachOnCancel.cpp"],
     headers = [],
     deps = [
-        "//folly/experimental/coro:detach_on_cancel",
-        "//folly/experimental/coro:gtest_helpers",
-        "//folly/experimental/coro:promise",
-        "//folly/experimental/coro:task",
-        "//folly/experimental/coro:timeout",
-        "//folly/portability:gtest",
+        "folly//folly/experimental/coro:detach_on_cancel",
+        "folly//folly/experimental/coro:gtest_helpers",
+        "folly//folly/experimental/coro:promise",
+        "folly//folly/experimental/coro:task",
+        "folly//folly/experimental/coro:timeout",
+        "folly//folly/portability:gtest",
     ],
 )
 
@@ -33,13 +33,13 @@ cpp_unittest(
     srcs = ["WithCancellation.cpp"],
     headers = [],
     deps = [
-        "//folly:cancellation_token",
-        "//folly/experimental/coro:gtest_helpers",
-        "//folly/experimental/coro:sleep",
-        "//folly/experimental/coro:task",
-        "//folly/experimental/coro:timeout",
-        "//folly/experimental/coro:with_cancellation",
-        "//folly/portability:gtest",
+        "folly//folly:cancellation_token",
+        "folly//folly/experimental/coro:gtest_helpers",
+        "folly//folly/experimental/coro:sleep",
+        "folly//folly/experimental/coro:task",
+        "folly//folly/experimental/coro:timeout",
+        "folly//folly/experimental/coro:with_cancellation",
+        "folly//folly/portability:gtest",
     ],
 )
 
@@ -48,9 +48,9 @@ cpp_unittest(
     srcs = ["AsyncScope.cpp"],
     headers = [],
     deps = [
-        "//folly/executors:global_executor",
-        "//folly/experimental/coro:async_scope",
-        "//folly/experimental/coro:gtest_helpers",
+        "folly//folly/executors:global_executor",
+        "folly//folly/experimental/coro:async_scope",
+        "folly//folly/experimental/coro:gtest_helpers",
     ],
 )
 
@@ -59,9 +59,9 @@ cpp_unittest(
     srcs = ["CancellableAsyncScope.cpp"],
     headers = [],
     deps = [
-        "//folly/executors:global_executor",
-        "//folly/experimental/coro:async_scope",
-        "//folly/experimental/coro:gtest_helpers",
+        "folly//folly/executors:global_executor",
+        "folly//folly/experimental/coro:async_scope",
+        "folly//folly/experimental/coro:gtest_helpers",
     ],
 )
 
@@ -70,11 +70,11 @@ cpp_unittest(
     srcs = ["Task.cpp"],
     headers = [],
     deps = [
-        "//folly/executors:global_executor",
-        "//folly/experimental/coro:blocking_wait",
-        "//folly/experimental/coro:task",
-        "//folly/futures:core",
-        "//folly/portability:gtest",
+        "folly//folly/executors:global_executor",
+        "folly//folly/experimental/coro:blocking_wait",
+        "folly//folly/experimental/coro:task",
+        "folly//folly/futures:core",
+        "folly//folly/portability:gtest",
     ],
 )
 
@@ -83,8 +83,8 @@ cpp_unittest(
     srcs = ["Retry.cpp"],
     headers = [],
     deps = [
-        "//folly/experimental/coro:gtest_helpers",
-        "//folly/experimental/coro:retry",
-        "//folly/portability:gtest",
+        "folly//folly/experimental/coro:gtest_helpers",
+        "folly//folly/experimental/coro:retry",
+        "folly//folly/portability:gtest",
     ],
 )

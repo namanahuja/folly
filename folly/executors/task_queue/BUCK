@@ -6,8 +6,8 @@ cpp_library(
     name = "blocking_queue",
     headers = ["BlockingQueue.h"],
     exported_deps = [
-        "//folly:c_portability",
-        "//folly:optional",
+        "folly//folly:c_portability",
+        "folly//folly:optional",
     ],
     exported_external_deps = [
         "glog",
@@ -19,8 +19,8 @@ cpp_library(
     headers = ["LifoSemMPMCQueue.h"],
     exported_deps = [
         ":blocking_queue",
-        "//folly:mpmc_queue",
-        "//folly/synchronization:lifo_sem",
+        "folly//folly:mpmc_queue",
+        "folly//folly/synchronization:lifo_sem",
     ],
 )
 
@@ -29,10 +29,10 @@ cpp_library(
     headers = ["PriorityLifoSemMPMCQueue.h"],
     exported_deps = [
         ":blocking_queue",
-        "//folly:executor",
-        "//folly:mpmc_queue",
-        "//folly:range",
-        "//folly/synchronization:lifo_sem",
+        "folly//folly:executor",
+        "folly//folly:mpmc_queue",
+        "folly//folly:range",
+        "folly//folly/synchronization:lifo_sem",
     ],
     exported_external_deps = [
         "glog",
@@ -44,11 +44,11 @@ cpp_library(
     headers = ["PriorityUnboundedBlockingQueue.h"],
     exported_deps = [
         ":blocking_queue",
-        "//folly:constexpr_math",
-        "//folly:executor",
-        "//folly/concurrency:priority_unbounded_queue_set",
-        "//folly/lang:exception",
-        "//folly/synchronization:lifo_sem",
+        "folly//folly:constexpr_math",
+        "folly//folly:executor",
+        "folly//folly/concurrency:priority_unbounded_queue_set",
+        "folly//folly/lang:exception",
+        "folly//folly/synchronization:lifo_sem",
     ],
 )
 
@@ -57,7 +57,7 @@ cpp_library(
     headers = ["UnboundedBlockingQueue.h"],
     exported_deps = [
         ":blocking_queue",
-        "//folly/concurrency:unbounded_queue",
-        "//folly/synchronization:lifo_sem",
+        "folly//folly/concurrency:unbounded_queue",
+        "folly//folly/synchronization:lifo_sem",
     ],
 )

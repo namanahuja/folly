@@ -8,8 +8,8 @@ cpp_unittest(
     srcs = ["synchronization/Baton.cpp"],
     headers = [],
     deps = [
-        "//folly/portability:gtest",
-        "//folly/synchronization:baton",
+        "folly//folly/portability:gtest",
+        "folly//folly/synchronization:baton",
     ],
 )
 
@@ -18,8 +18,8 @@ cpp_unittest(
     srcs = ["dynamic.cpp"],
     headers = [],
     deps = [
-        "//folly/json:dynamic",
-        "//folly/portability:gtest",
+        "folly//folly/json:dynamic",
+        "folly//folly/portability:gtest",
     ],
 )
 
@@ -28,8 +28,8 @@ cpp_unittest(
     srcs = ["DynamicConverter.cpp"],
     headers = [],
     deps = [
-        "//folly/json:dynamic",
-        "//folly/portability:gtest",
+        "folly//folly/json:dynamic",
+        "folly//folly/portability:gtest",
     ],
 )
 
@@ -38,11 +38,11 @@ cpp_binary(
     srcs = ["ExecutorGuide.cpp"],
     headers = [],
     deps = [
-        "//folly:executor",
-        "//folly/executors:manual_executor",
-        "//folly/experimental/coro:baton",
-        "//folly/experimental/coro:task",
-        "//folly/futures:core",
+        "folly//folly:executor",
+        "folly//folly/executors:manual_executor",
+        "folly//folly/experimental/coro:baton",
+        "folly//folly/experimental/coro:task",
+        "folly//folly/futures:core",
     ],
 )
 
@@ -51,8 +51,8 @@ cpp_unittest(
     srcs = ["File.cpp"],
     headers = [],
     deps = [
-        "//folly:file",
-        "//folly/portability:gtest",
+        "folly//folly:file",
+        "folly//folly/portability:gtest",
     ],
 )
 
@@ -61,8 +61,8 @@ cpp_unittest(
     srcs = ["Format.cpp"],
     headers = [],
     deps = [
-        "//folly:format",
-        "//folly/portability:gtest",
+        "folly//folly:format",
+        "folly//folly/portability:gtest",
     ],
 )
 
@@ -71,8 +71,8 @@ cpp_unittest(
     srcs = ["Likely.cpp"],
     headers = [],
     deps = [
-        "//folly:likely",
-        "//folly/portability:gtest",
+        "folly//folly:likely",
+        "folly//folly/portability:gtest",
     ],
 )
 
@@ -81,8 +81,8 @@ cpp_unittest(
     srcs = ["Function.cpp"],
     headers = [],
     deps = [
-        "//folly:function",
-        "//folly/portability:gtest",
+        "folly//folly:function",
+        "folly//folly/portability:gtest",
     ],
 )
 
@@ -92,8 +92,8 @@ cpp_unittest(
     headers = [],
     supports_static_listing = False,
     deps = [
-        "//folly:map_util",
-        "//folly/portability:gtest",
+        "folly//folly:map_util",
+        "folly//folly/portability:gtest",
     ],
 )
 
@@ -103,8 +103,8 @@ cpp_unittest(
     headers = [],
     supports_static_listing = False,
     deps = [
-        "//folly:scope_guard",
-        "//folly/portability:gtest",
+        "folly//folly:scope_guard",
+        "folly//folly/portability:gtest",
     ],
 )
 
@@ -114,8 +114,8 @@ cpp_unittest(
     headers = [],
     supports_static_listing = False,
     deps = [
-        "//folly:scope_guard",
-        "//folly/portability:gtest",
+        "folly//folly:scope_guard",
+        "folly//folly/portability:gtest",
     ],
 )
 
@@ -124,8 +124,8 @@ cpp_unittest(
     srcs = ["Synchronized.cpp"],
     headers = [],
     deps = [
-        "//folly:synchronized",
-        "//folly/portability:gtest",
+        "folly//folly:synchronized",
+        "folly//folly/portability:gtest",
     ],
 )
 
@@ -134,8 +134,8 @@ cpp_unittest(
     srcs = ["ipaddress.cpp"],
     headers = [],
     deps = [
-        "//folly:network_address",
-        "//folly/portability:gtest",
+        "folly//folly:network_address",
+        "folly//folly/portability:gtest",
     ],
 )
 
@@ -144,9 +144,9 @@ cpp_unittest(
     srcs = ["ScopedEventBaseThread.cpp"],
     headers = [],
     deps = [
-        "//folly/io/async:scoped_event_base_thread",
-        "//folly/portability:gtest",
-        "//folly/synchronization:baton",
+        "folly//folly/io/async:scoped_event_base_thread",
+        "folly//folly/portability:gtest",
+        "folly//folly/synchronization:baton",
     ],
 )
 
@@ -155,12 +155,12 @@ cpp_unittest(
     srcs = ["ScopedEventBaseThread2.cpp"],
     headers = [],
     deps = [
-        "//folly:optional",
-        "//folly/io/async:event_base_manager",
-        "//folly/io/async:scoped_event_base_thread",
-        "//folly/portability:gtest",
-        "//folly/synchronization:baton",
-        "//folly/system:thread_name",
+        "folly//folly:optional",
+        "folly//folly/io/async:event_base_manager",
+        "folly//folly/io/async:scoped_event_base_thread",
+        "folly//folly/portability:gtest",
+        "folly//folly/synchronization:baton",
+        "folly//folly/system:thread_name",
     ],
 )
 
@@ -169,8 +169,8 @@ cpp_unittest(
     srcs = ["CancellationToken.cpp"],
     headers = [],
     deps = [
-        "//folly:cancellation_token",
-        "//folly/portability:gtest",
+        "folly//folly:cancellation_token",
+        "folly//folly/portability:gtest",
     ],
 )
 
@@ -179,8 +179,8 @@ cpp_unittest(
     srcs = ["CancellationSource.cpp"],
     headers = [],
     deps = [
-        "//folly:cancellation_token",
-        "//folly/portability:gtest",
+        "folly//folly:cancellation_token",
+        "folly//folly/portability:gtest",
     ],
 )
 
@@ -189,7 +189,7 @@ cpp_unittest(
     srcs = ["CancellationCallback.cpp"],
     headers = [],
     deps = [
-        "//folly:cancellation_token",
-        "//folly/portability:gtest",
+        "folly//folly:cancellation_token",
+        "folly//folly/portability:gtest",
     ],
 )

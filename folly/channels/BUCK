@@ -10,10 +10,10 @@ cpp_library(
         "Channel-inl.h",
     ],
     exported_deps = [
-        "//folly:cancellation_token",
-        "//folly:synchronized",
-        "//folly/experimental/channels/detail:channel_bridge",
-        "//folly/experimental/coro:coroutine",
+        "folly//folly:cancellation_token",
+        "folly//folly:synchronized",
+        "folly//folly/experimental/channels/detail:channel_bridge",
+        "folly//folly/experimental/coro:coroutine",
     ],
 )
 
@@ -23,9 +23,9 @@ cpp_library(
         "ChannelCallbackHandle.h",
     ],
     exported_deps = [
-        "//folly:intrusive_list",
-        "//folly:scope_guard",
-        "//folly/channels:channel",
+        "folly//folly:intrusive_list",
+        "folly//folly:scope_guard",
+        "folly//folly/channels:channel",
     ],
 )
 
@@ -36,13 +36,13 @@ cpp_library(
         "ChannelProcessor-inl.h",
     ],
     exported_deps = [
-        "//folly:executor",
-        "//folly/channels:consume_channel",
-        "//folly/channels:merge_channel",
-        "//folly/channels:rate_limiter",
-        "//folly/channels:transform",
-        "//folly/executors:serial_executor",
-        "//folly/experimental/channels/detail:intrusive_ptr",
+        "folly//folly:executor",
+        "folly//folly/channels:consume_channel",
+        "folly//folly/channels:merge_channel",
+        "folly//folly/channels:rate_limiter",
+        "folly//folly/channels:transform",
+        "folly//folly/executors:serial_executor",
+        "folly//folly/experimental/channels/detail:intrusive_ptr",
     ],
 )
 
@@ -53,15 +53,15 @@ cpp_library(
         "ConsumeChannel-inl.h",
     ],
     exported_deps = [
-        "//folly:executor",
-        "//folly:format",
-        "//folly:intrusive_list",
-        "//folly:scope_guard",
-        "//folly/channels:channel",
-        "//folly/channels:channel_callback_handle",
-        "//folly/executors:sequenced_executor",
-        "//folly/experimental/channels/detail:utility",
-        "//folly/experimental/coro:task",
+        "folly//folly:executor",
+        "folly//folly:format",
+        "folly//folly:intrusive_list",
+        "folly//folly:scope_guard",
+        "folly//folly/channels:channel",
+        "folly//folly/channels:channel_callback_handle",
+        "folly//folly/executors:sequenced_executor",
+        "folly//folly/experimental/channels/detail:utility",
+        "folly//folly/experimental/coro:task",
     ],
 )
 
@@ -72,11 +72,11 @@ cpp_library(
         "FanoutChannel-inl.h",
     ],
     exported_deps = [
-        "//folly/channels:channel",
-        "//folly/channels:fanout_sender",
-        "//folly/container:f14_hash",
-        "//folly/executors:sequenced_executor",
-        "//folly/experimental/channels/detail:utility",
+        "folly//folly/channels:channel",
+        "folly//folly/channels:fanout_sender",
+        "folly//folly/container:f14_hash",
+        "folly//folly/executors:sequenced_executor",
+        "folly//folly/experimental/channels/detail:utility",
     ],
 )
 
@@ -87,11 +87,11 @@ cpp_library(
         "FanoutSender-inl.h",
     ],
     exported_deps = [
-        "//folly/channels:channel",
-        "//folly/container:f14_hash",
-        "//folly/executors:sequenced_executor",
-        "//folly/experimental/channels/detail:pointer_variant",
-        "//folly/experimental/channels/detail:utility",
+        "folly//folly/channels:channel",
+        "folly//folly/container:f14_hash",
+        "folly//folly/executors:sequenced_executor",
+        "folly//folly/experimental/channels/detail:pointer_variant",
+        "folly//folly/experimental/channels/detail:utility",
     ],
 )
 
@@ -102,10 +102,10 @@ cpp_library(
         "Merge-inl.h",
     ],
     exported_deps = [
-        "//folly/channels:channel",
-        "//folly/container:f14_hash",
-        "//folly/executors:sequenced_executor",
-        "//folly/experimental/channels/detail:utility",
+        "folly//folly/channels:channel",
+        "folly//folly/container:f14_hash",
+        "folly//folly/executors:sequenced_executor",
+        "folly//folly/experimental/channels/detail:utility",
     ],
 )
 
@@ -116,10 +116,10 @@ cpp_library(
         "MergeChannel-inl.h",
     ],
     exported_deps = [
-        "//folly/channels:channel",
-        "//folly/container:f14_hash",
-        "//folly/executors:sequenced_executor",
-        "//folly/experimental/channels/detail:utility",
+        "folly//folly/channels:channel",
+        "folly//folly/container:f14_hash",
+        "folly//folly/executors:sequenced_executor",
+        "folly//folly/experimental/channels/detail:utility",
     ],
 )
 
@@ -131,18 +131,18 @@ cpp_library(
     ],
     exported_deps = [
         "fbsource//third-party/range-v3:range-v3",
-        "//folly/channels:channel",
-        "//folly/channels:fanout_sender",
-        "//folly/channels:on_closed_exception",
-        "//folly/channels:rate_limiter",
-        "//folly/container:f14_hash",
-        "//folly/executors:sequenced_executor",
-        "//folly/experimental/channels/detail:multiplexer_traits",
-        "//folly/experimental/channels/detail:utility",
-        "//folly/experimental/coro:future_util",
-        "//folly/experimental/coro:mutex",
-        "//folly/experimental/coro:promise",
-        "//folly/experimental/coro:task",
+        "folly//folly/channels:channel",
+        "folly//folly/channels:fanout_sender",
+        "folly//folly/channels:on_closed_exception",
+        "folly//folly/channels:rate_limiter",
+        "folly//folly/container:f14_hash",
+        "folly//folly/executors:sequenced_executor",
+        "folly//folly/experimental/channels/detail:multiplexer_traits",
+        "folly//folly/experimental/channels/detail:utility",
+        "folly//folly/experimental/coro:future_util",
+        "folly//folly/experimental/coro:mutex",
+        "folly//folly/experimental/coro:promise",
+        "folly//folly/experimental/coro:task",
     ],
 )
 
@@ -161,12 +161,12 @@ cpp_library(
     ],
     exported_deps = [
         "fbsource//third-party/fmt:fmt",
-        "//folly:cancellation_token",
-        "//folly/channels:channel",
-        "//folly/channels:channel_callback_handle",
-        "//folly/channels:consume_channel",
-        "//folly/executors:sequenced_executor",
-        "//folly/experimental/coro:task",
+        "folly//folly:cancellation_token",
+        "folly//folly/channels:channel",
+        "folly//folly/channels:channel_callback_handle",
+        "folly//folly/channels:consume_channel",
+        "folly//folly/executors:sequenced_executor",
+        "folly//folly/experimental/coro:task",
     ],
 )
 
@@ -177,9 +177,9 @@ cpp_library(
         "ProxyChannel-inl.h",
     ],
     exported_deps = [
-        "//folly/channels:channel",
-        "//folly/executors:sequenced_executor",
-        "//folly/experimental/channels/detail:utility",
+        "folly//folly/channels:channel",
+        "folly//folly/executors:sequenced_executor",
+        "folly//folly/experimental/channels/detail:utility",
     ],
 )
 
@@ -189,8 +189,8 @@ cpp_library(
         "RateLimiter.h",
     ],
     exported_deps = [
-        "//folly:function",
-        "//folly/executors:sequenced_executor",
+        "folly//folly:function",
+        "folly//folly/executors:sequenced_executor",
     ],
 )
 
@@ -200,10 +200,10 @@ cpp_library(
         "MaxConcurrentRateLimiter.cpp",
     ],
     exported_deps = [
-        "//folly:synchronized",
-        "//folly/channels:rate_limiter",
-        "//folly/concurrency:unbounded_queue",
-        "//folly/executors:sequenced_executor",
+        "folly//folly:synchronized",
+        "folly//folly/channels:rate_limiter",
+        "folly//folly/concurrency:unbounded_queue",
+        "folly//folly/executors:sequenced_executor",
     ],
 )
 
@@ -214,12 +214,12 @@ cpp_library(
         "Transform-inl.h",
     ],
     exported_deps = [
-        "//folly/channels:channel",
-        "//folly/channels:on_closed_exception",
-        "//folly/channels:rate_limiter",
-        "//folly/executors:sequenced_executor",
-        "//folly/experimental/channels/detail:utility",
-        "//folly/experimental/coro:async_generator",
-        "//folly/experimental/coro:task",
+        "folly//folly/channels:channel",
+        "folly//folly/channels:on_closed_exception",
+        "folly//folly/channels:rate_limiter",
+        "folly//folly/executors:sequenced_executor",
+        "folly//folly/experimental/channels/detail:utility",
+        "folly//folly/experimental/coro:async_generator",
+        "folly//folly/experimental/coro:task",
     ],
 )

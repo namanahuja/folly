@@ -7,8 +7,8 @@ cpp_unittest(
     srcs = ["DoubleRadixSortTest.cpp"],
     headers = [],
     deps = [
-        "//folly:random",
-        "//folly/portability:gtest",
-        "//folly/stats/detail:double_radix_sort",
+        "folly//folly:random",
+        "folly//folly/portability:gtest",
+        "folly//folly/stats/detail:double_radix_sort",
     ],
 )

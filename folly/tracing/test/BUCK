@@ -7,8 +7,8 @@ cpp_unittest(
     name = "async_stack_test",
     srcs = ["AsyncStackTest.cpp"],
     deps = [
-        "//folly/portability:gtest",
-        "//folly/tracing:async_stack",
+        "folly//folly/portability:gtest",
+        "folly//folly/tracing:async_stack",
     ],
     external_deps = [
         "glog",
@@ -20,17 +20,17 @@ cpp_unittest(
     srcs = ["StaticTracepointTest.cpp"],
     deps = [
         ":static_tracepoint_test_module",
-        "//folly:conv",
-        "//folly:format",
-        "//folly:random",
-        "//folly:string",
-        "//folly:subprocess",
-        "//folly/experimental/symbolizer/detail:debug",
-        "//folly/lang:bits",
-        "//folly/portability:filesystem",
-        "//folly/portability:gtest",
-        "//folly/portability:unistd",
-        "//folly/tracing:static_tracepoint",
+        "folly//folly:conv",
+        "folly//folly:format",
+        "folly//folly:random",
+        "folly//folly:string",
+        "folly//folly:subprocess",
+        "folly//folly/experimental/symbolizer/detail:debug",
+        "folly//folly/lang:bits",
+        "folly//folly/portability:filesystem",
+        "folly//folly/portability:gtest",
+        "folly//folly/portability:unistd",
+        "folly//folly/tracing:static_tracepoint",
     ],
 )
 
@@ -43,6 +43,6 @@ cpp_library(
         "StaticTracepointTestModule.h",
     ],
     deps = [
-        "//folly/tracing:static_tracepoint",
+        "folly//folly/tracing:static_tracepoint",
     ],
 )

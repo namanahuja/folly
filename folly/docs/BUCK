@@ -1,4 +1,4 @@
-load("//folly/docs:defs.bzl", "copy", "html")
+load("folly//folly/docs:defs.bzl", "copy", "html")
 
 #
 # Actual listing of source files

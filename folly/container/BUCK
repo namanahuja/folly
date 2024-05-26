@@ -6,8 +6,8 @@ cpp_library(
     name = "access",
     headers = ["Access.h"],
     exported_deps = [
-        "//folly:portability",
-        "//folly/functional:invoke",
+        "folly//folly:portability",
+        "folly//folly/functional:invoke",
     ],
 )
 
@@ -15,9 +15,9 @@ cpp_library(
     name = "array",
     headers = ["Array.h"],
     exported_deps = [
-        "//folly:c_portability",
-        "//folly:traits",
-        "//folly:utility",
+        "folly//folly:c_portability",
+        "folly//folly:traits",
+        "folly//folly:utility",
     ],
 )
 
@@ -25,9 +25,9 @@ cpp_library(
     name = "bit_iterator",
     headers = ["BitIterator.h"],
     exported_deps = [
-        "//folly:portability",
-        "//folly/container/detail:bit_iterator_detail",
-        "//folly/lang:bits",
+        "folly//folly:portability",
+        "folly//folly/container/detail:bit_iterator_detail",
+        "folly//folly/lang:bits",
     ],
     exported_external_deps = [
         "boost",
@@ -39,9 +39,9 @@ cpp_library(
     headers = ["Iterator.h"],
     exported_deps = [
         ":access",
-        "//folly:traits",
-        "//folly:utility",
-        "//folly/lang:rvalue_reference_wrapper",
+        "folly//folly:traits",
+        "folly//folly:utility",
+        "folly//folly/lang:rvalue_reference_wrapper",
     ],
 )
 
@@ -49,8 +49,8 @@ cpp_library(
     name = "enumerate",
     headers = ["Enumerate.h"],
     exported_deps = [
-        "//folly:c_portability",
-        "//folly/portability:sys_types",
+        "folly//folly:c_portability",
+        "folly//folly/portability:sys_types",
     ],
 )
 
@@ -58,9 +58,9 @@ cpp_library(
     name = "evicting_cache_map",
     headers = ["EvictingCacheMap.h"],
     exported_deps = [
-        "//folly/container:f14_hash",
-        "//folly/container:heterogeneous_access",
-        "//folly/lang:exception",
+        "folly//folly/container:f14_hash",
+        "folly//folly/container:heterogeneous_access",
+        "folly//folly/lang:exception",
     ],
     exported_external_deps = [
         "boost",
@@ -77,13 +77,13 @@ cpp_library(
         ":f14_hash_fwd",
         ":iterator",
         ":view",
-        "//folly:portability",
-        "//folly:range",
-        "//folly:traits",
-        "//folly/container/detail:f14_hash_detail",
-        "//folly/container/detail:util",
-        "//folly/lang:exception",
-        "//folly/lang:safe_assert",
+        "folly//folly:portability",
+        "folly//folly:range",
+        "folly//folly:traits",
+        "folly//folly/container/detail:f14_hash_detail",
+        "folly//folly/container/detail:util",
+        "folly//folly/lang:exception",
+        "folly//folly/lang:safe_assert",
     ],
 )
 
@@ -94,8 +94,8 @@ cpp_library(
         "F14Set-fwd.h",
     ],
     exported_deps = [
-        "//folly/container/detail:f14_defaults",
-        "//folly/memory:memory_resource",
+        "folly//folly/container/detail:f14_defaults",
+        "folly//folly/memory:memory_resource",
     ],
 )
 
@@ -106,15 +106,15 @@ cpp_library(
     ],
     exported_deps = [
         ":iterator",
-        "//folly:range",
-        "//folly:scope_guard",
-        "//folly:small_vector",
-        "//folly:traits",
-        "//folly:utility",
-        "//folly/functional:invoke",
-        "//folly/lang:exception",
-        "//folly/memory:memory_resource",
-        "//folly/portability:builtins",
+        "folly//folly:range",
+        "folly//folly:scope_guard",
+        "folly//folly:small_vector",
+        "folly//folly:traits",
+        "folly//folly:utility",
+        "folly//folly/functional:invoke",
+        "folly//folly/lang:exception",
+        "folly//folly/memory:memory_resource",
+        "folly//folly/portability:builtins",
     ],
 )
 
@@ -126,11 +126,11 @@ cpp_library(
     ],
     exported_deps = [
         ":access",
-        "//folly:portability",
-        "//folly:preprocessor",
-        "//folly:traits",
-        "//folly:utility",
-        "//folly/functional:invoke",
+        "folly//folly:portability",
+        "folly//folly:preprocessor",
+        "folly//folly:traits",
+        "folly//folly:utility",
+        "folly//folly/functional:invoke",
     ],
 )
 
@@ -148,9 +148,9 @@ cpp_library(
     ],
     exported_deps = [
         ":heterogeneous_access_fwd",
-        "//folly:range",
-        "//folly:traits",
-        "//folly/hash:hash",
+        "folly//folly:range",
+        "folly//folly:traits",
+        "folly//folly/hash:hash",
     ],
 )
 
@@ -163,8 +163,8 @@ cpp_library(
     name = "range_traits",
     headers = ["range_traits.h"],
     exported_deps = [
-        "//folly:traits",
-        "//folly:utility",
+        "folly//folly:traits",
+        "folly//folly:utility",
     ],
 )
 
@@ -172,7 +172,7 @@ cpp_library(
     name = "sparse_byte_set",
     headers = ["SparseByteSet.h"],
     exported_deps = [
-        "//folly:c_portability",
+        "folly//folly:c_portability",
     ],
 )
 
@@ -183,10 +183,10 @@ cpp_library(
     ],
     exported_deps = [
         ":iterator",
-        "//folly:portability",
-        "//folly:range",
-        "//folly/container/detail:tape_detail",
-        "//folly/memory:uninitialized_memory_hacks",
+        "folly//folly:portability",
+        "folly//folly:range",
+        "folly//folly/container/detail:tape_detail",
+        "folly//folly/memory:uninitialized_memory_hacks",
     ],
 )
 
@@ -194,9 +194,9 @@ cpp_library(
     name = "view",
     headers = ["View.h"],
     exported_deps = [
-        "//folly:portability",
-        "//folly/functional:invoke",
-        "//folly/lang:customization_point",
+        "folly//folly:portability",
+        "folly//folly/functional:invoke",
+        "folly//folly/lang:customization_point",
     ],
 )
 
@@ -206,7 +206,7 @@ cpp_library(
         "WeightedEvictingCacheMap.h",
     ],
     exported_deps = [
-        "//folly/container:evicting_cache_map",
+        "folly//folly/container:evicting_cache_map",
     ],
 )
 
@@ -216,7 +216,7 @@ cpp_library(
         "IntrusiveHeap.h",
     ],
     exported_deps = [
-        "//folly:portability",
+        "folly//folly:portability",
     ],
     exported_external_deps = [
         "boost",
@@ -230,10 +230,10 @@ cpp_library(
         "Reserve.h",
     ],
     exported_deps = [
-        "//folly:likely",
-        "//folly:traits",
-        "//folly:utility",
-        "//folly/lang:exception",
+        "folly//folly:likely",
+        "folly//folly:traits",
+        "folly//folly:utility",
+        "folly//folly/lang:exception",
     ],
 )
 
@@ -243,12 +243,12 @@ cpp_library(
         "sorted_vector_types.h",
     ],
     exported_deps = [
-        "//folly:scope_guard",
-        "//folly:traits",
-        "//folly:utility",
-        "//folly/lang:access",
-        "//folly/lang:exception",
-        "//folly/memory:memory_resource",
+        "folly//folly:scope_guard",
+        "folly//folly:traits",
+        "folly//folly:utility",
+        "folly//folly/lang:access",
+        "folly//folly/lang:exception",
+        "folly//folly/memory:memory_resource",
     ],
 )
 
@@ -256,14 +256,14 @@ cpp_library(
     name = "fbvector",
     headers = ["FBVector.h"],
     exported_deps = [
-        "//folly:format_traits",
-        "//folly:likely",
-        "//folly:scope_guard",
-        "//folly:traits",
-        "//folly/lang:checked_math",
-        "//folly/lang:exception",
-        "//folly/lang:hint",
-        "//folly/memory:malloc",
+        "folly//folly:format_traits",
+        "folly//folly:likely",
+        "folly//folly:scope_guard",
+        "folly//folly:traits",
+        "folly//folly/lang:checked_math",
+        "folly//folly/lang:exception",
+        "folly//folly/lang:hint",
+        "folly//folly/memory:malloc",
     ],
 )
 
@@ -279,10 +279,10 @@ cpp_library(
     name = "map_util",
     headers = ["MapUtil.h"],
     exported_deps = [
-        "//folly:conv",
-        "//folly:optional",
-        "//folly:range",
-        "//folly/functional:invoke",
+        "folly//folly:conv",
+        "folly//folly:optional",
+        "folly//folly:range",
+        "folly//folly/functional:invoke",
     ],
 )
 
@@ -290,21 +290,21 @@ cpp_library(
     name = "small_vector",
     headers = ["small_vector.h"],
     exported_deps = [
-        "//folly:constexpr_math",
-        "//folly:format_traits",
-        "//folly:likely",
-        "//folly:portability",
-        "//folly:scope_guard",
-        "//folly:traits",
-        "//folly/functional:invoke",
-        "//folly/hash:hash",
-        "//folly/lang:align",
-        "//folly/lang:assume",
-        "//folly/lang:checked_math",
-        "//folly/lang:exception",
-        "//folly/memory:malloc",
-        "//folly/memory:sanitize_leak",
-        "//folly/portability:malloc",
+        "folly//folly:constexpr_math",
+        "folly//folly:format_traits",
+        "folly//folly:likely",
+        "folly//folly:portability",
+        "folly//folly:scope_guard",
+        "folly//folly:traits",
+        "folly//folly/functional:invoke",
+        "folly//folly/hash:hash",
+        "folly//folly/lang:align",
+        "folly//folly/lang:assume",
+        "folly//folly/lang:checked_math",
+        "folly//folly/lang:exception",
+        "folly//folly/memory:malloc",
+        "folly//folly/memory:sanitize_leak",
+        "folly//folly/portability:malloc",
     ],
     exported_external_deps = [
         "boost",

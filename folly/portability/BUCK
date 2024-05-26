@@ -6,7 +6,7 @@ cpp_library(
     name = "asm",
     headers = ["Asm.h"],
     exported_deps = [
-        "//folly:portability",
+        "folly//folly:portability",
     ],
 )
 
@@ -14,7 +14,7 @@ cpp_library(
     name = "atomic",
     headers = ["Atomic.h"],
     exported_deps = [
-        "//folly:portability",
+        "folly//folly:portability",
     ],
 )
 
@@ -26,7 +26,7 @@ cpp_library(
         ":windows",
     ],
     exported_deps = [
-        "//folly:portability",
+        "folly//folly:portability",
     ],
 )
 
@@ -34,7 +34,7 @@ cpp_library(
     name = "config",
     headers = ["Config.h"],
     exported_deps = [
-        "//folly:config",
+        # "follyfolly//folly:config",
     ],
 )
 
@@ -42,8 +42,8 @@ cpp_library(
     name = "constexpr",
     headers = ["Constexpr.h"],
     exported_deps = [
-        "//folly:c_portability",
-        "//folly:portability",
+        "folly//folly:c_portability",
+        "folly//folly:portability",
     ],
 )
 
@@ -62,7 +62,7 @@ cpp_library(
     exported_deps = [
         ":fcntl",
         ":windows",
-        "//folly/net/detail:socket_file_descriptor_map",
+        "folly//folly/net/detail:socket_file_descriptor_map",
     ],
     exported_external_deps = [
         "libevent",
@@ -79,7 +79,7 @@ cpp_library(
     ],
     exported_deps = [
         ":windows",
-        "//folly:portability",
+        "folly//folly:portability",
     ],
 )
 
@@ -118,7 +118,7 @@ cpp_library(
         "fbsource//third-party/googletest:gmock",
         ":unistd",
         ":windows",
-        "//folly:portability",
+        "folly//folly:portability",
     ],
 )
 
@@ -129,7 +129,7 @@ cpp_library(
         "fbsource//third-party/googletest:gtest",
         ":unistd",
         ":windows",
-        "//folly:portability",
+        "folly//folly:portability",
     ],
 )
 
@@ -167,7 +167,7 @@ cpp_library(
     ],
     exported_deps = [
         ":config",
-        "//folly:c_portability",
+        "folly//folly:c_portability",
     ],
 )
 
@@ -180,7 +180,7 @@ cpp_library(
     # @shim
     name = "memory",
     headers = ["Memory.h"],
-    exported_deps = ["//folly:memory"],
+    exported_deps = ["folly//folly:memory"],
 )
 
 cpp_library(
@@ -188,7 +188,7 @@ cpp_library(
     srcs = ["openat2.c"],
     headers = ["openat2.h"],
     exported_deps = [
-        "//folly:config",
+        "folly//folly:config",
     ],
 )
 
@@ -198,7 +198,7 @@ cpp_library(
     headers = ["OpenSSL.h"],
     exported_deps = [
         ":windows",
-        "//folly:portability",
+        "folly//folly:portability",
     ],
     exported_external_deps = [
         ("openssl", None, "ssl"),
@@ -211,7 +211,7 @@ cpp_library(
     srcs = ["Sched.cpp"],
     headers = ["Sched.h"],
     exported_deps = [
-        "//folly:portability",
+        "folly//folly:portability",
     ],
 )
 
@@ -220,14 +220,14 @@ cpp_library(
     srcs = ["PThread.cpp"],
     headers = ["PThread.h"],
     deps = [
-        "//folly/lang:assume",
+        "folly//folly/lang:assume",
     ],
     exported_deps = [
         ":config",
         ":sched",
         ":time",
         ":windows",
-        "//folly:portability",
+        "folly//folly:portability",
     ],
     external_deps = [
         "boost",
@@ -243,13 +243,13 @@ cpp_library(
     srcs = ["Sockets.cpp"],
     headers = ["Sockets.h"],
     deps = [
-        "//folly:scope_guard",
-        "//folly/net:network_socket",
-        "//folly/net/detail:socket_file_descriptor_map",
+        "folly//folly:scope_guard",
+        "folly//folly/net:network_socket",
+        "folly//folly/net/detail:socket_file_descriptor_map",
     ],
     exported_deps = [
-        "//folly:portability",
-        "//folly/net:net_ops",
+        "folly//folly:portability",
+        "folly//folly/net:net_ops",
     ],
 )
 
@@ -267,7 +267,7 @@ cpp_library(
     headers = ["Stdio.h"],
     deps = [
         ":unistd",
-        "//folly:scope_guard",
+        "folly//folly:scope_guard",
     ],
 )
 
@@ -307,7 +307,7 @@ cpp_library(
     headers = ["SysMembarrier.h"],
     deps = [
         ":sys_syscall",
-        "//folly:portability",
+        "folly//folly:portability",
     ],
 )
 
@@ -319,7 +319,7 @@ cpp_library(
     ],
     deps = [
         ":windows",
-        "//folly:portability",
+        "folly//folly:portability",
     ],
     exported_external_deps = [
         ("glibc", None, "rt"),
@@ -354,8 +354,8 @@ cpp_library(
     name = "sys_syscall",
     headers = ["SysSyscall.h"],
     exported_deps = [
-        "//folly:c_portability",
-        "//folly:portability",
+        "folly//folly:c_portability",
+        "folly//folly:portability",
     ],
 )
 
@@ -379,7 +379,7 @@ cpp_library(
         ":sockets",
         ":sys_file",
         ":unistd",
-        "//folly:scope_guard",
+        "folly//folly:scope_guard",
     ],
     exported_deps = [
         ":config",
@@ -399,9 +399,9 @@ cpp_library(
     headers = ["Time.h"],
     deps = [
         ":windows",
-        "//folly:c_portability",
-        "//folly:likely",
-        "//folly:utility",
+        "folly//folly:c_portability",
+        "folly//folly:likely",
+        "folly//folly:utility",
     ],
     exported_deps = [
         ":config",
@@ -418,12 +418,12 @@ cpp_library(
     deps = [
         ":sockets",
         ":windows",
-        "//folly:scope_guard",
-        "//folly/net/detail:socket_file_descriptor_map",
+        "folly//folly:scope_guard",
+        "folly//folly/net/detail:socket_file_descriptor_map",
     ],
     exported_deps = [
         ":sys_types",
-        "//folly:portability",
+        "folly//folly:portability",
     ],
 )
 

@@ -10,8 +10,8 @@ cpp_unittest(
     srcs = ["AccessTest.cpp"],
     headers = [],
     deps = [
-        "//folly/container:access",
-        "//folly/portability:gtest",
+        "folly//folly/container:access",
+        "folly//folly/portability:gtest",
     ],
 )
 
@@ -21,8 +21,8 @@ cpp_unittest(
     headers = [],
     supports_static_listing = False,
     deps = [
-        "//folly/container:array",
-        "//folly/portability:gtest",
+        "folly//folly/container:array",
+        "folly//folly/portability:gtest",
     ],
 )
 
@@ -31,10 +31,10 @@ cpp_benchmark(
     srcs = ["BitIteratorBench.cpp"],
     headers = [],
     deps = [
-        "//folly:benchmark",
-        "//folly:small_vector",
-        "//folly/container:bit_iterator",
-        "//folly/init:init",
+        "folly//folly:benchmark",
+        "folly//folly:small_vector",
+        "folly//folly/container:bit_iterator",
+        "folly//folly/init:init",
     ],
     external_deps = [
         "glog",
@@ -46,8 +46,8 @@ cpp_unittest(
     srcs = ["BitIteratorTest.cpp"],
     headers = [],
     deps = [
-        "//folly/container:bit_iterator",
-        "//folly/portability:gtest",
+        "folly//folly/container:bit_iterator",
+        "folly//folly/portability:gtest",
     ],
 )
 
@@ -56,9 +56,9 @@ cpp_unittest(
     srcs = ["EnumerateTest.cpp"],
     headers = [],
     deps = [
-        "//folly:range",
-        "//folly/container:enumerate",
-        "//folly/portability:gtest",
+        "folly//folly:range",
+        "folly//folly/container:enumerate",
+        "folly//folly/portability:gtest",
     ],
 )
 
@@ -67,8 +67,8 @@ cpp_benchmark(
     srcs = ["EvictingCacheMapBench.cpp"],
     headers = [],
     deps = [
-        "//folly:benchmark",
-        "//folly/container:evicting_cache_map",
+        "folly//folly:benchmark",
+        "folly//folly/container:evicting_cache_map",
     ],
 )
 
@@ -78,8 +78,8 @@ cpp_unittest(
     headers = [],
     allocator = "jemalloc_debug",
     deps = [
-        "//folly/container:evicting_cache_map",
-        "//folly/portability:gtest",
+        "folly//folly/container:evicting_cache_map",
+        "folly//folly/portability:gtest",
     ],
 )
 
@@ -89,7 +89,7 @@ cpp_library(
         "F14TestUtil.h",
     ],
     exported_deps = [
-        "//folly/container/detail:f14_hash_detail",
+        "folly//folly/container/detail:f14_hash_detail",
     ],
 )
 
@@ -99,8 +99,8 @@ cpp_unittest(
         "F14FwdTest.cpp",
     ],
     deps = [
-        "//folly/container:f14_hash_fwd",
-        "//folly/portability:gtest",
+        "folly//folly/container:f14_hash_fwd",
+        "folly//folly/portability:gtest",
     ],
 )
 
@@ -112,14 +112,14 @@ cpp_unittest(
     deps = [
         ":f14_test_util",
         ":tracking_types",
-        "//folly:benchmark",
-        "//folly:conv",
-        "//folly:fbstring",
-        "//folly:portability",
-        "//folly/container:f14_hash",
-        "//folly/hash:hash",
-        "//folly/portability:gtest",
-        "//folly/test:test_utils",
+        "folly//folly:benchmark",
+        "folly//folly:conv",
+        "folly//folly:fbstring",
+        "folly//folly:portability",
+        "folly//folly/container:f14_hash",
+        "folly//folly/hash:hash",
+        "folly//folly/portability:gtest",
+        "folly//folly/test:test_utils",
     ],
     external_deps = [
         "glog",
@@ -135,14 +135,14 @@ cpp_unittest(
     deps = [
         ":f14_test_util",
         ":tracking_types",
-        "//folly:benchmark",
-        "//folly:conv",
-        "//folly:fbstring",
-        "//folly:portability",
-        "//folly/container:f14_hash",
-        "//folly/hash:hash",
-        "//folly/portability:gtest",
-        "//folly/test:test_utils",
+        "folly//folly:benchmark",
+        "folly//folly:conv",
+        "folly//folly:fbstring",
+        "folly//folly:portability",
+        "folly//folly/container:f14_hash",
+        "folly//folly/hash:hash",
+        "folly//folly/portability:gtest",
+        "folly//folly/test:test_utils",
     ],
     external_deps = [
         "glog",
@@ -155,8 +155,8 @@ cpp_unittest(
         "F14PolicyTest.cpp",
     ],
     deps = [
-        "//folly/container:f14_hash",
-        "//folly/portability:gtest",
+        "folly//folly/container:f14_hash",
+        "folly//folly/portability:gtest",
     ],
 )
 
@@ -168,14 +168,14 @@ cpp_unittest(
     deps = [
         ":f14_test_util",
         ":tracking_types",
-        "//folly:benchmark",
-        "//folly:conv",
-        "//folly:fbstring",
-        "//folly:portability",
-        "//folly/container:f14_hash",
-        "//folly/lang:keep",
-        "//folly/portability:gtest",
-        "//folly/test:test_utils",
+        "folly//folly:benchmark",
+        "folly//folly:conv",
+        "folly//folly:fbstring",
+        "folly//folly:portability",
+        "folly//folly/container:f14_hash",
+        "folly//folly/lang:keep",
+        "folly//folly/portability:gtest",
+        "folly//folly/test:test_utils",
     ],
     external_deps = [
         "glog",
@@ -191,14 +191,14 @@ cpp_unittest(
     deps = [
         ":f14_test_util",
         ":tracking_types",
-        "//folly:benchmark",
-        "//folly:conv",
-        "//folly:fbstring",
-        "//folly:portability",
-        "//folly/container:f14_hash",
-        "//folly/lang:keep",
-        "//folly/portability:gtest",
-        "//folly/test:test_utils",
+        "folly//folly:benchmark",
+        "folly//folly:conv",
+        "folly//folly:fbstring",
+        "folly//folly:portability",
+        "folly//folly/container:f14_hash",
+        "folly//folly/lang:keep",
+        "folly//folly/portability:gtest",
+        "folly//folly/test:test_utils",
     ],
     external_deps = [
         "glog",
@@ -210,15 +210,15 @@ cpp_unittest(
     srcs = ["heap_vector_types_test.cpp"],
     headers = [],
     deps = [
-        "//folly:random",
-        "//folly:range",
-        "//folly:small_vector",
-        "//folly:sorted_vector_types",
-        "//folly:utility",
-        "//folly/container:heap_vector_types",
-        "//folly/memory:malloc",
-        "//folly/portability:gmock",
-        "//folly/portability:gtest",
+        "folly//folly:random",
+        "folly//folly:range",
+        "folly//folly:small_vector",
+        "folly//folly:sorted_vector_types",
+        "folly//folly:utility",
+        "folly//folly/container:heap_vector_types",
+        "folly//folly/memory:malloc",
+        "folly//folly/portability:gmock",
+        "folly//folly/portability:gtest",
     ],
 )
 
@@ -229,10 +229,10 @@ cpp_unittest(
     ],
     deps = [
         "fbsource//third-party/fmt:fmt",
-        "//folly:random",
-        "//folly:traits",
-        "//folly/container:f14_hash",
-        "//folly/portability:gtest",
+        "folly//folly:random",
+        "folly//folly:traits",
+        "folly//folly/container:f14_hash",
+        "folly//folly/portability:gtest",
     ],
     external_deps = [
         ("boost", None, "boost_interprocess"),
@@ -246,7 +246,7 @@ cpp_binary(
         "F14SmallOverheads.cpp",
     ],
     deps = [
-        "//folly/container:f14_hash",
+        "folly//folly/container:f14_hash",
     ],
 )
 
@@ -256,9 +256,9 @@ cpp_unittest(
         "F14AsanSupportTest.cpp",
     ],
     deps = [
-        "//folly:portability",
-        "//folly/container:f14_hash",
-        "//folly/portability:gtest",
+        "folly//folly:portability",
+        "folly//folly/container:f14_hash",
+        "folly//folly/portability:gtest",
     ],
 )
 
@@ -267,11 +267,11 @@ cpp_benchmark(
     srcs = ["ForeachBenchmark.cpp"],
     headers = [],
     deps = [
-        "//folly:benchmark",
-        "//folly:random",
-        "//folly/container:enumerate",
-        "//folly/container:foreach",
-        "//folly/init:init",
+        "folly//folly:benchmark",
+        "folly//folly:random",
+        "folly//folly/container:enumerate",
+        "folly//folly/container:foreach",
+        "folly//folly/init:init",
     ],
 )
 
@@ -280,8 +280,8 @@ cpp_unittest(
     srcs = ["ForeachTest.cpp"],
     headers = [],
     deps = [
-        "//folly/container:foreach",
-        "//folly/portability:gtest",
+        "folly//folly/container:foreach",
+        "folly//folly/portability:gtest",
     ],
 )
 
@@ -291,13 +291,13 @@ cpp_unittest(
         "HeterogeneousAccessTest.cpp",
     ],
     deps = [
-        "//folly:fbstring",
-        "//folly:portability",
-        "//folly:range",
-        "//folly:small_vector",
-        "//folly:traits",
-        "//folly/container:heterogeneous_access",
-        "//folly/portability:gtest",
+        "folly//folly:fbstring",
+        "folly//folly:portability",
+        "folly//folly:range",
+        "folly//folly:small_vector",
+        "folly//folly:traits",
+        "folly//folly/container:heterogeneous_access",
+        "folly//folly/portability:gtest",
     ],
 )
 
@@ -306,8 +306,8 @@ cpp_unittest(
     srcs = ["IteratorTest.cpp"],
     headers = [],
     deps = [
-        "//folly/container:iterator",
-        "//folly/portability:gtest",
+        "folly//folly/container:iterator",
+        "folly//folly/portability:gtest",
     ],
 )
 
@@ -316,8 +316,8 @@ cpp_unittest(
     srcs = ["MergeTest.cpp"],
     headers = [],
     deps = [
-        "//folly/container:merge",
-        "//folly/portability:gtest",
+        "folly//folly/container:merge",
+        "folly//folly/portability:gtest",
     ],
 )
 
@@ -326,8 +326,8 @@ cpp_unittest(
     srcs = ["range_traits_test.cpp"],
     headers = [],
     deps = [
-        "//folly/container:range_traits",
-        "//folly/portability:gtest",
+        "folly//folly/container:range_traits",
+        "folly//folly/portability:gtest",
     ],
 )
 
@@ -337,10 +337,10 @@ cpp_benchmark(
     headers = [],
     deps = [
         "fbsource//third-party/fmt:fmt",
-        "//folly:benchmark",
-        "//folly:format",
-        "//folly/container:sparse_byte_set",
-        "//folly/portability:gflags",
+        "folly//folly:benchmark",
+        "folly//folly:format",
+        "folly//folly/container:sparse_byte_set",
+        "folly//folly/portability:gflags",
     ],
 )
 
@@ -349,8 +349,8 @@ cpp_unittest(
     srcs = ["SparseByteSetTest.cpp"],
     headers = [],
     deps = [
-        "//folly/container:sparse_byte_set",
-        "//folly/portability:gtest",
+        "folly//folly/container:sparse_byte_set",
+        "folly//folly/portability:gtest",
     ],
 )
 
@@ -360,10 +360,10 @@ cpp_library(
         "TrackingTypes.h",
     ],
     exported_deps = [
-        "//folly:function",
-        "//folly/hash:hash",
-        "//folly/lang:safe_assert",
-        "//folly/portability:asm",
+        "folly//folly:function",
+        "folly//folly/hash:hash",
+        "folly//folly/lang:safe_assert",
+        "folly//folly/portability:asm",
     ],
 )
 
@@ -371,10 +371,10 @@ cpp_unittest(
     name = "tape_test",
     srcs = ["tape_test.cpp"],
     deps = [
-        "//folly:small_vector",
-        "//folly/container:tape",
-        "//folly/portability:gmock",
-        "//folly/portability:gtest",
+        "folly//folly:small_vector",
+        "folly//folly/container:tape",
+        "folly//folly/portability:gmock",
+        "folly//folly/portability:gtest",
     ],
 )
 
@@ -382,9 +382,9 @@ cpp_unittest(
     name = "tape_bench",
     srcs = ["tape_bench.cpp"],
     deps = [
-        "//folly:benchmark",
-        "//folly/container:tape",
-        "//folly/init:init",
+        "folly//folly:benchmark",
+        "folly//folly/container:tape",
+        "folly//folly/init:init",
     ],
 )
 
@@ -393,11 +393,11 @@ cpp_unittest(
     srcs = ["UtilTest.cpp"],
     headers = [],
     deps = [
-        "//folly:optional",
-        "//folly:range",
-        "//folly/container/detail:util",
-        "//folly/container/test:tracking_types",
-        "//folly/portability:gtest",
+        "folly//folly:optional",
+        "folly//folly:range",
+        "folly//folly/container/detail:util",
+        "folly//folly/container/test:tracking_types",
+        "folly//folly/portability:gtest",
     ],
     external_deps = [
         "glog",
@@ -410,8 +410,8 @@ cpp_unittest(
     headers = [],
     allocator = "jemalloc_debug",
     deps = [
-        "//folly/container:weighted_evicting_cache_map",
-        "//folly/portability:gtest",
+        "folly//folly/container:weighted_evicting_cache_map",
+        "folly//folly/portability:gtest",
     ],
 )
 
@@ -420,10 +420,10 @@ cpp_unittest(
     srcs = ["IntrusiveHeapTest.cpp"],
     headers = [],
     deps = [
-        "//folly:random",
-        "//folly/container:intrusive_heap",
-        "//folly/portability:gflags",
-        "//folly/portability:gtest",
+        "folly//folly:random",
+        "folly//folly/container:intrusive_heap",
+        "folly//folly/portability:gflags",
+        "folly//folly/portability:gtest",
     ],
 )
 
@@ -432,14 +432,14 @@ cpp_binary(
     srcs = ["HashMapsBench.cpp"],
     headers = [],
     deps = [
-        "//folly:benchmark",
-        "//folly:conv",
-        "//folly:format",
-        "//folly:function",
-        "//folly/container:f14_hash",
-        "//folly/hash:hash",
-        "//folly/init:init",
-        "//folly/portability:gflags",
+        "folly//folly:benchmark",
+        "folly//folly:conv",
+        "folly//folly:format",
+        "folly//folly:function",
+        "folly//folly/container:f14_hash",
+        "folly//folly/hash:hash",
+        "folly//folly/init:init",
+        "folly//folly/portability:gflags",
     ],
     external_deps = [
         "glog",
@@ -450,9 +450,9 @@ cpp_unittest(
     name = "reserve_test",
     srcs = ["ReserveTest.cpp"],
     deps = [
-        "//folly/container:f14_hash",
-        "//folly/container:reserve",
-        "//folly/portability:gtest",
+        "folly//folly/container:f14_hash",
+        "folly//folly/container:reserve",
+        "folly//folly/portability:gtest",
     ],
 )
 
@@ -464,13 +464,13 @@ cpp_benchmark(
         "--json",
     ],
     deps = [
-        "//folly:benchmark",
-        "//folly:fbvector",
-        "//folly:small_vector",
-        "//folly:traits",
-        "//folly/container:foreach",
-        "//folly/portability:gflags",
-        "//folly/test:fbvector_test_util",
+        "folly//folly:benchmark",
+        "folly//folly:fbvector",
+        "folly//folly:small_vector",
+        "folly//folly:traits",
+        "folly//folly/container:foreach",
+        "folly//folly/portability:gflags",
+        "folly//folly/test:fbvector_test_util",
     ],
 )
 
@@ -481,13 +481,13 @@ cpp_unittest(
         "FBVectorTests.cpp.h",
     ],
     deps = [
-        "//folly:fbstring",
-        "//folly:fbvector",
-        "//folly:random",
-        "//folly:traits",
-        "//folly/container:foreach",
-        "//folly/portability:gtest",
-        "//folly/test:fbvector_test_util",
+        "folly//folly:fbstring",
+        "folly//folly:fbvector",
+        "folly//folly:random",
+        "folly//folly:traits",
+        "folly//folly/container:foreach",
+        "folly//folly/portability:gtest",
+        "folly//folly/test:fbvector_test_util",
     ],
 )
 
@@ -496,10 +496,10 @@ cpp_unittest(
     srcs = ["MapUtilTest.cpp"],
     headers = [],
     deps = [
-        "//folly:map_util",
-        "//folly:sorted_vector_types",
-        "//folly:traits",
-        "//folly/portability:gtest",
+        "folly//folly:map_util",
+        "folly//folly:sorted_vector_types",
+        "folly//folly:traits",
+        "folly//folly/portability:gtest",
     ],
 )
 
@@ -510,12 +510,12 @@ cpp_unittest(
     supports_static_listing = False,
     deps = [
         "fbsource//third-party/fmt:fmt",
-        "//folly:conv",
-        "//folly:small_vector",
-        "//folly:sorted_vector_types",
-        "//folly:traits",
-        "//folly/container:iterator",
-        "//folly/portability:gtest",
+        "folly//folly:conv",
+        "folly//folly:small_vector",
+        "folly//folly:sorted_vector_types",
+        "folly//folly:traits",
+        "folly//folly/container:iterator",
+        "folly//folly/portability:gtest",
     ],
     external_deps = [
         ("boost", None, "boost_algorithm"),
@@ -527,13 +527,13 @@ cpp_unittest(
     srcs = ["sorted_vector_test.cpp"],
     headers = [],
     deps = [
-        "//folly:optional",
-        "//folly:range",
-        "//folly:small_vector",
-        "//folly:sorted_vector_types",
-        "//folly:utility",
-        "//folly/memory:malloc",
-        "//folly/portability:gmock",
-        "//folly/portability:gtest",
+        "folly//folly:optional",
+        "folly//folly:range",
+        "folly//folly:small_vector",
+        "folly//folly:sorted_vector_types",
+        "folly//folly:utility",
+        "folly//folly/memory:malloc",
+        "folly//folly/portability:gmock",
+        "folly//folly/portability:gtest",
     ],
 )

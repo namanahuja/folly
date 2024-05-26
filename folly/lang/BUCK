@@ -6,7 +6,7 @@ cpp_library(
     name = "access",
     headers = ["Access.h"],
     exported_deps = [
-        "//folly/functional:invoke",
+        "folly//folly/functional:invoke",
     ],
 )
 
@@ -14,8 +14,8 @@ cpp_library(
     name = "align",
     headers = ["Align.h"],
     exported_deps = [
-        "//folly:portability",
-        "//folly:traits",
+        "folly//folly:portability",
+        "folly//folly:traits",
     ],
 )
 
@@ -24,7 +24,7 @@ cpp_library(
     headers = ["Aligned.h"],
     exported_deps = [
         ":align",
-        "//folly:utility",
+        "folly//folly:utility",
     ],
 )
 
@@ -33,7 +33,7 @@ cpp_library(
     headers = ["Assume.h"],
     exported_deps = [
         ":hint",
-        "//folly:portability",
+        "folly//folly:portability",
     ],
 )
 
@@ -41,7 +41,7 @@ cpp_library(
     name = "badge",
     headers = ["Badge.h"],
     exported_deps = [
-        "//folly:traits",
+        "folly//folly:traits",
     ],
 )
 
@@ -50,11 +50,11 @@ cpp_library(
     headers = ["Bits.h"],
     exported_deps = [
         ":assume",
-        "//folly:constexpr_math",
-        "//folly:portability",
-        "//folly:traits",
-        "//folly:utility",
-        "//folly/portability:builtins",
+        "folly//folly:constexpr_math",
+        "folly//folly:portability",
+        "folly//folly:traits",
+        "folly//folly:utility",
+        "folly//folly/portability:builtins",
     ],
 )
 
@@ -62,7 +62,7 @@ cpp_library(
     name = "builtin",
     headers = ["Builtin.h"],
     exported_deps = [
-        "//folly:portability",
+        "folly//folly:portability",
     ],
 )
 
@@ -76,8 +76,8 @@ cpp_library(
     srcs = ["CString.cpp"],
     headers = ["CString.h"],
     deps = [
-        "//folly:cpp_attributes",
-        "//folly/functional:invoke",
+        "folly//folly:cpp_attributes",
+        "folly//folly/functional:invoke",
     ],
 )
 
@@ -86,8 +86,8 @@ cpp_library(
     headers = ["Cast.h"],
     exported_deps = [
         ":safe_assert",
-        "//folly:portability",
-        "//folly:traits",
+        "folly//folly:portability",
+        "folly//folly:traits",
     ],
 )
 
@@ -95,8 +95,8 @@ cpp_library(
     name = "checked_math",
     headers = ["CheckedMath.h"],
     exported_deps = [
-        "//folly:c_portability",
-        "//folly:likely",
+        "folly//folly:c_portability",
+        "folly//folly:likely",
     ],
 )
 
@@ -105,7 +105,7 @@ cpp_library(
     headers = ["CustomizationPoint.h"],
     exported_deps = [
         ":static_const",
-        "//folly:portability",
+        "folly//folly:portability",
     ],
 )
 
@@ -123,12 +123,12 @@ cpp_library(
     exported_deps = [
         ":safe_assert",
         ":type_info",
-        "//folly:c_portability",
-        "//folly:cpp_attributes",
-        "//folly:likely",
-        "//folly:portability",
-        "//folly:traits",
-        "//folly:utility",
+        "folly//folly:c_portability",
+        "folly//folly:cpp_attributes",
+        "folly//folly:likely",
+        "folly//folly:portability",
+        "folly//folly:traits",
+        "folly//folly:utility",
     ],
 )
 
@@ -141,7 +141,7 @@ cpp_library(
     name = "keep",
     headers = ["Keep.h"],
     exported_deps = [
-        "//folly:c_portability",
+        "folly//folly:c_portability",
     ],
 )
 
@@ -153,8 +153,8 @@ cpp_library(
     ],
     exported_deps = [
         ":safe_assert",
-        "//folly:portability",
-        "//folly:traits",
+        "folly//folly:portability",
+        "folly//folly:traits",
     ],
 )
 
@@ -162,9 +162,9 @@ cpp_library(
     name = "new",
     headers = ["New.h"],
     exported_deps = [
-        "//folly:cpp_attributes",
-        "//folly:portability",
-        "//folly/functional:invoke",
+        "folly//folly:cpp_attributes",
+        "folly//folly:portability",
+        "folly//folly/functional:invoke",
     ],
 )
 
@@ -180,8 +180,8 @@ cpp_library(
     name = "propagate_const",
     headers = ["PropagateConst.h"],
     exported_deps = [
-        "//folly:traits",
-        "//folly:utility",
+        "folly//folly:traits",
+        "folly//folly:utility",
     ],
 )
 
@@ -196,15 +196,15 @@ cpp_library(
     headers = ["SafeAssert.h"],
     deps = [
         ":to_ascii",
-        "//folly/detail:file_util_detail",
-        "//folly/portability:sys_types",
-        "//folly/portability:windows",
+        "folly//folly/detail:file_util_detail",
+        "folly//folly/portability:sys_types",
+        "folly//folly/portability:windows",
     ],
     exported_deps = [
         ":c_array",
-        "//folly:cpp_attributes",
-        "//folly:portability",
-        "//folly:preprocessor",
+        "folly//folly:cpp_attributes",
+        "folly//folly:portability",
+        "folly//folly:preprocessor",
     ],
 )
 
@@ -212,7 +212,7 @@ cpp_library(
     name = "static_const",
     headers = ["StaticConst.h"],
     exported_deps = [
-        "//folly:portability",
+        "folly//folly:portability",
     ],
 )
 
@@ -221,7 +221,7 @@ cpp_library(
     headers = ["Thunk.h"],
     exported_deps = [
         ":new",
-        "//folly:utility",
+        "folly//folly:utility",
     ],
 )
 
@@ -232,11 +232,11 @@ cpp_library(
     exported_deps = [
         ":align",
         ":c_array",
-        "//folly:constexpr_math",
-        "//folly:likely",
-        "//folly:portability",
-        "//folly:utility",
-        "//folly/portability:builtins",
+        "folly//folly:constexpr_math",
+        "folly//folly:likely",
+        "folly//folly:portability",
+        "folly//folly:utility",
+        "folly//folly/portability:builtins",
     ],
 )
 
@@ -244,8 +244,8 @@ cpp_library(
     name = "type_info",
     headers = ["TypeInfo.h"],
     exported_deps = [
-        "//folly:cpp_attributes",
-        "//folly:portability",
+        "folly//folly:cpp_attributes",
+        "folly//folly:portability",
     ],
 )
 
@@ -254,7 +254,7 @@ cpp_library(
     headers = ["Pretty.h"],
     exported_deps = [
         ":c_array",
-        "//folly:portability",
+        "folly//folly:portability",
     ],
 )
 
@@ -263,8 +263,8 @@ cpp_library(
     srcs = ["UncaughtExceptions.cpp"],
     headers = ["UncaughtExceptions.h"],
     exported_deps = [
-        "//folly:cpp_attributes",
-        "//folly:likely",
-        "//folly:portability",
+        "folly//folly:cpp_attributes",
+        "folly//folly:likely",
+        "folly//folly:portability",
     ],
 )

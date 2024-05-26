@@ -6,10 +6,10 @@ cpp_binary(
     name = "test_main",
     srcs = ["TestMain.cpp"],
     deps = [
-        "//folly:portability",
-        "//folly/init:init",
-        "//folly/portability:gflags",
-        "//folly/portability:gtest",
+        "folly//folly:portability",
+        "folly//folly/init:init",
+        "folly//folly/portability:gflags",
+        "folly//folly/portability:gtest",
     ],
     external_deps = [
         "glog",

@@ -8,8 +8,8 @@ cpp_binary(
     srcs = ["IOBufBenchmark.cpp"],
     headers = [],
     deps = [
-        "//folly:benchmark",
-        "//folly/io:iobuf",
+        "folly//folly:benchmark",
+        "folly//folly/io:iobuf",
     ],
 )
 
@@ -21,11 +21,11 @@ cpp_unittest(
     emails = ["simpkins@fb.com"],
     supports_static_listing = False,
     deps = [
-        "//folly:range",
-        "//folly/io:iobuf",
-        "//folly/io:typed_io_buf",
-        "//folly/memory:malloc",
-        "//folly/portability:gtest",
+        "folly//folly:range",
+        "folly//folly/io:iobuf",
+        "folly//folly/io:typed_io_buf",
+        "folly//folly/memory:malloc",
+        "folly//folly/portability:gtest",
     ],
 )
 
@@ -36,8 +36,8 @@ cpp_unittest(
     allocator = "jemalloc_debug",
     emails = ["dmm@fb.com"],
     deps = [
-        "//folly/io:iobuf",
-        "//folly/portability:gtest",
+        "folly//folly/io:iobuf",
+        "folly//folly/portability:gtest",
     ],
 )
 
@@ -46,10 +46,10 @@ cpp_binary(
     srcs = ["IOBufCursorBenchmark.cpp"],
     headers = [],
     deps = [
-        "//folly:benchmark",
-        "//folly:format",
-        "//folly:range",
-        "//folly/io:iobuf",
+        "folly//folly:benchmark",
+        "folly//folly:format",
+        "folly//folly:range",
+        "folly//folly/io:iobuf",
     ],
 )
 
@@ -58,10 +58,10 @@ cpp_unittest(
     srcs = ["IOBufCursorTest.cpp"],
     headers = [],
     deps = [
-        "//folly:format",
-        "//folly:range",
-        "//folly/io:iobuf",
-        "//folly/portability:gtest",
+        "folly//folly:format",
+        "folly//folly:range",
+        "folly//folly/io:iobuf",
+        "folly//folly/portability:gtest",
     ],
 )
 
@@ -71,9 +71,9 @@ cpp_binary(
     headers = [],
     allocator = "jemalloc",
     deps = [
-        "//folly:benchmark",
-        "//folly/io:iobuf",
-        "//folly/portability:gflags",
+        "folly//folly:benchmark",
+        "folly//folly/io:iobuf",
+        "folly//folly/portability:gflags",
     ],
 )
 
@@ -83,9 +83,9 @@ cpp_unittest(
     headers = [],
     deps = [
         "fbsource//third-party/fmt:fmt",
-        "//folly:range",
-        "//folly/io:iobuf",
-        "//folly/portability:gtest",
+        "folly//folly:range",
+        "folly//folly/io:iobuf",
+        "folly//folly/portability:gtest",
     ],
 )
 
@@ -94,8 +94,8 @@ cpp_unittest(
     srcs = ["IOBufIovecBuilderTest.cpp"],
     headers = [],
     deps = [
-        "//folly/io:iobuf",
-        "//folly/portability:gtest",
+        "folly//folly/io:iobuf",
+        "folly//folly/portability:gtest",
     ],
 )
 
@@ -104,10 +104,10 @@ cpp_binary(
     srcs = ["QueueAppenderBenchmark.cpp"],
     headers = [],
     deps = [
-        "//folly:benchmark",
-        "//folly:format",
-        "//folly:range",
-        "//folly/io:iobuf",
+        "folly//folly:benchmark",
+        "folly//folly:format",
+        "folly//folly:range",
+        "folly//folly/io:iobuf",
     ],
 )
 
@@ -116,15 +116,15 @@ cpp_unittest(
     srcs = ["RecordIOTest.cpp"],
     headers = [],
     deps = [
-        "//folly:conv",
-        "//folly:fbstring",
-        "//folly:random",
-        "//folly/experimental:test_util",
-        "//folly/io:iobuf",
-        "//folly/io:record_io",
-        "//folly/portability:gflags",
-        "//folly/portability:gtest",
-        "//folly/portability:unistd",
+        "folly//folly:conv",
+        "folly//folly:fbstring",
+        "folly//folly:random",
+        "folly//folly/experimental:test_util",
+        "folly//folly/io:iobuf",
+        "folly//folly/io:record_io",
+        "folly//folly/portability:gflags",
+        "folly//folly/portability:gtest",
+        "folly//folly/portability:unistd",
     ],
     external_deps = [
         "glog",
@@ -136,11 +136,11 @@ cpp_unittest(
     srcs = ["ShutdownSocketSetTest.cpp"],
     headers = [],
     deps = [
-        "//folly/io:shutdown_socket_set",
-        "//folly/net:net_ops",
-        "//folly/net:network_socket",
-        "//folly/portability:gtest",
-        "//folly/synchronization:baton",
+        "folly//folly/io:shutdown_socket_set",
+        "folly//folly/net:net_ops",
+        "folly//folly/net:network_socket",
+        "folly//folly/portability:gtest",
+        "folly//folly/synchronization:baton",
     ],
     external_deps = [
         "glog",
@@ -152,9 +152,9 @@ cpp_unittest(
     srcs = ["SocketOptionValueTest.cpp"],
     headers = [],
     deps = [
-        "//folly:conv",
-        "//folly/io:socket_option_map",
-        "//folly/portability:gtest",
+        "folly//folly:conv",
+        "folly//folly/io:socket_option_map",
+        "folly//folly/portability:gtest",
     ],
     external_deps = [
         "glog",

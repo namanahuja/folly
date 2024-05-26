@@ -8,9 +8,9 @@ cpp_unittest(
     name = "aligned_test",
     srcs = ["AlignedTest.cpp"],
     deps = [
-        "//folly/lang:align",
-        "//folly/lang:aligned",
-        "//folly/portability:gtest",
+        "folly//folly/lang:align",
+        "folly//folly/lang:aligned",
+        "folly//folly/portability:gtest",
     ],
 )
 
@@ -18,8 +18,8 @@ cpp_unittest(
     name = "badge_test",
     srcs = ["BadgeTest.cpp"],
     deps = [
-        "//folly/lang:badge",
-        "//folly/portability:gtest",
+        "folly//folly/lang:badge",
+        "folly//folly/portability:gtest",
     ],
 )
 
@@ -28,11 +28,11 @@ cpp_binary(
     srcs = ["BitsBenchmark.cpp"],
     headers = [],
     deps = [
-        "//folly:benchmark",
-        "//folly:cpp_attributes",
-        "//folly:random",
-        "//folly/lang:assume",
-        "//folly/lang:bits",
+        "folly//folly:benchmark",
+        "folly//folly:cpp_attributes",
+        "folly//folly:random",
+        "folly//folly/lang:assume",
+        "folly//folly/lang:bits",
     ],
 )
 
@@ -41,9 +41,9 @@ cpp_unittest(
     srcs = ["BitsTest.cpp"],
     headers = [],
     deps = [
-        "//folly:random",
-        "//folly/lang:bits",
-        "//folly/portability:gtest",
+        "folly//folly:random",
+        "folly//folly/lang:bits",
+        "folly//folly/portability:gtest",
     ],
 )
 
@@ -51,8 +51,8 @@ cpp_unittest(
     name = "c_string_test",
     srcs = ["CStringTest.cpp"],
     deps = [
-        "//folly/lang:c_string",
-        "//folly/portability:gtest",
+        "folly//folly/lang:c_string",
+        "folly//folly/portability:gtest",
     ],
 )
 
@@ -60,9 +60,9 @@ cpp_unittest(
     name = "cast_test",
     srcs = ["CastTest.cpp"],
     deps = [
-        "//folly:utility",
-        "//folly/lang:cast",
-        "//folly/portability:gtest",
+        "folly//folly:utility",
+        "folly//folly/lang:cast",
+        "folly//folly/portability:gtest",
     ],
 )
 
@@ -70,9 +70,9 @@ cpp_unittest(
     name = "checked_math_test",
     srcs = ["CheckedMathTest.cpp"],
     deps = [
-        "//folly/lang:checked_math",
-        "//folly/lang:keep",
-        "//folly/portability:gtest",
+        "folly//folly/lang:checked_math",
+        "folly//folly/lang:keep",
+        "folly//folly/portability:gtest",
     ],
 )
 
@@ -80,11 +80,11 @@ cpp_unittest(
     name = "exception_test",
     srcs = ["ExceptionTest.cpp"],
     deps = [
-        "//folly:portability",
-        "//folly/lang:exception",
-        "//folly/lang:keep",
-        "//folly/lang:pretty",
-        "//folly/portability:gtest",
+        "folly//folly:portability",
+        "folly//folly/lang:exception",
+        "folly//folly/lang:keep",
+        "folly//folly/lang:pretty",
+        "folly//folly/portability:gtest",
     ],
 )
 
@@ -92,8 +92,8 @@ cpp_unittest(
     name = "extern_test",
     srcs = ["ExternTest.cpp"],
     deps = [
-        "//folly/lang:extern",
-        "//folly/portability:gtest",
+        "folly//folly/lang:extern",
+        "folly//folly/portability:gtest",
     ],
 )
 
@@ -101,8 +101,8 @@ cpp_unittest(
     name = "hint_test",
     srcs = ["HintTest.cpp"],
     deps = [
-        "//folly/lang:hint",
-        "//folly/portability:gtest",
+        "folly//folly/lang:hint",
+        "folly//folly/portability:gtest",
     ],
 )
 
@@ -110,9 +110,9 @@ cpp_unittest(
     name = "new_test",
     srcs = ["NewTest.cpp"],
     deps = [
-        "//folly/lang:align",
-        "//folly/lang:new",
-        "//folly/portability:gtest",
+        "folly//folly/lang:align",
+        "folly//folly/lang:new",
+        "folly//folly/portability:gtest",
     ],
 )
 
@@ -120,8 +120,8 @@ cpp_unittest(
     name = "ordering_test",
     srcs = ["OrderingTest.cpp"],
     deps = [
-        "//folly/lang:ordering",
-        "//folly/portability:gtest",
+        "folly//folly/lang:ordering",
+        "folly//folly/portability:gtest",
     ],
 )
 
@@ -129,8 +129,8 @@ cpp_unittest(
     name = "propagate_const_test",
     srcs = ["PropagateConstTest.cpp"],
     deps = [
-        "//folly/lang:propagate_const",
-        "//folly/portability:gtest",
+        "folly//folly/lang:propagate_const",
+        "folly//folly/portability:gtest",
     ],
 )
 
@@ -139,8 +139,8 @@ cpp_unittest(
     srcs = ["RValueReferenceWrapperTest.cpp"],
     headers = [],
     deps = [
-        "//folly/lang:rvalue_reference_wrapper",
-        "//folly/portability:gtest",
+        "folly//folly/lang:rvalue_reference_wrapper",
+        "folly//folly/portability:gtest",
     ],
 )
 
@@ -149,11 +149,11 @@ cpp_unittest(
     srcs = ["SafeAssertTest.cpp"],
     headers = [],
     deps = [
-        "//folly:benchmark",
-        "//folly:conv",
-        "//folly/lang:keep",
-        "//folly/lang:safe_assert",
-        "//folly/portability:gtest",
+        "folly//folly:benchmark",
+        "folly//folly:conv",
+        "folly//folly/lang:keep",
+        "folly//folly/lang:safe_assert",
+        "folly//folly/portability:gtest",
     ],
     external_deps = [
         "glog",
@@ -164,9 +164,9 @@ cpp_unittest(
     name = "thunk_test",
     srcs = ["ThunkTest.cpp"],
     deps = [
-        "//folly:traits",
-        "//folly/lang:thunk",
-        "//folly/portability:gtest",
+        "folly//folly:traits",
+        "folly//folly/lang:thunk",
+        "folly//folly/portability:gtest",
     ],
 )
 
@@ -175,10 +175,10 @@ cpp_benchmark(
     srcs = ["ToAsciiBench.cpp"],
     deps = [
         "fbsource//third-party/fmt:fmt",
-        "//folly:benchmark",
-        "//folly/lang:keep",
-        "//folly/lang:to_ascii",
-        "//folly/portability:fmt_compile",
+        "folly//folly:benchmark",
+        "folly//folly/lang:keep",
+        "folly//folly/lang:to_ascii",
+        "folly//folly/portability:fmt_compile",
     ],
 )
 
@@ -186,8 +186,8 @@ cpp_unittest(
     name = "to_ascii_test",
     srcs = ["ToAsciiTest.cpp"],
     deps = [
-        "//folly/lang:to_ascii",
-        "//folly/portability:gtest",
+        "folly//folly/lang:to_ascii",
+        "folly//folly/portability:gtest",
     ],
 )
 
@@ -195,8 +195,8 @@ cpp_unittest(
     name = "type_info_test",
     srcs = ["TypeInfoTest.cpp"],
     deps = [
-        "//folly/lang:type_info",
-        "//folly/portability:gtest",
+        "folly//folly/lang:type_info",
+        "folly//folly/portability:gtest",
     ],
 )
 
@@ -204,8 +204,8 @@ cpp_unittest(
     name = "pretty_test",
     srcs = ["PrettyTest.cpp"],
     deps = [
-        "//folly/lang:pretty",
-        "//folly/portability:gtest",
+        "folly//folly/lang:pretty",
+        "folly//folly/portability:gtest",
     ],
 )
 
@@ -213,10 +213,10 @@ cpp_benchmark(
     name = "uncaught_exceptions_bench",
     srcs = ["UncaughtExceptionsBench.cpp"],
     deps = [
-        "//folly:benchmark",
-        "//folly/lang:hint",
-        "//folly/lang:keep",
-        "//folly/lang:uncaught_exceptions",
+        "folly//folly:benchmark",
+        "folly//folly/lang:hint",
+        "folly//folly/lang:keep",
+        "folly//folly/lang:uncaught_exceptions",
     ],
 )
 
@@ -226,9 +226,9 @@ cpp_unittest(
     headers = [],
     supports_static_listing = False,
     deps = [
-        "//folly:conv",
-        "//folly/functional:invoke",
-        "//folly/lang:uncaught_exceptions",
-        "//folly/portability:gtest",
+        "folly//folly:conv",
+        "folly//folly/functional:invoke",
+        "folly//folly/lang:uncaught_exceptions",
+        "folly//folly/portability:gtest",
     ],
 )

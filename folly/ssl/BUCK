@@ -6,8 +6,8 @@ cpp_library(
     name = "openssl_ptr_types",
     headers = ["OpenSSLPtrTypes.h"],
     exported_deps = [
-        "//folly:memory",
-        "//folly/portability:openssl",
+        "folly//folly:memory",
+        "folly//folly/portability:openssl",
     ],
     exported_external_deps = [
         "glog",
@@ -19,14 +19,14 @@ cpp_library(
     srcs = ["OpenSSLHash.cpp"],
     headers = ["OpenSSLHash.h"],
     deps = [
-        "//folly:format",
+        "folly//folly:format",
     ],
     exported_deps = [
         ":openssl_ptr_types",
-        "//folly:exception",
-        "//folly:range",
-        "//folly/io:iobuf",
-        "//folly/portability:openssl",
+        "folly//folly:exception",
+        "folly//folly:range",
+        "folly//folly/io:iobuf",
+        "folly//folly/portability:openssl",
     ],
 )
 
@@ -35,15 +35,15 @@ cpp_library(
     srcs = ["OpenSSLCertUtils.cpp"],
     headers = ["OpenSSLCertUtils.h"],
     deps = [
-        "//folly:file_util",
-        "//folly:scope_guard",
-        "//folly:string",
+        "folly//folly:file_util",
+        "folly//folly:scope_guard",
+        "folly//folly:string",
     ],
     exported_deps = [
         ":openssl_ptr_types",
-        "//folly:optional",
-        "//folly/io:iobuf",
-        "//folly/portability:openssl",
+        "folly//folly:optional",
+        "folly//folly/io:iobuf",
+        "folly//folly/portability:openssl",
     ],
 )
 
@@ -51,7 +51,7 @@ cpp_library(
     name = "openssl_version_finder",
     headers = ["OpenSSLVersionFinder.h"],
     exported_deps = [
-        "//folly/portability:openssl",
+        "folly//folly/portability:openssl",
     ],
 )
 
@@ -59,7 +59,7 @@ cpp_library(
     name = "openssl_ticket_handler",
     headers = ["OpenSSLTicketHandler.h"],
     exported_deps = [
-        "//folly/portability:openssl",
+        "folly//folly/portability:openssl",
     ],
 )
 
@@ -75,13 +75,13 @@ cpp_library(
     srcs = ["SSLSessionManager.cpp"],
     headers = ["SSLSessionManager.h"],
     deps = [
-        "//folly:overload",
-        "//folly/ssl/detail:openssl_session",
+        "folly//folly:overload",
+        "folly//folly/ssl/detail:openssl_session",
     ],
     exported_deps = [
         ":openssl_ptr_types",
         ":ssl_session",
-        "//folly/portability:openssl",
+        "folly//folly/portability:openssl",
     ],
 )
 
@@ -97,10 +97,10 @@ cpp_library(
     headers = ["OpenSSLKeyUtils.h"],
     deps = [
         ":password_collector",
-        "//folly/portability:openssl",
+        "folly//folly/portability:openssl",
     ],
     exported_deps = [
         ":openssl_ptr_types",
-        "//folly:range",
+        "folly//folly:range",
     ],
 )

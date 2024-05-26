@@ -7,10 +7,10 @@ cpp_library(
     srcs = ["OpenSSLSession.cpp"],
     headers = ["OpenSSLSession.h"],
     exported_deps = [
-        "//folly:shared_mutex",
-        "//folly:synchronized",
-        "//folly/portability:openssl",
-        "//folly/ssl:openssl_ptr_types",
-        "//folly/ssl:ssl_session",
+        "folly//folly:shared_mutex",
+        "folly//folly:synchronized",
+        "folly//folly/portability:openssl",
+        "folly//folly/ssl:openssl_ptr_types",
+        "folly//folly/ssl:ssl_session",
     ],
 )

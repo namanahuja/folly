@@ -9,13 +9,13 @@ cpp_library(
     deps = [
         ":base64_sse4_2",
         ":base64_swar",
-        "//folly:cpu_id",
+        "folly//folly:cpu_id",
     ],
     exported_deps = [
         ":base64_common",
         ":base64_scalar",
-        "//folly:portability",
-        "//folly/portability:constexpr",
+        "folly//folly:portability",
+        "folly//folly/portability:constexpr",
     ],
 )
 
@@ -55,7 +55,7 @@ cpp_library(
         ":base64_hidden_constants",
         ":base64_scalar",
         ":base64_swar",
-        "//folly:c_portability",
+        "folly//folly:c_portability",
     ],
 )
 
@@ -64,7 +64,7 @@ cpp_library(
     headers = ["Base64_SSE4_2_Platform.h"],
     exported_deps = [
         ":base64_hidden_constants",
-        "//folly:portability",
+        "folly//folly:portability",
     ],
 )
 
@@ -82,7 +82,7 @@ cpp_library(
     ],
     exported_deps = [
         ":base64_common",
-        "//folly:portability",
+        "folly//folly:portability",
     ],
 )
 
@@ -94,7 +94,7 @@ cpp_library(
         ":base64_constants",
         ":base64_hidden_constants",
         ":base64_scalar",
-        "//folly:portability",
+        "folly//folly:portability",
     ],
     exported_deps = [
         ":base64_common",

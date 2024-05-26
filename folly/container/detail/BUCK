@@ -6,7 +6,7 @@ cpp_library(
     name = "bit_iterator_detail",
     headers = ["BitIteratorDetail.h"],
     exported_deps = [
-        "//folly/portability:sys_types",
+        "folly//folly/portability:sys_types",
     ],
     exported_external_deps = [
         "boost",
@@ -19,7 +19,7 @@ cpp_library(
         "F14IntrinsicsAvailability.h",
     ],
     exported_deps = [
-        "//folly:portability",
+        "folly//folly:portability",
     ],
 )
 
@@ -29,7 +29,7 @@ cpp_library(
         "F14Defaults.h",
     ],
     exported_deps = [
-        "//folly/container:heterogeneous_access_fwd",
+        "folly//folly/container:heterogeneous_access_fwd",
     ],
 )
 
@@ -49,25 +49,25 @@ cpp_library(
         ":f14_intrinsics_availability",
         ":f14_mask",
         ":util",
-        "//folly:bits",
-        "//folly:constexpr_math",
-        "//folly:likely",
-        "//folly:memory",
-        "//folly:optional",
-        "//folly:portability",
-        "//folly:scope_guard",
-        "//folly:traits",
-        "//folly:unit",
-        "//folly/container:heterogeneous_access",
-        "//folly/functional:invoke",
-        "//folly/hash:hash",
-        "//folly/lang:align",
-        "//folly/lang:assume",
-        "//folly/lang:exception",
-        "//folly/lang:pretty",
-        "//folly/lang:safe_assert",
-        "//folly/memory:malloc",
-        "//folly/portability:builtins",
+        "folly//folly:bits",
+        "folly//folly:constexpr_math",
+        "folly//folly:likely",
+        "folly//folly:memory",
+        "folly//folly:optional",
+        "folly//folly:portability",
+        "folly//folly:scope_guard",
+        "folly//folly:traits",
+        "folly//folly:unit",
+        "folly//folly/container:heterogeneous_access",
+        "folly//folly/functional:invoke",
+        "folly//folly/hash:hash",
+        "folly//folly/lang:align",
+        "folly//folly/lang:assume",
+        "folly//folly/lang:exception",
+        "folly//folly/lang:pretty",
+        "folly//folly/lang:safe_assert",
+        "folly//folly/memory:malloc",
+        "folly//folly/portability:builtins",
     ],
 )
 
@@ -78,12 +78,12 @@ cpp_library(
     ],
     exported_deps = [
         ":f14_intrinsics_availability",
-        "//folly:bits",
-        "//folly:constexpr_math",
-        "//folly:likely",
-        "//folly:portability",
-        "//folly/lang:assume",
-        "//folly/lang:safe_assert",
+        "folly//folly:bits",
+        "folly//folly:constexpr_math",
+        "folly//folly:likely",
+        "folly//folly:portability",
+        "folly//folly/lang:assume",
+        "folly//folly/lang:safe_assert",
     ],
 )
 
@@ -93,12 +93,12 @@ cpp_library(
         "tape_detail.h",
     ],
     exported_deps = [
-        "//folly:portability",
-        "//folly:range",
-        "//folly/container:iterator",
-        "//folly/container:range_traits",
-        "//folly/lang:hint",
-        "//folly/memory:uninitialized_memory_hacks",
+        "folly//folly:portability",
+        "folly//folly:range",
+        "folly//folly/container:iterator",
+        "folly//folly/container:range_traits",
+        "folly//folly/lang:hint",
+        "folly//folly/memory:uninitialized_memory_hacks",
     ],
 )
 
@@ -108,8 +108,8 @@ cpp_library(
         "Util.h",
     ],
     exported_deps = [
-        "//folly:traits",
-        "//folly/container:iterator",
-        "//folly/functional:apply_tuple",
+        "folly//folly:traits",
+        "folly//folly/container:iterator",
+        "folly//folly/functional:apply_tuple",
     ],
 )

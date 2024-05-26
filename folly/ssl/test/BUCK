@@ -1,5 +1,5 @@
 load("@fbcode_macros//build_defs:cpp_unittest.bzl", "cpp_unittest")
-load("//folly/io/async/test/certs:defs.bzl", "alias_pem")
+load("folly//folly/io/async/test/certs:defs.bzl", "alias_pem")
 
 oncall("fbcode_entropy_wardens_folly")
 
@@ -12,9 +12,9 @@ cpp_unittest(
     name = "openssl_hash_test",
     srcs = ["OpenSSLHashTest.cpp"],
     deps = [
-        "//folly/io:iobuf",
-        "//folly/portability:gtest",
-        "//folly/ssl:openssl_hash",
+        "folly//folly/io:iobuf",
+        "folly//folly/portability:gtest",
+        "folly//folly/ssl:openssl_hash",
     ],
 )
 
@@ -27,16 +27,16 @@ cpp_unittest(
     ],
     supports_static_listing = False,
     deps = [
-        "//folly:format",
-        "//folly:range",
-        "//folly:string",
-        "//folly/container:enumerate",
-        "//folly/experimental:test_util",
-        "//folly/portability:gtest",
-        "//folly/portability:openssl",
-        "//folly/portability:time",
-        "//folly/ssl:openssl_cert_utils",
-        "//folly/ssl:openssl_ptr_types",
+        "folly//folly:format",
+        "folly//folly:range",
+        "folly//folly:string",
+        "folly//folly/container:enumerate",
+        "folly//folly/experimental:test_util",
+        "folly//folly/portability:gtest",
+        "folly//folly/portability:openssl",
+        "folly//folly/portability:time",
+        "folly//folly/ssl:openssl_cert_utils",
+        "folly//folly/ssl:openssl_ptr_types",
     ],
 )
 
@@ -44,11 +44,11 @@ cpp_unittest(
     name = "ssl_session_manager_test",
     srcs = ["SSLSessionManagerTest.cpp"],
     deps = [
-        "//folly/portability:gtest",
-        "//folly/portability:openssl",
-        "//folly/ssl:openssl_ptr_types",
-        "//folly/ssl:ssl_session_manager",
-        "//folly/ssl/detail:openssl_session",
+        "folly//folly/portability:gtest",
+        "folly//folly/portability:openssl",
+        "folly//folly/ssl:openssl_ptr_types",
+        "folly//folly/ssl:ssl_session_manager",
+        "folly//folly/ssl/detail:openssl_session",
     ],
 )
 
@@ -56,8 +56,8 @@ cpp_unittest(
     name = "openssl_key_utils_test",
     srcs = ["OpenSSLKeyUtilsTest.cpp"],
     deps = [
-        "//folly/portability:gtest",
-        "//folly/ssl:openssl_key_utils",
-        "//folly/ssl:password_collector",
+        "folly//folly/portability:gtest",
+        "folly//folly/ssl:openssl_key_utils",
+        "folly//folly/ssl:password_collector",
     ],
 )

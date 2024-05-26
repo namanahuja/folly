@@ -7,7 +7,7 @@ cpp_unittest(
     srcs = ["farmhash_test.cpp"],
     headers = [],
     deps = [
-        "//folly/external/farmhash:farmhash",
-        "//folly/portability:gtest",
+        "folly//folly/external/farmhash:farmhash",
+        "folly//folly/portability:gtest",
     ],
 )

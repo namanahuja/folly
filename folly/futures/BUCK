@@ -7,8 +7,8 @@ cpp_library(
     srcs = ["Barrier.cpp"],
     headers = ["Barrier.h"],
     deps = [
-        "//folly:scope_guard",
-        "//folly/lang:new",
+        "folly//folly:scope_guard",
+        "folly//folly/lang:new",
     ],
     exported_deps = [
         ":core",
@@ -38,44 +38,44 @@ cpp_library(
         "WTCallback.h",
     ],
     deps = [
-        "//folly:likely",
-        "//folly:singleton",
-        "//folly/container:intrusive_heap",
-        "//folly/lang:safe_assert",
-        "//folly/portability:gflags",
-        "//folly/synchronization:distributed_mutex",
-        "//folly/synchronization:relaxed_atomic",
-        "//folly/synchronization:saturating_semaphore",
-        "//folly/synchronization:wait_options",
-        "//folly/system:thread_name",
+        "folly//folly:likely",
+        "folly//folly:singleton",
+        "folly//folly/container:intrusive_heap",
+        "folly//folly/lang:safe_assert",
+        "folly//folly/portability:gflags",
+        "folly//folly/synchronization:distributed_mutex",
+        "folly//folly/synchronization:relaxed_atomic",
+        "folly//folly/synchronization:saturating_semaphore",
+        "folly//folly/synchronization:wait_options",
+        "folly//folly/system:thread_name",
     ],
     exported_deps = [
         ":portability",
-        "//folly:chrono",
-        "//folly:optional",
-        "//folly:portability",
-        "//folly:random",
-        "//folly:scope_guard",
-        "//folly:traits",
-        "//folly:try",
-        "//folly:unit",
-        "//folly:utility",
-        "//folly/container:foreach",
-        "//folly/detail:async_trace",
-        "//folly/executors:drivable_executor",
-        "//folly/executors:executor_with_priority",
-        "//folly/executors:global_executor",
-        "//folly/executors:inline_executor",
-        "//folly/executors:queued_immediate_executor",
-        "//folly/executors:timed_drivable_executor",
-        "//folly/experimental/coro:traits",
-        "//folly/fibers:core",
-        "//folly/functional:invoke",
-        "//folly/futures/detail:core",
-        "//folly/futures/detail:types",
-        "//folly/io/async:async_base",
-        "//folly/lang:exception",
-        "//folly/lang:pretty",
+        "folly//folly:chrono",
+        "folly//folly:optional",
+        "folly//folly:portability",
+        "folly//folly:random",
+        "folly//folly:scope_guard",
+        "folly//folly:traits",
+        "folly//folly:try",
+        "folly//folly:unit",
+        "folly//folly:utility",
+        "folly//folly/container:foreach",
+        "folly//folly/detail:async_trace",
+        "folly//folly/executors:drivable_executor",
+        "folly//folly/executors:executor_with_priority",
+        "folly//folly/executors:global_executor",
+        "folly//folly/executors:inline_executor",
+        "folly//folly/executors:queued_immediate_executor",
+        "folly//folly/executors:timed_drivable_executor",
+        "folly//folly/experimental/coro:traits",
+        "folly//folly/fibers:core",
+        "folly//folly/functional:invoke",
+        "folly//folly/futures/detail:core",
+        "folly//folly/futures/detail:types",
+        "folly//folly/io/async:async_base",
+        "folly//folly/lang:exception",
+        "folly//folly/lang:pretty",
     ],
 )
 
@@ -85,7 +85,7 @@ cpp_library(
     exported_deps = [
         ":core",
         ":shared_promise",
-        "//folly/lang:exception",
+        "folly//folly/lang:exception",
     ],
 )
 
@@ -96,10 +96,10 @@ cpp_library(
         ":core",  # @manual
         ":future_splitter",  # @manual
         ":shared_promise",  # @manual
-        "//folly/executors:inline_executor",  # @manual
-        "//folly/executors:manual_executor",  # @manual
-        "//folly/executors:queued_immediate_executor",  # @manual
-        "//folly/executors:scheduled_executor",  # @manual
+        "folly//folly/executors:inline_executor",  # @manual
+        "folly//folly/executors:manual_executor",  # @manual
+        "folly//folly/executors:queued_immediate_executor",  # @manual
+        "folly//folly/executors:scheduled_executor",  # @manual
     ],
 )
 
@@ -108,8 +108,8 @@ cpp_library(
     srcs = ["ManualTimekeeper.cpp"],
     headers = ["ManualTimekeeper.h"],
     exported_deps = [
-        "//folly:synchronized",
-        "//folly/futures:core",
+        "folly//folly:synchronized",
+        "folly//folly/futures:core",
     ],
 )
 
@@ -117,7 +117,7 @@ cpp_library(
     name = "portability",
     headers = ["Portability.h"],
     exported_deps = [
-        "//folly:portability",
+        "folly//folly:portability",
     ],
 )
 
@@ -130,8 +130,8 @@ cpp_library(
     ],
     exported_deps = [
         ":core",
-        "//folly:portability",
-        "//folly/executors:inline_executor",
-        "//folly/lang:exception",
+        "folly//folly:portability",
+        "folly//folly/executors:inline_executor",
+        "folly//folly/lang:exception",
     ],
 )

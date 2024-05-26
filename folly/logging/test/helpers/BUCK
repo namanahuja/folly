@@ -7,9 +7,9 @@ cpp_binary(
     name = "fatal_helper",
     srcs = ["FatalHelper.cpp"],
     deps = [
-        "//folly/init:init",
-        "//folly/logging:logging",
-        "//folly/portability:stdlib",
+        "folly//folly/init:init",
+        "folly//folly/logging:logging",
+        "folly//folly/portability:stdlib",
     ],
 )
 
@@ -19,8 +19,8 @@ cpp_binary(
     deps = [
         ":helpers",
         ":log_on_shutdown",
-        "//folly/init:init",
-        "//folly/logging:logging",
+        "folly//folly/init:init",
+        "folly//folly/logging:logging",
     ],
 )
 
@@ -36,7 +36,7 @@ cpp_library(
     name = "helpers",
     headers = ["helpers.h"],
     exported_deps = [
-        "//folly/logging:logging",
+        "folly//folly/logging:logging",
     ],
 )
 

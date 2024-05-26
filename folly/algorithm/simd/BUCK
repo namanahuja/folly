@@ -9,7 +9,7 @@ cpp_library(
     name = "movemask",
     headers = ["Movemask.h"],
     exported_deps = [
-        "//folly:portability",
+        "folly//folly:portability",
     ],
 )
 
@@ -18,6 +18,6 @@ cpp_library(
     headers = ["FindFixed.h"],
     exported_deps = [
         ":movemask",
-        "//folly:portability",
+        "folly//folly:portability",
     ],
 )

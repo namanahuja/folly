@@ -8,8 +8,8 @@ cpp_unittest(
         "InlineFunctionRefTest.cpp",
     ],
     deps = [
-        "//folly/portability:gtest",
-        "//folly/synchronization/detail:inline_function_ref",
+        "folly//folly/portability:gtest",
+        "folly//folly/synchronization/detail:inline_function_ref",
     ],
 )
 
@@ -19,8 +19,8 @@ cpp_unittest(
         "HardwareTest.cpp",
     ],
     deps = [
-        "//folly/portability:gtest",
-        "//folly/synchronization/detail:hardware",
+        "folly//folly/portability:gtest",
+        "folly//folly/synchronization/detail:hardware",
     ],
     external_deps = [
         "glog",

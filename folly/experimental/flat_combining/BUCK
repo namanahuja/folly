@@ -8,6 +8,6 @@ cpp_library(
         "FlatCombining.h",
     ],
     exported_deps = [
-        "//folly/synchronization:flat_combining",
+        "folly//folly/synchronization:flat_combining",
     ],
 )

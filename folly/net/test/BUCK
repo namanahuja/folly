@@ -9,8 +9,8 @@ cpp_library(
         "MockNetOpsDispatcher.h",
     ],
     exported_deps = [
-        "//folly/net:net_ops_dispatcher",
-        "//folly/portability:gmock",
+        "folly//folly/net:net_ops_dispatcher",
+        "folly//folly/portability:gmock",
     ],
 )
 
@@ -20,8 +20,8 @@ cpp_library(
         "MockTcpInfoDispatcher.h",
     ],
     exported_deps = [
-        "//folly/net:tcpinfo_dispatcher",
-        "//folly/portability:gmock",
+        "folly//folly/net:tcpinfo_dispatcher",
+        "folly//folly/portability:gmock",
     ],
 )
 
@@ -29,9 +29,9 @@ cpp_unittest(
     name = "net_ops_test",
     srcs = ["NetOpsTest.cpp"],
     deps = [
-        "//folly/net:net_ops",
-        "//folly/net:network_socket",
-        "//folly/portability:gtest",
+        "folly//folly/net:net_ops",
+        "folly//folly/net:network_socket",
+        "folly//folly/portability:gtest",
     ],
     external_deps = [
         "glog",
@@ -44,10 +44,10 @@ cpp_unittest(
     supports_static_listing = False,
     deps = [
         ":tcpinfo_test_util",
-        "//folly/net:tcpinfo",
-        "//folly/net/test:mock_net_ops_dispatcher",
-        "//folly/portability:gmock",
-        "//folly/portability:gtest",
+        "folly//folly/net:tcpinfo",
+        "folly//folly/net/test:mock_net_ops_dispatcher",
+        "folly//folly/portability:gmock",
+        "folly//folly/portability:gtest",
     ],
 )
 
@@ -57,9 +57,9 @@ cpp_library(
         "TcpInfoTestUtil.h",
     ],
     exported_deps = [
-        "//folly/net:tcpinfo",
-        "//folly/net/test:mock_net_ops_dispatcher",
-        "//folly/portability:gmock",
-        "//folly/portability:gtest",
+        "folly//folly/net:tcpinfo",
+        "folly//folly/net/test:mock_net_ops_dispatcher",
+        "folly//folly/portability:gmock",
+        "folly//folly/portability:gtest",
     ],
 )

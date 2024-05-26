@@ -7,12 +7,12 @@ cpp_unittest(
     srcs = ["BitVectorCodingTest.cpp"],
     headers = [],
     deps = [
-        "//folly:benchmark",
-        "//folly:portability",
-        "//folly/compression/elias_fano:bit_vector_coding",
-        "//folly/experimental:select64",
-        "//folly/experimental/test:coding_test_utils",
-        "//folly/init:init",
+        "folly//folly:benchmark",
+        "folly//folly:portability",
+        "folly//folly/compression/elias_fano:bit_vector_coding",
+        "folly//folly/experimental:select64",
+        "folly//folly/experimental/test:coding_test_utils",
+        "folly//folly/init:init",
     ],
 )
 
@@ -21,11 +21,11 @@ cpp_unittest(
     srcs = ["EliasFanoCodingTest.cpp"],
     headers = [],
     deps = [
-        "//folly:benchmark",
-        "//folly:random",
-        "//folly/compression/elias_fano:elias_fano_coding",
-        "//folly/experimental:select64",
-        "//folly/experimental/test:coding_test_utils",
-        "//folly/init:init",
+        "folly//folly:benchmark",
+        "folly//folly:random",
+        "folly//folly/compression/elias_fano:elias_fano_coding",
+        "folly//folly/experimental:select64",
+        "folly//folly/experimental/test:coding_test_utils",
+        "folly//folly/init:init",
     ],
 )

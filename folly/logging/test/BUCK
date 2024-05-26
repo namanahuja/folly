@@ -10,26 +10,26 @@ cpp_unittest(
     name = "async_file_writer_test",
     srcs = ["AsyncFileWriterTest.cpp"],
     deps = [
-        "//folly:conv",
-        "//folly:exception",
-        "//folly:file",
-        "//folly:file_util",
-        "//folly:string",
-        "//folly:synchronized",
-        "//folly/experimental:test_util",
-        "//folly/futures:core",
-        "//folly/init:init",
-        "//folly/lang:safe_assert",
-        "//folly/logging:init",
-        "//folly/logging:logging",
-        "//folly/portability:config",
-        "//folly/portability:gflags",
-        "//folly/portability:gmock",
-        "//folly/portability:gtest",
-        "//folly/portability:unistd",
-        "//folly/system:thread_id",
-        "//folly/system:thread_name",
-        "//folly/test:test_utils",
+        "folly//folly:conv",
+        "folly//folly:exception",
+        "folly//folly:file",
+        "folly//folly:file_util",
+        "folly//folly:string",
+        "folly//folly:synchronized",
+        "folly//folly/experimental:test_util",
+        "folly//folly/futures:core",
+        "folly//folly/init:init",
+        "folly//folly/lang:safe_assert",
+        "folly//folly/logging:init",
+        "folly//folly/logging:logging",
+        "folly//folly/portability:config",
+        "folly//folly/portability:gflags",
+        "folly//folly/portability:gmock",
+        "folly//folly/portability:gtest",
+        "folly//folly/portability:unistd",
+        "folly//folly/system:thread_id",
+        "folly//folly/system:thread_name",
+        "folly//folly/test:test_utils",
     ],
 )
 
@@ -37,10 +37,10 @@ cpp_unittest(
     name = "async_log_writer_test",
     srcs = ["AsyncLogWriterTest.cpp"],
     deps = [
-        "//folly/logging:logging",
-        "//folly/portability:gmock",
-        "//folly/portability:gtest",
-        "//folly/test:test_utils",
+        "folly//folly/logging:logging",
+        "folly//folly/portability:gmock",
+        "folly//folly/portability:gtest",
+        "folly//folly/test:test_utils",
     ],
 )
 
@@ -49,13 +49,13 @@ cpp_unittest(
     srcs = ["ConfigParserTest.cpp"],
     deps = [
         ":config_helpers",
-        "//folly:string",
-        "//folly/json:dynamic",
-        "//folly/logging:init",
-        "//folly/logging:logging",
-        "//folly/portability:gmock",
-        "//folly/portability:gtest",
-        "//folly/test:test_utils",
+        "folly//folly:string",
+        "folly//folly/json:dynamic",
+        "folly//folly/logging:init",
+        "folly//folly/logging:logging",
+        "folly//folly/portability:gmock",
+        "folly//folly/portability:gtest",
+        "folly//folly/test:test_utils",
     ],
 )
 
@@ -65,13 +65,13 @@ cpp_unittest(
     deps = [
         ":config_helpers",
         ":test_handler",
-        "//folly/json:dynamic",
-        "//folly/logging:init",
-        "//folly/logging:log_handler",
-        "//folly/logging:logging",
-        "//folly/portability:gmock",
-        "//folly/portability:gtest",
-        "//folly/test:test_utils",
+        "folly//folly/json:dynamic",
+        "folly//folly/logging:init",
+        "folly//folly/logging:log_handler",
+        "folly//folly/logging:logging",
+        "folly//folly/portability:gmock",
+        "folly//folly/portability:gtest",
+        "folly//folly/test:test_utils",
     ],
 )
 
@@ -79,7 +79,7 @@ python_unittest(
     name = "fatal_test",
     srcs = ["fatal_test.py"],
     env = {
-        "FOLLY_FATAL_HELPER": "$(location //folly/logging/test/helpers:fatal_helper)",
+        "FOLLY_FATAL_HELPER": "$(location folly//folly/logging/test/helpers:fatal_helper)",
     },
 )
 
@@ -87,8 +87,8 @@ python_unittest(
     name = "log_after_main",
     srcs = ["log_after_main.py"],
     env = {
-        "FOLLY_LOG_AFTER_MAIN_HELPER": "$(location //folly/logging/test/helpers:log_after_main)",
-        "FOLLY_LOG_AFTER_MAIN_NO_INIT_HELPER": "$(location //folly/logging/test/helpers:log_after_main_no_init)",
+        "FOLLY_LOG_AFTER_MAIN_HELPER": "$(location folly//folly/logging/test/helpers:log_after_main)",
+        "FOLLY_LOG_AFTER_MAIN_NO_INIT_HELPER": "$(location folly//folly/logging/test/helpers:log_after_main_no_init)",
     },
 )
 
@@ -96,12 +96,12 @@ cpp_unittest(
     name = "file_handler_factory_test",
     srcs = ["FileHandlerFactoryTest.cpp"],
     deps = [
-        "//folly:exception",
-        "//folly/experimental:test_util",
-        "//folly/logging:file_handler_factory",
-        "//folly/logging:logging",
-        "//folly/portability:gtest",
-        "//folly/test:test_utils",
+        "folly//folly:exception",
+        "folly//folly/experimental:test_util",
+        "folly//folly/logging:file_handler_factory",
+        "folly//folly/logging:logging",
+        "folly//folly/portability:gtest",
+        "folly//folly/test:test_utils",
     ],
 )
 
@@ -109,11 +109,11 @@ cpp_unittest(
     name = "custom_log_formatter_test",
     srcs = ["CustomLogFormatterTest.cpp"],
     deps = [
-        "//folly:format",
-        "//folly/init:init",
-        "//folly/logging:logging",
-        "//folly/portability:gtest",
-        "//folly/portability:stdlib",
+        "folly//folly:format",
+        "folly//folly/init:init",
+        "folly//folly/logging:logging",
+        "folly//folly/portability:gtest",
+        "folly//folly/portability:stdlib",
     ],
 )
 
@@ -121,12 +121,12 @@ cpp_unittest(
     name = "glog_formatter_test",
     srcs = ["GlogFormatterTest.cpp"],
     deps = [
-        "//folly:format",
-        "//folly/init:init",
-        "//folly/logging:logging",
-        "//folly/portability:gtest",
-        "//folly/portability:stdlib",
-        "//folly/system:thread_name",
+        "folly//folly:format",
+        "folly//folly/init:init",
+        "folly//folly/logging:logging",
+        "folly//folly/portability:gtest",
+        "folly//folly/portability:stdlib",
+        "folly//folly/system:thread_name",
     ],
 )
 
@@ -134,13 +134,13 @@ cpp_unittest(
     name = "immediate_file_writer_test",
     srcs = ["ImmediateFileWriterTest.cpp"],
     deps = [
-        "//folly:conv",
-        "//folly:exception",
-        "//folly:file_util",
-        "//folly/experimental:test_util",
-        "//folly/logging:logging",
-        "//folly/portability:gmock",
-        "//folly/portability:gtest",
+        "folly//folly:conv",
+        "folly//folly:exception",
+        "folly//folly:file_util",
+        "folly//folly/experimental:test_util",
+        "folly//folly/logging:logging",
+        "folly//folly/portability:gmock",
+        "folly//folly/portability:gtest",
     ],
 )
 
@@ -149,11 +149,11 @@ cpp_unittest(
     srcs = ["InitTest.cpp"],
     deps = [
         ":config_helpers",
-        "//folly/logging:init",
-        "//folly/logging:logging",
-        "//folly/portability:gflags",
-        "//folly/portability:gtest",
-        "//folly/test:test_utils",
+        "folly//folly/logging:init",
+        "folly//folly/logging:logging",
+        "folly//folly/portability:gflags",
+        "folly//folly/portability:gtest",
+        "folly//folly/test:test_utils",
     ],
 )
 
@@ -162,9 +162,9 @@ cpp_unittest(
     srcs = ["LogCategoryTest.cpp"],
     deps = [
         ":test_handler",
-        "//folly:conv",
-        "//folly/logging:logging",
-        "//folly/portability:gtest",
+        "folly//folly:conv",
+        "folly//folly/logging:logging",
+        "folly//folly/portability:gtest",
     ],
 )
 
@@ -173,8 +173,8 @@ cpp_unittest(
     srcs = ["LoggerDBTest.cpp"],
     deps = [
         ":test_handler",
-        "//folly/logging:logging",
-        "//folly/portability:gtest",
+        "folly//folly/logging:logging",
+        "folly//folly/portability:gtest",
     ],
 )
 
@@ -184,11 +184,11 @@ cpp_unittest(
     deps = [
         "fbsource//third-party/fmt:fmt",
         ":test_handler",
-        "//folly/logging:log_handler",
-        "//folly/logging:logging",
-        "//folly/portability:gmock",
-        "//folly/portability:gtest",
-        "//folly/test:test_utils",
+        "folly//folly/logging:log_handler",
+        "folly//folly/logging:logging",
+        "folly//folly/portability:gmock",
+        "folly//folly/portability:gtest",
+        "folly//folly/test:test_utils",
     ],
 )
 
@@ -196,10 +196,10 @@ cpp_unittest(
     name = "log_level_test",
     srcs = ["LogLevelTest.cpp"],
     deps = [
-        "//folly:conv",
-        "//folly:random",
-        "//folly/logging:log_level",
-        "//folly/portability:gtest",
+        "folly//folly:conv",
+        "folly//folly:random",
+        "folly//folly/logging:log_level",
+        "folly//folly/portability:gtest",
     ],
 )
 
@@ -207,9 +207,9 @@ cpp_unittest(
     name = "log_message_test",
     srcs = ["LogMessageTest.cpp"],
     deps = [
-        "//folly:string",
-        "//folly/logging:logging",
-        "//folly/portability:gtest",
+        "folly//folly:string",
+        "folly//folly/logging:logging",
+        "folly//folly/portability:gtest",
     ],
 )
 
@@ -217,8 +217,8 @@ cpp_unittest(
     name = "log_name_test",
     srcs = ["LogNameTest.cpp"],
     deps = [
-        "//folly/logging:log_name",
-        "//folly/portability:gtest",
+        "folly//folly/logging:log_name",
+        "folly//folly/portability:gtest",
     ],
 )
 
@@ -226,8 +226,8 @@ cpp_unittest(
     name = "log_stream_test",
     srcs = ["LogStreamTest.cpp"],
     deps = [
-        "//folly/logging:logging",
-        "//folly/portability:gtest",
+        "folly//folly/logging:logging",
+        "folly//folly/portability:gtest",
     ],
 )
 
@@ -235,9 +235,9 @@ cpp_unittest(
     name = "rate_limiter_test",
     srcs = ["RateLimiterTest.cpp"],
     deps = [
-        "//folly:conv",
-        "//folly/logging:rate_limiter",
-        "//folly/portability:gtest",
+        "folly//folly:conv",
+        "folly//folly/logging:rate_limiter",
+        "folly//folly/portability:gtest",
     ],
 )
 
@@ -245,11 +245,11 @@ cpp_unittest(
     name = "standard_log_handler_test",
     srcs = ["StandardLogHandlerTest.cpp"],
     deps = [
-        "//folly:conv",
-        "//folly/logging:log_handler",
-        "//folly/logging:log_level",
-        "//folly/logging:logging",
-        "//folly/portability:gtest",
+        "folly//folly:conv",
+        "folly//folly/logging:log_handler",
+        "folly//folly/logging:log_level",
+        "folly//folly/logging:logging",
+        "folly//folly/portability:gtest",
     ],
 )
 
@@ -258,10 +258,10 @@ cpp_library(
     srcs = ["ConfigHelpers.cpp"],
     headers = ["ConfigHelpers.h"],
     deps = [
-        "//folly:string",
-        "//folly/logging:init",
-        "//folly/logging:log_handler",
-        "//folly/logging:logging",
+        "folly//folly:string",
+        "folly//folly/logging:init",
+        "folly//folly/logging:log_handler",
+        "folly//folly/logging:logging",
     ],
 )
 
@@ -269,10 +269,10 @@ cpp_unittest(
     name = "sync_level_test",
     srcs = ["SyncLevelTest.cpp"],
     deps = [
-        "//folly/logging:init",
-        "//folly/logging:log_handler",
-        "//folly/logging:logging",
-        "//folly/test:test_utils",
+        "folly//folly/logging:init",
+        "folly//folly/logging:log_handler",
+        "folly//folly/logging:logging",
+        "folly//folly/test:test_utils",
     ],
 )
 
@@ -281,11 +281,11 @@ cpp_library(
     srcs = ["TestLogHandler.cpp"],
     headers = ["TestLogHandler.h"],
     deps = [
-        "//folly:map_util",
+        "folly//folly:map_util",
     ],
     exported_deps = [
-        "//folly/logging:log_handler",
-        "//folly/logging:logging",
+        "folly//folly/logging:log_handler",
+        "folly//folly/logging:logging",
     ],
 )
 
@@ -300,8 +300,8 @@ cpp_library(
         "XlogHeader2.h",
     ],
     exported_deps = [
-        "//folly:range",
-        "//folly/logging:logging",
+        "folly//folly:range",
+        "folly//folly/logging:logging",
     ],
 )
 
@@ -309,12 +309,12 @@ cpp_binary(
     name = "xlog_bench",
     srcs = ["XlogBench.cpp"],
     deps = [
-        "//folly:benchmark",
-        "//folly/init:init",
-        "//folly/logging:init",
-        "//folly/logging:log_handler",
-        "//folly/logging:logging",
-        "//folly/portability:gflags",
+        "folly//folly:benchmark",
+        "folly//folly/init:init",
+        "folly//folly/logging:init",
+        "folly//folly/logging:log_handler",
+        "folly//folly/logging:logging",
+        "folly//folly/portability:gflags",
     ],
     external_deps = [
         ("boost", None, "boost_preprocessor"),
@@ -331,13 +331,13 @@ cpp_unittest(
     deps = [
         ":test_handler",
         ":xlog_test_lib",
-        "//folly/logging:init",
-        "//folly/logging:log_handler",
-        "//folly/logging:logging",
-        "//folly/portability:constexpr",
-        "//folly/portability:gmock",
-        "//folly/portability:gtest",
-        "//folly/test:test_utils",
+        "folly//folly/logging:init",
+        "folly//folly/logging:log_handler",
+        "folly//folly/logging:logging",
+        "folly//folly/portability:constexpr",
+        "folly//folly/portability:gmock",
+        "folly//folly/portability:gtest",
+        "folly//folly/test:test_utils",
     ],
 )
 
@@ -345,11 +345,11 @@ cpp_unittest(
     name = "standard_log_handler_factory_test",
     srcs = ["StandardLogHandlerFactoryTest.cpp"],
     deps = [
-        "//folly/logging:init",
-        "//folly/logging:log_handler",
-        "//folly/logging:logging",
-        "//folly/portability:gmock",
-        "//folly/test:test_utils",
+        "folly//folly/logging:init",
+        "folly//folly/logging:log_handler",
+        "folly//folly/logging:logging",
+        "folly//folly/portability:gmock",
+        "folly//folly/test:test_utils",
     ],
 )
 
@@ -358,11 +358,11 @@ cpp_unittest(
     srcs = ["BridgeFromGoogleLoggingTest.cpp"],
     deps = [
         ":test_handler",
-        "//folly/logging:glog_bridge",
-        "//folly/logging:init",
-        "//folly/logging:log_handler",
-        "//folly/logging:logging",
-        "//folly/portability:gtest",
-        "//folly/test:test_utils",
+        "folly//folly/logging:glog_bridge",
+        "folly//folly/logging:init",
+        "folly//folly/logging:log_handler",
+        "folly//folly/logging:logging",
+        "folly//folly/portability:gtest",
+        "folly//folly/test:test_utils",
     ],
 )
