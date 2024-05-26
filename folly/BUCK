@@ -222,8 +222,9 @@ cpp_library(
 
 cpp_library(
     name = "config",
-    # @fb-only: headers = ["folly-config.h"], 
+    # @fb-only: headers = ["folly-config.h"],
     headers = ["//:folly-config.h"], # @oss-only
+    tags = ["folly-config.h"],
 )
 
 cpp_library(
