@@ -220,10 +220,11 @@ cpp_library(
     ],
 )
 
+oss_depends_on_folly = read_config("oss_depends_on", "folly", False)
 cpp_library(
     name = "config",
-    # @fb-only: headers = ["folly-config.h"], 
-    headers = ["//:folly-config.h"], # @oss-only
+    # @fb-only: headers = ["folly-config.h"],
+    headers = ["//folly:folly-config.h"] if oss_depends_on_folly else ["//:folly-config.h"], # @oss-only
 )
 
 cpp_library(

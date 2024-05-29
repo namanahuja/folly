@@ -2,20 +2,20 @@ load("@fbcode_macros//build_defs:cpp_benchmark.bzl", "cpp_benchmark")
 load("@fbcode_macros//build_defs:cpp_binary.bzl", "cpp_binary")
 load("@fbcode_macros//build_defs:cpp_library.bzl", "cpp_library")
 load("@fbcode_macros//build_defs:cpp_unittest.bzl", "cpp_unittest")
-load("//folly/io/async/test/certs:defs.bzl", "alias_pem")
+# load("//folly/io/async/test/certs:defs.bzl", "alias_pem")
 
 oncall("fbcode_entropy_wardens_folly")
 
-alias_pem(pems = [
-    "tests-cert.pem",
-    "tests-key.pem",
-    "ca-cert.pem",
-    "client_cert.pem",
-    "client_key.pem",
-    "client_ca_cert.pem",
-    "client_chain.pem",
-    "clienti_key.pem",
-])
+# alias_pem(pems = [
+#     "tests-cert.pem",
+#     "tests-key.pem",
+#     "ca-cert.pem",
+#     "client_cert.pem",
+#     "client_key.pem",
+#     "client_ca_cert.pem",
+#     "client_chain.pem",
+#     "clienti_key.pem",
+# ])
 
 cpp_library(
     name = "test_ssl_server",
